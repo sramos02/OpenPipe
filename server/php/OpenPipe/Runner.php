@@ -92,7 +92,6 @@ class OpenPipe_Runner {
 	
 	
 	protected function cleanup(){
-		ini_set('implicit_flush', Off);
 		$this->frameworkAdapter->cleanup();
 	}
 	

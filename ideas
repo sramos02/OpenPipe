@@ -1,0 +1,5 @@
+speed perception engine:
+	-determine priority based on:
+		-block size/position/most utilized
+		-block load times
+		-"balance importance w/ speed"

@@ -1,36 +1,35 @@
 <?php
 
+require_once('Interface.php');
+
 abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	
-	public function setId(string $id){
-		
+	protected $id;
+	protected $phase;
+	
+	protected $output;
+	
+	public function setId($id){
+		$this->id = $id;
 	}
 	public function getId(){
-		
+		return $this->id;
 	}
 	
-	public function setPhase(int $phase){
-		
+	public function setPhase($phase){
+		$this->phase = $phase;
 	}
 	public function getPhase(){
-		
+		return $this->phase;
 	}
 	
-	public function loadHtml(string $html){
-		
+	public function setOutput($output){
+		$this->output = $output;
 	}
 	
-	public function pipe(){
-		
+	public function getOutput(){
+		return $this->output;
 	}
 	
-	
-	protected function extractCssJsonArray(){
-		
-	}
-	
-	protected function extractJsJsonArray(){
-		
-	}
 	
 }

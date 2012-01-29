@@ -6,15 +6,15 @@
 	
 	
 	<div id="left-sidebar">
-		<div pipelet-id="pipelet1" >
+		<div id="pipelet1" pipelet-id="pipelet1" ></div>
 	</div>
 	
 	<div id="content">
-		<div pipelet-id="pipelet3" pipelet-priority="1" >
+		<div id="pipelet3" pipelet-id="pipelet3" pipelet-priority="1" ></div>
 	</div>
 	
 	<div id="right-sidebar">
-		<div pipelet-id="pipelet2" >
+		<div id="pipelet2" pipelet-id="pipelet2" ></div>
 	</div>
 	
 </div>

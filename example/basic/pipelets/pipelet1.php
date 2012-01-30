@@ -1,3 +1,2 @@
-<?php sleep(1); ?>
-<script type="text/javascript" >alert('hello world');</script>
+<?php usleep(200000); ?>
 <h1>Pipelet 1</h1>

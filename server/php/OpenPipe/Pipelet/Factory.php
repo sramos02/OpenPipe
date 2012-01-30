@@ -15,6 +15,8 @@ class OpenPipe_Pipelet_Factory{
 			if(!empty($match[1])){
 				$pipeletId = trim($match[1], '\'" ');
 				$pipelets[] = new OpenPipe_Pipelet_Base($pipeletId, $phase);
+				
+				sort($pipelets);
 			}
 		}
 

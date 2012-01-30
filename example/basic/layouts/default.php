@@ -1,3 +1,29 @@
+<style>
+
+	#container {
+		width: 960px;
+		margin: auto;
+	}
+	
+	#left-sidebar {
+		float: left;
+		overflow: auto;
+		width: 200px;
+	}
+	
+	#content {
+		float: left;
+		overflow: auto;
+		width: 560px;
+	}
+	
+	#right-sidebar {
+		float: left;
+		overflow: auto;
+		width: 200px;
+	}
+	
+</style>
 <div id="container" >
 
 	<div id="header">
@@ -6,14 +32,18 @@
 	
 	
 	<div id="left-sidebar">
-		<div id="pipelet1" pipelet-id="pipelet1" ></div>
+		&nbsp;
+		<div id="pipelet3" pipelet-id="pipelet3" ></div>
 	</div>
 	
 	<div id="content">
-		<div id="pipelet3" pipelet-id="pipelet3" pipelet-priority="1" ></div>
+		&nbsp;
+		<div id="pipelet1" pipelet-id="pipelet1" pipelet-priority="1" ></div>
+		
 	</div>
 	
 	<div id="right-sidebar">
+		&nbsp;
 		<div id="pipelet2" pipelet-id="pipelet2" ></div>
 	</div>
 	

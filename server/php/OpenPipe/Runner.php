@@ -59,17 +59,34 @@ class OpenPipe_Runner {
 		$js = $this->extractJsJsonArray($pipelet);
 		$html = $this->extractHtml($pipelet);
 
-		op_piped_echo_js("op.load({'id': '$id', 'html': '$html', 'css': $css, 'script': $js});");
+		op_piped_echo_js("op.load({'id': '$id', 'html': '$html', 'css': $css, 'scripts': $js});");
 
 	}
 	
 	
-	protected function extractCssJsonArray(){
-		return json_encode(array());
+	protected function extractCssJsonArray($pipelet){
+		preg_match_all('/<style.*?>.*?<\/style>/', $pipelet->getOutput(), $matches, PREG_SET_ORDER);
+		$pipelet->setOutput(preg_replace('/<style.*?>.*<\/style>/', '', $pipelet->getOutput()));
+		
+		$css = array();
+		foreach($matches as $match){
+			$css[] = $match[0];
+		}
+		
+		return json_encode($css);
 	}
 	
-	protected function extractJsJsonArray(){
-		return json_encode(array());
+	
+	protected function extractJsJsonArray($pipelet){
+		preg_match_all('/<script.*?>.*?<\/script>/', $pipelet->getOutput(), $matches, PREG_SET_ORDER);
+		$pipelet->setOutput(preg_replace('/<script.*?>.*<\/script>/', '', $pipelet->getOutput()));
+		
+		$js = array();
+		foreach($matches as $match){
+			$js[] = $match[0];
+		}
+		
+		return json_encode($js);
 	}
 	
 	protected function extractHtml($pipelet){

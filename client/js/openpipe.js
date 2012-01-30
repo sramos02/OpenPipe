@@ -65,7 +65,7 @@
 		if(segment.css != undefined) this.loadCss(segment.css);
 		$('#'+segment.id).show();
 		
-		if(segment.script != undefined) this.pushScript(segment.script, segment.phase);
+		if(segment.scripts != undefined) this.pushScripts(segment.scripts, segment.phase);
 	 };
 
 
@@ -78,12 +78,26 @@
 	 };
 
 	 op.loadCss = function(css){
-		$('head').append('<style type="text/css" >'+css+'</style>');
+		
+		var that = this;
+		_.each(css, function(css_item){
+			$('head').append(css_item);
+		});
+		
 
 	 };
 
 
 
+
+	 op.pushScripts = function(scripts, phase){
+		
+		var that = this;
+		_.each(scripts, function(script){
+			that.pushScript(script, phase)
+		});
+
+	 };
 
 	 op.pushScript = function(script, phase){
 		if(phase == undefined) phase = 0;
@@ -95,7 +109,7 @@
 	op.loadScripts = function(phase){
 		var that = this;
 		_.each(scripts[phase], function(script){
-			$('body').append('<script type="text/javascript">'+script+'</script>');
+			$('body').append(script);
 		});
 	}
 

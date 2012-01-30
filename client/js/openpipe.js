@@ -23,7 +23,7 @@
 	 op.init = function(){
 		$('html').append('<div id="op-loading">loading</div>');
 		$('.pipelet').hide();
-	 }
+	 };
 
 
 	 op.load = function(segment){
@@ -48,13 +48,13 @@
 			if(phase > lastPhase) that.phaseComplete(phase);
 		});
 			
-	 }
+	 };
 
 
 
 
 	 op.loadSegment = function(segment){
-		if(isFirstSegment == true){
+		if(isFirstSegment === true){
 			isFirstSegment = false;
 			$('#op-loading').hide();
 		}
@@ -94,7 +94,7 @@
 		
 		var that = this;
 		_.each(scripts, function(script){
-			that.pushScript(script, phase)
+			that.pushScript(script, phase);
 		});
 
 	 };
@@ -111,7 +111,7 @@
 		_.each(scripts[phase], function(script){
 			$('body').append(script);
 		});
-	}
+	};
 
 
 	 //set the root open pipe object	

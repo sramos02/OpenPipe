@@ -9,10 +9,13 @@ class OpenPipe_Pipelet_Factory{
 		
 		
 		$pipelets = array();
-		preg_match_all('/pipelet\-id\=[\'\"](.*?)[\'\"]/', $html, $matches, PREG_SET_ORDER);
+		preg_match_all('/<.*?pipelet-id\=(\'.*?\'|".*?").*?>/', $html, $matches, PREG_SET_ORDER);
 
 		foreach($matches as $match){
-			$pipelets[] = new OpenPipe_Pipelet_Base($match[1], $phase);
+			if(!empty($match[1])){
+				$pipeletId = trim($match[1], '\'" ');
+				$pipelets[] = new OpenPipe_Pipelet_Base($pipeletId, $phase);
+			}
 		}
 
 		

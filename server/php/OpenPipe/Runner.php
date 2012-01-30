@@ -1,5 +1,6 @@
 <?php
 
+require_once('Output/Piped.php');
 require_once('Adapter/Interface.php');
 require_once('Pipelet/Factory.php');
 
@@ -24,9 +25,7 @@ class OpenPipe_Runner {
 		$currentPipelet = null;
 
 		$layout = $this->frameworkAdapter->getOutput();
-		$layout = str_replace("\n", '', $layout);
-		echo "<script type='text/javascript' >op.load({'id': 'op-container', 'html': '$layout' });</script>";
-		flush();
+		op_piped_echo_js("op.load({'id': 'op-container', 'html': '$layout' });");
 	
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
 		
@@ -42,8 +41,7 @@ class OpenPipe_Runner {
 				$pipelets = $pipeletsQueue;
 				$pipeletsQueue = array();
 				
-				echo "<script type='text/javascript' >op.phaseComplete($phase)</script>";
-				flush();
+				op_piped_echo_js("op.phaseComplete($phase);");
 				++$phase;
 				
 			}
@@ -61,8 +59,8 @@ class OpenPipe_Runner {
 		$js = $this->extractJsJsonArray($pipelet);
 		$html = $this->extractHtml($pipelet);
 
-		echo "<script type='text/javascript' >op.load({'id': '$id', 'html': '$html', 'css': $css, 'script': $js});</script>";
-		flush();
+		op_piped_echo_js("op.load({'id': '$id', 'html': '$html', 'css': $css, 'script': $js});");
+
 	}
 	
 	
@@ -75,8 +73,7 @@ class OpenPipe_Runner {
 	}
 	
 	protected function extractHtml($pipelet){
-		$output = str_replace("\n", '', $pipelet->getOutput());
-		
+		$output = $pipelet->getOutput();
 		return $output;
 	}
 	
@@ -97,13 +94,13 @@ class OpenPipe_Runner {
 	
 	
 	protected function header(){
-		echo '<!DOCTYPE html><html><head><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script><script type="text/javascript" src="../../client/js/libs/underscore.js"></script><script type="text/javascript" src="../../client/js/openpipe.js"></script></head><body><div id="op-container"></div>';
-		flush();
+		op_piped_echo('<!DOCTYPE html><html><head><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script><script type="text/javascript" src="../../client/js/libs/underscore.js"></script><script type="text/javascript" src="../../client/js/openpipe.js"></script></head><body><div id="op-container"></div>');
+		
 	}
 	
 	protected function footer(){
-		echo '<script type="text/javascript" >op.done()</script></body></html>';
-		flush();
+		op_piped_echo_js('op.done();');
+		op_piped_echo('</body></html>');
 	}
 	
 	

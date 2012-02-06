@@ -1,9 +1,24 @@
 <?php
+/**
+*	Represents an abstract OpenPipe adapter. As an abstract class it provides basic services for obtaining the layout (root object for pipelets), and generating
+*	output for pipelets that are requested. Any object which extends this class will implement the getLayout() and getContent() methods. This abtract class will
+*	handle the details in regards to buffering output and sending it back to the requesting object.
+*
+*	@author Sean Kenny
+*	@package OpenPipe_Adapter
+*	@version <version_id>
+**/
 
 require_once('Interface.php');
 
 abstract class OpenPipe_Adapter_Abstract implements OpenPipe_Adapter_Interface{
 	
+	/**
+	*	Returns output for the given pipelet. Output is web content (html, css, javascript). If Pipelet is null then the layout is generated.
+	*
+	*	@param OpenPipe_Pipelet_Interface $pipelet if not specified then the adapter will generate the Pipelets layout by default
+	*	@return string given output either generated for layout or for individual pipelet
+	*/
 	public function getOutput(OpenPipe_Pipelet_Interface $pipelet=null){
 		
 		ob_start();
@@ -29,12 +44,29 @@ abstract class OpenPipe_Adapter_Abstract implements OpenPipe_Adapter_Interface{
 	}
 	
 	
-	
+	/**
+	*	Method should return the layout for the given web request
+	*
+	*	@return string the root layout for all pipelets to be derived from
+	*/
 	abstract protected function getLayout();
+	
+	/**
+	*	Method should return the layout for the given web request
+	*
+	*	@return string the root layout for all pipelets to be derived from
+	*/
 	abstract protected function getContent(OpenPipe_Pipelet_Interface $pipelet);
 	
 	
+	/**
+	*	This abstract class does not provided any bootstrapping logic
+	*/
 	public function bootstrap(){ }
+	
+	/**
+	*	This abstract class does not provided any cleanup logic
+	*/
 	public function cleanup(){ }
 		
 }

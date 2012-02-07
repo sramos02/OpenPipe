@@ -17,7 +17,7 @@ abstract class OpenPipe_Adapter_Abstract implements OpenPipe_Adapter_Interface{
 	*	Returns output for the given pipelet. Output is web content (html, css, javascript). If Pipelet is null then the layout is generated.
 	*
 	*	@param OpenPipe_Pipelet_Interface $pipelet if not specified then the adapter will generate the Pipelets layout by default
-	*	@return string given output either generated for layout or for individual pipelet
+	*	@return string|OpenPipe_Pipelet_Interface given string output either generated for layout or a OpenPipe_Pipelet_Interface with output set
 	*/
 	public function getOutput(OpenPipe_Pipelet_Interface $pipelet=null){
 		

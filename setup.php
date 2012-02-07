@@ -1,4 +1,4 @@
 <?php
 
 
-echo 'TODO!!!\n';
+die('TODO');

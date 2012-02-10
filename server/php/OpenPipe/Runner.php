@@ -23,7 +23,7 @@ class OpenPipe_Runner {
 	*	@var OpenPipe_Adapter_Interface
 	*	@access protected
 	*/
-	protected $frameworkAdapter;	
+	protected $frameworkAdapter;
 
 
 	/**

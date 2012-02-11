@@ -9,6 +9,7 @@
 
 require_once(dirname(__FILE__).'/../Abstract.php');
 
+//declare global variables that CodeIgniter 2 needs to function. This will be called on before including code igniter files
 $BM;
 $CFG;
 

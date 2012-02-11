@@ -9,5 +9,3 @@
 	$openPipeRunner = new OpenPipe_Runner($openPipeAdapter);
 	
 	$openPipeRunner->run();
-	
-?>

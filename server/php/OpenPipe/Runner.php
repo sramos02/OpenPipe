@@ -51,6 +51,7 @@ class OpenPipe_Runner {
 		$currentPipelet = null;
 
 		$layout = $this->frameworkAdapter->getOutput();
+		$layout = str_replace("'", "\\'", $layout);
 		op_piped_echo_js("op.load({'id': 'op-container', 'html': '$layout' });");
 	
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
@@ -168,7 +169,7 @@ class OpenPipe_Runner {
 	*	@return void
 	*/
 	protected function header(){
-		op_piped_echo('<!DOCTYPE html><html><head><script type="text/javascript" src="../../client/js/libs/jquery.js" ></script><script type="text/javascript" src="../../client/js/libs/underscore.js"></script><script type="text/javascript" src="../../client/js/openpipe.js"></script></head><body><div id="op-container"></div>');
+		op_piped_echo('<!DOCTYPE html><html><head><script type="text/javascript" src="../../../client/js/libs/jquery.js" ></script><script type="text/javascript" src="../../../client/js/libs/underscore.js"></script><script type="text/javascript" src="../../../client/js/openpipe.js"></script></head><body><div id="op-container"></div>');
 		
 	}
 	

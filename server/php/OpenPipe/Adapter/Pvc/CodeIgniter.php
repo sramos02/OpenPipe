@@ -13,7 +13,6 @@ $BM;
 $CFG;
 
 
-
 class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	
 	/**
@@ -52,7 +51,6 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 		global $BM, $CFG;
 		
 		include($this->appRootPath.'/'.$this->indexFileName);
-		echo 'test';
 	}
 
 	/**

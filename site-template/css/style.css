@@ -103,4 +103,29 @@ header {
 	width: 960px;
 	margin: auto;
 	text-align: left;
+	
+	color: #000000;
+}
+
+
+.nav-category {
+	font-size: 11px;
+	margin: 20px;
+}
+
+.nav-category h2 {
+	color: #999999;
+	font-size: 11px;
+	margin: 0px;
+}
+
+.nav-category ul {
+	margin: 0px;
+	padding: 0px;	
+}
+
+.nav-category ul li{
+	margin: 3px 0px;
+	padding: 0px;
+	list-style-type: none;	
 }

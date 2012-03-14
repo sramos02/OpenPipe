@@ -1,5 +1,4 @@
 <?php
-<?php
 /**
 *	A basic adapter which provides an implementation of the abstract adapter class. It simply loads layouts and piplets from known directories given during
 *	the constructor process

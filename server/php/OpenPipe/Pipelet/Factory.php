@@ -33,7 +33,6 @@ class OpenPipe_Pipelet_Factory{
 				sort($pipelets);
 			}
 		}
-
 		
 		return $pipelets;
 	}

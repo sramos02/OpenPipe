@@ -1,7 +1,6 @@
 <?php
 
     
-
 	require_once(dirname(__FILE__).'/../../server/php/OpenPipe/Adapter/Basic.php');
 	require_once(dirname(__FILE__).'/../../server/php/OpenPipe/Runner.php');
 	

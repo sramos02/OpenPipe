@@ -10,8 +10,7 @@
 require_once(dirname(__FILE__).'/../Abstract.php');
 
 //declare global variables that CodeIgniter 2 needs to function. This will be called on before including code igniter files
-$BM;
-$CFG;
+$BM; $CFG; $UNI;
 
 
 class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
@@ -49,19 +48,23 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	*	@return void
 	*/
  	protected function getLayout(){
-		global $BM, $CFG;
-		
+		global $BM, $CFG, $UNI;	
 		include($this->appRootPath.'/'.$this->indexFileName);
 	}
 
 	/**
-	*	loads a php pipelet via include()
+	*	loads a php pipelet via CodeIgniter controller - being sure to play nice with output class
 	*	
-	*	@param string $id the id of the pipelet to be used. An id is the filename without the php extension. For example default.php would be default
+	*	@param OpenPipe_Pipelet_Interface $pipelet the pipelet to be used.
 	*	@return void
 	*/	
 	protected function getContent(OpenPipe_Pipelet_Interface $pipelet){
-		die('wtf');
+		$CI = &get_instance();
+		$CI->output->set_output('');
+		
+		call_user_func_array(array($CI, $pipelet->getId()), array());
+		
+		$CI->output->_display();
 	}
 	
 }

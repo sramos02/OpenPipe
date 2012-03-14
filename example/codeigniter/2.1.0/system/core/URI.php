@@ -84,6 +84,7 @@ class CI_URI {
 	 */
 	function _fetch_uri_string()
 	{
+
 		if (strtoupper($this->config->item('uri_protocol')) == 'AUTO')
 		{
 			// Is the request coming from the command line?

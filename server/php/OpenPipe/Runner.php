@@ -24,6 +24,8 @@ class OpenPipe_Runner {
 	*	@access protected
 	*/
 	protected $frameworkAdapter;
+	
+	protected $js_path;
 
 
 	/**
@@ -31,8 +33,9 @@ class OpenPipe_Runner {
 	*	@param OpenPipe_Adapter_Interface $frameworkAdapter
 	*	@return OpenPipe_Runner
 	*/
-	public function __construct(OpenPipe_Adapter_Interface $frameworkAdapter){
+	public function __construct(OpenPipe_Adapter_Interface $frameworkAdapter, $js_path='js'){
 		$this->frameworkAdapter = $frameworkAdapter;
+		$this->js_path = $js_path;
 	}
 
 	
@@ -169,7 +172,13 @@ class OpenPipe_Runner {
 	*	@return void
 	*/
 	protected function header(){
-		op_piped_echo('<!DOCTYPE html><html><head><script type="text/javascript" src="../../../client/js/libs/jquery.js" ></script><script type="text/javascript" src="../../../client/js/libs/underscore.js"></script><script type="text/javascript" src="../../../client/js/openpipe.js"></script></head><body><div id="op-container"></div>');
+		$header  = '<!DOCTYPE html><html><head>';
+		$header .= "<script type='text/javascript' src='{$this->js_path}/libs/jquery.js' ></script>";
+		$header .= "<script type='text/javascript' src='{$this->js_path}/libs/underscore.js'></script>";
+		$header .= "<script type='text/javascript' src='{$this->js_path}/openpipe.js'></script>";
+		$header .= '</head><body><div id="op-container"></div>';
+		
+		op_piped_echo($header);
 		
 	}
 	

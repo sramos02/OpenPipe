@@ -1,11 +1,11 @@
 
 Week 1
 	xx-Commenting
-	-Unit tests
-	-Class Hierarchy changes/refactoring current design
+	xx-Unit tests
+	xx-Class Hierarchy changes/refactoring current design
 	
 Week 2
-	-Codeigniter adapter
+	xx-Codeigniter adapter
 	-concrete test site
 	-minification libs
 	-manual prioritization

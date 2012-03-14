@@ -4,6 +4,7 @@
 *
 *	@author Sean Kenny
 *	@package OpenPipe_Adapter
+*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>
 **/
 

@@ -1,5 +1,5 @@
 //     OpenPipe.js 0.0.1
-//     (c) 2011-2012 Sean Kenny, Southern Connecticut State Unitversity (SCSU).
+//     (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 //     OpenPipe is freely distributable under the MIT license.
 
 (function() {

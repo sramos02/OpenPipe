@@ -12,6 +12,7 @@
 *
 *	@author Sean Kenny
 *	@package OpenPipe_Pipelet
+*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>
 **/
 

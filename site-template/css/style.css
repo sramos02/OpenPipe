@@ -108,6 +108,8 @@ header {
 }
 
 
+/*----- NAV CATS ----*/
+
 .nav-category {
 	font-size: 11px;
 	margin: 20px;
@@ -128,4 +130,54 @@ header {
 	margin: 3px 0px;
 	padding: 0px;
 	list-style-type: none;	
+}
+
+
+/*---- POSTS ----*/
+
+.post {
+	padding: 10px 0px;
+	margin: 10px 0px;
+	border-bottom: thin solid #CCCCCC;
+}
+
+.post .post-image{
+	float: left;
+	padding: 0px 10px;
+}
+
+.post h2 {
+	margin: 0px;
+	color: #3B5998;
+	font-size: 11px;
+}
+
+.post p {
+	margin: 5px;
+	padding: 0px;
+}
+
+/*----- ADS ----*/
+.ad {
+	color: #3B5998;
+	font-size: 11px;
+	margin: 6px 0px;
+	padding: 6px 0px;
+	border-bottom: thin solid #CCCCCC;
+}
+
+.ad h2 {
+	margin: 0px;
+	color: #3B5998;
+	font-size: 11px;
+}
+.ad img {
+	display: block;
+	float: left;
+	max-width: 100px;
+}
+
+.ad p {
+	margin: 0px;
+	padding: 0px;
 }

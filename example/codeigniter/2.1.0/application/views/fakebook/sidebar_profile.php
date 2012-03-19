@@ -1,4 +1,4 @@
 <?php usleep(200000); ?>
 <div id="profile-sidebar">
-	<img src="images/mock/profile-sidebar.jpg" />
+	<img src="../public/images/fakebook/mock/profile-sidebar.jpg" />
 </div>

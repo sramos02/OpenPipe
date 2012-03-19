@@ -30,7 +30,7 @@
 		
 		
 			<div class="chat-sidebar">
-				<div id="sidebar_on_chat" pipelet-id="sidebar_on_chat" ></div>
+				<div id="sidebar_friends_on_chat" pipelet-id="sidebar_friends_on_chat" ></div>
 			</div>
 		
 		</section>

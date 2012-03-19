@@ -64,8 +64,8 @@
 		
 		this.registerPhase(segment.phase);
 		
-		if(segment.html != undefined) this.loadHtml(segment.html, segment.id);
 		if(segment.css != undefined) this.loadCss(segment.css);
+		if(segment.html != undefined) this.loadHtml(segment.html, segment.id);
 		$('#'+segment.id).show();
 		
 		if(segment.scripts != undefined) this.pushScripts(segment.scripts, segment.phase);

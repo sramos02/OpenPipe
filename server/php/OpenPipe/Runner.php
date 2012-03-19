@@ -66,7 +66,7 @@ class OpenPipe_Runner {
 			
 			$this->pipe($currentPipelet);
 			
-			//$pipeletsQueue = array_merge($pipeletsQueue, OpenPipe_Pipelet_Factory::buildFromHtml($, $phase));
+			$pipeletsQueue = array_merge($pipeletsQueue, OpenPipe_Pipelet_Factory::buildFromHtml($currentPipelet->getOutput(), $phase+1));
 			
 			if(empty($pipelets)){
 				$pipelets = $pipeletsQueue;

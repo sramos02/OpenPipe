@@ -20,6 +20,12 @@ class Fakebook extends CI_Controller {
 	}
 	
 	
+	/* --- Posts ---- */
+	public function post_comments(){
+		$this->load->view('fakebook/post_comments');
+	}
+	
+	
 	
 	/* ---- Header ---- */
 	public function header(){
@@ -29,6 +35,10 @@ class Fakebook extends CI_Controller {
 	
 	
 	/* ---- Left sidebar ----*/
+	public function sidebar_profile(){
+		$this->load->view('fakebook/sidebar_profile');
+	}
+	
 	public function sidebar_favorites(){
 		$this->load->view('fakebook/sidebar_favorites');
 	}

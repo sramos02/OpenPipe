@@ -7,11 +7,14 @@ Week 1
 Week 2
 	xx-Codeigniter adapter
 	xx-concrete test site
-	-minification libs
-	-manual prioritization
+
 
 Week 3
+	-minification libs
+	-manual prioritization
 	- pipelet selection algorithm
+	
 
 Week 4
 	- analysis/tweaking
+		-remove jquery dependancies

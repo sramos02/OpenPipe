@@ -12,9 +12,8 @@
 				diam egestas. Integer a dolor nec justo
 			</p>
 			
-			<div id="post-comments">
-				<img src="../public/images/fakebook/mock/comments-1.jpg" />
-			</div>
+			<div id="post_comments" pipelet-id="post_comments" ></div>
+
 		</div>
 		
 		

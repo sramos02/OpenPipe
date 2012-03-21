@@ -14,11 +14,11 @@ class Openpipe extends CI_Controller {
 	}
 	
 	public function pipelet2(){
-		$this->load->view('pipelet3');
+		$this->load->view('pipelet2');
 	}
 	
 	public function pipelet3(){
-		echo $this->load->view('pipelet2');
+		echo $this->load->view('pipelet3');
 	}
 }
 

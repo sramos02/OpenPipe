@@ -61,6 +61,7 @@ class OpenPipe_Runner {
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
 		
 		while(!empty($pipelets)){
+			
 			$currentPipelet =  array_shift($pipelets);
 			$this->frameworkAdapter->getOutput($currentPipelet);
 			

@@ -20,11 +20,18 @@ require_once('Pipelet/Factory.php');
 class OpenPipe_Runner {
 	
 	/**
-	*	The OpenPipe_Adapter_Interface object that is used by this OpenPipe_Runner output to gather pipelets and load individual pipelet data for
+	*	The OpenPipe_Adapter_Interface object that is used by this OpenPipe_Runner to gather pipelets and load individual pipelet data
 	*	@var OpenPipe_Adapter_Interface
 	*	@access protected
 	*/
 	protected $frameworkAdapter;
+	
+	/**
+	*	The OpenPipe_Output_Interface object that is used by this OpenPipe_Runner to send output data to the browser
+	*	@var OpenPipe_Output_Interface
+	*	@access protected
+	*/	
+	protected $output;
 	
 	protected $js_path;
 
@@ -55,6 +62,7 @@ class OpenPipe_Runner {
 		$currentPipelet = null;
 
 		$layout = $this->frameworkAdapter->getOutput();
+	
 		$layout = str_replace("'", "\\'", $layout);
 		op_output_echo_js("op.load({'id': 'op-container', 'html': '$layout' });");
 	

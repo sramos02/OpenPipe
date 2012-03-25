@@ -51,6 +51,7 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
  	protected function getLayout(){
 		global $BM, $CFG, $UNI;	
 		include($this->appRootPath.'/'.$this->indexFileName);
+				
 	}
 
 	/**
@@ -60,6 +61,8 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	*	@return void
 	*/	
 	protected function getContent(OpenPipe_Pipelet_Interface $pipelet){
+		global $BM, $CFG, $UNI;	
+		
 		$CI = &get_instance();
 		$CI->output->set_output('');
 		

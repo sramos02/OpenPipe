@@ -13,7 +13,7 @@
 **/
 
 
-require_once('Output/Piped.php');
+require_once('Output/Util.php');
 require_once('Adapter/Interface.php');
 require_once('Pipelet/Factory.php');
 

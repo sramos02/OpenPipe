@@ -1,0 +1,245 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \OpenPipe_Pipelet_Base</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/db_Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors</a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers (TODO/FIXME)</a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements</a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Builds the object"><span class="description">Builds the object</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#getId" title="getId :: Returns the current set pipelet id"><span class="description">Returns the current set pipelet id</span><pre>getId()</pre></a></li>
+<li class="method public inherited"><a href="#getOutput" title="getOutput :: Return the output that is currently set for the pipelet"><span class="description">Return the output that is currently set for the pipelet</span><pre>getOutput()</pre></a></li>
+<li class="method public inherited"><a href="#getPhase" title="getPhase :: Return the current set phase number"><span class="description">Return the current set phase number</span><pre>getPhase()</pre></a></li>
+<li class="method public inherited"><a href="#setId" title="setId :: Sets the id of the pipelet (used to determine what content to gather from a Pipe Adapter)"><span class="description">Sets the id of the pipelet (used to determine what content to gather from a Pipe Adapter)</span><pre>setId()</pre></a></li>
+<li class="method public inherited"><a href="#setOutput" title="setOutput :: Set the output that has been gathered for this pipelet from a Pipelet_Adapter"><span class="description">Set the output that has been gathered for this pipelet from a Pipelet_Adapter</span><pre>setOutput()</pre></a></li>
+<li class="method public inherited"><a href="#setPhase" title="setPhase :: Sets the phase of the pipelet (used to determine loading priorities and sequences)"><span class="description">Sets the phase of the pipelet (used to determine loading priorities and sequences)</span><pre>setPhase()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24id" title="$id :: The unique identifier for this pipelet. that distinguishes it from all others."><span class="description">The unique identifier for this pipelet. that distinguishes it from all others.</span><pre>$id</pre></a></li>
+<li class="property protected inherited"><a href="#%24output" title="$output :: The output that is potentially gathered and piped as output for this pipelet"><span class="description">The output that is potentially gathered and piped as output for this pipelet</span><pre>$output</pre></a></li>
+<li class="property protected inherited"><a href="#%24phase" title="$phase :: The numbered phase of the pipelet to signify priority low-to-high"><span class="description">The numbered phase of the pipelet to signify priority low-to-high</span><pre>$phase</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5COpenPipe_Pipelet_Base" id="\OpenPipe_Pipelet_Base"></a><div href="../classes/db_%5COpenPipe_Pipelet_Base.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Builds the object</h2>
+<pre>__construct($id, int | string $phase) : <a href="../classes/db_%5COpenPipe_Pipelet_Base.html">\OpenPipe_Pipelet_Base</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>@param string $id the identifier for the pipelet</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$phase</h4>
+<code>intstring</code><p>the phase for the pipelet</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/db_%5COpenPipe_Pipelet_Base.html">\OpenPipe_Pipelet_Base</a></code>new instance</div>
+</div></div>
+</div>
+<a name="getId" id="getId"></a><div class="element clickable method public getId" data-toggle="collapse" data-target=".getId .collapse">
+<h2>Returns the current set pipelet id</h2>
+<pre>getId() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::getId()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getOutput" id="getOutput"></a><div class="element clickable method public getOutput" data-toggle="collapse" data-target=".getOutput .collapse">
+<h2>Return the output that is currently set for the pipelet</h2>
+<pre>getOutput() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::getOutput()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getPhase" id="getPhase"></a><div class="element clickable method public getPhase" data-toggle="collapse" data-target=".getPhase .collapse">
+<h2>Return the current set phase number</h2>
+<pre>getPhase() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::getPhase()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setId" id="setId"></a><div class="element clickable method public setId" data-toggle="collapse" data-target=".setId .collapse">
+<h2>Sets the id of the pipelet (used to determine what content to gather from a Pipe Adapter)</h2>
+<pre>setId($id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>@param string $id a unique identifier for the pipelet that will signify importance to the client adapter and allow data to be looked up/generated accordingly</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::setId()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setOutput" id="setOutput"></a><div class="element clickable method public setOutput" data-toggle="collapse" data-target=".setOutput .collapse">
+<h2>Set the output that has been gathered for this pipelet from a Pipelet_Adapter</h2>
+<pre>setOutput($output) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>param string $output the output string that has been generated/gathered for this given pipelet</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::setOutput()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$output</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setPhase" id="setPhase"></a><div class="element clickable method public setPhase" data-toggle="collapse" data-target=".setPhase .collapse">
+<h2>Sets the phase of the pipelet (used to determine loading priorities and sequences)</h2>
+<pre>setPhase($phase) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>@param  int|string phase to set. Lower numbers are higher priority (1), than higher numbers (999)</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::setPhase()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$phase</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24id" id="$id"> </a><div class="element clickable property protected $id" data-toggle="collapse" data-target=".$id .collapse">
+<h2>The unique identifier for this pipelet. that distinguishes it from all others.</h2>
+<pre>$id : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::$$id</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24output" id="$output"> </a><div class="element clickable property protected $output" data-toggle="collapse" data-target=".$output .collapse">
+<h2>The output that is potentially gathered and piped as output for this pipelet</h2>
+<pre>$output : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::$$output</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24phase" id="$phase"> </a><div class="element clickable property protected $phase" data-toggle="collapse" data-target=".$phase .collapse">
+<h2>The numbered phase of the pipelet to signify priority low-to-high</h2>
+<pre>$phase : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\OpenPipe_Pipelet_Abstract::$$phase</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a1</a> and<br>
+            generated on 2012-03-24T22:06:23-04:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -39,12 +39,12 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 			$html = $content->getOutput();
 		}
 		
-		//get the style and script tages in each content section
+		//get the link, style, and script tages in each content section
 		$this->styles = array_merge($this->styles, OpenPipe_Output_Util::extractStyleTags($html));
 		$this->links = array_merge($this->links, OpenPipe_Output_Util::extractLinkTags($html));
 		$this->scripts = array_merge($this->scripts, OpenPipe_Output_Util::extractScriptTags($html));
-				
-		$this->content .= $html;
+		
+		$this->injectHtml($id, $html);
 	}
 	
 	
@@ -82,6 +82,17 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 		$finalOutput .= '</body></html>';
 		
 		echo $finalOutput;
+	}
+	
+	
+	
+	
+	protected function injectHtml($id, $html){
+		if($this->content == ''){
+			$this->content = $html;
+		}else{
+			$this->content = preg_replace("/(<.*?pipelet-id=(?:\"$id\"|'$id').*?>)/ms", "\\1 $html", $this->content);
+		}
 	}
 	
 	

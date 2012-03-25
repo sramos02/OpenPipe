@@ -8,12 +8,14 @@ require_once('Util.php');
 class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 	
 	protected $styles;
+	protected $links;
 	protected $scripts;
 	protected $content;
 	
 	
 	public function bootstrap(){
 		$this->styles = array();
+		$this->links = array();
 		$this->scripts = array();
 		$this->content = '';
 	}
@@ -39,6 +41,7 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 		
 		//get the style and script tages in each content section
 		$this->styles = array_merge($this->styles, OpenPipe_Output_Util::extractStyleTags($html));
+		$this->links = array_merge($this->links, OpenPipe_Output_Util::extractLinkTags($html));
 		$this->scripts = array_merge($this->scripts, OpenPipe_Output_Util::extractScriptTags($html));
 				
 		$this->content .= $html;
@@ -57,6 +60,11 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 	public function clean(){
 	 	$finalOutput = "<!DOCTYPE HTML>\n<html><head>";
 		
+		//put the collected scripts before body close
+		foreach($this->links as $link){
+			$finalOutput .= $link;
+		}
+		
 		//put the collected styles in the head;
 		foreach($this->styles as $style){
 			$finalOutput .= $style;
@@ -64,6 +72,7 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 		
 		$finalOutput .= '</head><body>';
 		$finalOutput .= $this->content;
+
 		
 		//put the collected scripts before body close
 		foreach($this->scripts as $script){

@@ -10,6 +10,23 @@
 
 class OpenPipe_Output_Util  {
 	
+	/**
+	*	Given an html string extract the link information from the raw data and return
+	*	@param $html string the html string to extract script tags from
+	*	@return array array of strings containing link tags found within the html string
+	*/
+	public static function extractLinkTags(&$html){
+		preg_match_all('/<link.*?\/>/ms', $html, $matches, PREG_SET_ORDER);
+		$html = preg_replace('/<link.*?\/>/ms', '', $html);
+		
+		$links = array();
+		foreach($matches as $match){
+			$links[] = $match[0];
+		}
+
+		return $links;
+	}
+	
 	
 	/**
 	*	Given an html string extract the style information from the raw data and return
@@ -47,7 +64,7 @@ class OpenPipe_Output_Util  {
 	}
 	
 	
-	
+		
 	
 	/**
 	*	Outputs javascript data in piped format. Piped format implies minimized and able to be placed in a pipe JavaScript array

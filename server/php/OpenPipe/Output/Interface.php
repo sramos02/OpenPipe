@@ -16,9 +16,9 @@ interface OpenPipe_Output_Interface {
 	
 	public function preContent();
 	
-	public function phaseStart();
-	public function content();
-	public function phaseEnd();
+	public function phaseStart($phase);
+	public function content($content);
+	public function phaseEnd($phase);
 	
 	public function postContent();
 	

@@ -27,5 +27,5 @@ interface OpenPipe_Adapter_Interface {
 	/**
 	*	called once during the shut down of an OpenPipe runner
 	*/
-	function cleanup();
+	function cleanUp();
 }

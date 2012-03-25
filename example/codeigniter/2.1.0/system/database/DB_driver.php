@@ -349,7 +349,7 @@ class CI_DB_driver {
 		// If so we'll simply return true
 		if ($this->is_write_type($sql) === TRUE)
 		{
-			// If caching is enabled we'll auto-cleanup any
+			// If caching is enabled we'll auto-cleanUp any
 			// existing files related to this particular URI
 			if ($this->cache_on == TRUE AND $this->cache_autodel == TRUE AND $this->_cache_init())
 			{

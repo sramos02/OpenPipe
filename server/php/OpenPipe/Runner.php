@@ -32,8 +32,7 @@ class OpenPipe_Runner {
 	*	@access protected
 	*/	
 	protected $output;
-	
-	protected $js_path;
+
 
 
 	/**
@@ -41,118 +40,56 @@ class OpenPipe_Runner {
 	*	@param OpenPipe_Adapter_Interface $frameworkAdapter
 	*	@return OpenPipe_Runner
 	*/
-	public function __construct(OpenPipe_Adapter_Interface $frameworkAdapter, $js_path='js'){
+	public function __construct(OpenPipe_Adapter_Interface $frameworkAdapter, OpenPipe_Output_Interface $output){
 		$this->frameworkAdapter = $frameworkAdapter;
-		$this->js_path = $js_path;
+		$this->output = $output;
 	}
 
 	
 	/**
-	*	Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanup, and shutdown
+	*	Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanUp, and shutdown
 	*	@return void
 	*/
 	public function run(){
 		$this->bootstrap();
-		$this->header();
-		
-		$pipelets = array();
-		$pipeletsQueue = array();
-
-		$phase = 0;
-		$currentPipelet = null;
+		$this->output->preContent();
 
 		$layout = $this->frameworkAdapter->getOutput();
+		$this->output->content($layout);
 	
-		$layout = str_replace("'", "\\'", $layout);
-		op_output_echo_js("op.load({'id': 'op-container', 'html': '$layout' });");
 	
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
+		$pipeletsQueue = array();
+		
+		
+		$phase = 0;
+		$this->output->phaseStart($phase);
 		
 		while(!empty($pipelets)){
 			
 			$currentPipelet =  array_shift($pipelets);
-			$this->frameworkAdapter->getOutput($currentPipelet);
 			
-			$this->pipe($currentPipelet);
+			$this->frameworkAdapter->getOutput($currentPipelet);
+			$this->output->content($currentPipelet);
 			
 			$pipeletsQueue = array_merge($pipeletsQueue, OpenPipe_Pipelet_Factory::buildFromHtml($currentPipelet->getOutput(), $phase+1));
 			
 			if(empty($pipelets)){
 				$pipelets = $pipeletsQueue;
 				$pipeletsQueue = array();
-				
-				op_output_echo_js("op.phaseComplete($phase);");
-				++$phase;
-				
+
+				$this->output->phaseEnd(++$phase);
+				$this->output->phaseStart($phase);
+		
 			}
 			
 		}
 		
 		$this->footer();
-		$this->cleanup();
+		$this->cleanUp();
 	}
-	
-	
-	/**
-	*	Given an OpenPipe_Pipelet_Interface based object extract the relevant OpenPipe Javascript components and output as JavaScript to the end client browser
-	*	@param OpenPipe_Pipelet_Interface $pipelet pipelet to extract data from and send as OpenPipe client library loadable JSON data
-	*	@return void
-	*/
-	protected function pipe($pipelet){
-		$id = $pipelet->getId();
-		$css = $this->extractCssJsonArray($pipelet);
-		$js = $this->extractJsJsonArray($pipelet);
-		$html = $this->extractHtml($pipelet);
 
-		op_output_echo_js("op.load({'id': '$id', 'html': '$html', 'css': $css, 'scripts': $js});");
-
-	}
 	
-	
-	/**
-	*	Given an OpenPipe_Pipelet_Interface object extract the css information from the raw data and encode in a JSON array
-	*	@param OpenPipe_Pipelet_Interface $pipelet pipelet to extract CSS data and JSON encode as an array of CSS 
-	*	@return string JSON encoded array of CSS stylesheet extracted from the $pipelet output
-	*/
-	protected function extractCssJsonArray($pipelet){
-		preg_match_all('/<style.*?>.*?<\/style>/', $pipelet->getOutput(), $matches, PREG_SET_ORDER);
-		$pipelet->setOutput(preg_replace('/<style.*?>.*<\/style>/', '', $pipelet->getOutput()));
-		
-		$css = array();
-		foreach($matches as $match){
-			$css[] = $match[0];
-		}
-		
-		return json_encode($css);
-	}
-	
-	/**
-	*	Given an OpenPipe_Pipelet_Interface object extract the JavaScript information from the raw data and encode in a JSON array
-	*	@param OpenPipe_Pipelet_Interface $pipelet pipelet to extract JavaScript data and JSON encode as an array of JavaScript data
-	*	@return string JSON encoded array of JavaScript tags extracted from the $pipelet output
-	*/	
-	protected function extractJsJsonArray($pipelet){
-		preg_match_all('/<script.*?>.*?<\/script>/', $pipelet->getOutput(), $matches, PREG_SET_ORDER);
-		$pipelet->setOutput(preg_replace('/<script.*?>.*<\/script>/', '', $pipelet->getOutput()));
-		
-		$js = array();
-		foreach($matches as $match){
-			$js[] = $match[0];
-		}
-		
-		return json_encode($js);
-	}
-	
-	
-	/**
-	*	Obtain raw output from the given pipelet
-	*	@param OpenPipe_Pipelet_Interface $pipelet pipelet to obtain output from
-	*	@return string output from the pipelet object
-	*/
-	protected function extractHtml($pipelet){
-		$output = $pipelet->getOutput();
-		return $output;
-	}
 	
 
 	/**
@@ -160,50 +97,19 @@ class OpenPipe_Runner {
 	*	@return void
 	*/
 	protected function bootstrap(){
-		
-		//set 1024 newline - this forces soutput to the browser to start
-		echo str_repeat(" ",1024);
-		flush();
-		
 		$this->frameworkAdapter->bootstrap();
+		$this->output->bootstrap();
 	}
 	
 	/**
-	*   Performs cleanup of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanup() method at the very end
+	*   Performs cleanUp of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanUp() method at the very end
 	*	@return void
 	*/
-	protected function cleanup(){
-		$this->frameworkAdapter->cleanup();
+	protected function cleanUp(){
+		$this->frameworkAdapter->cleanUp();
+		$this->output->cleanUp();
 	}
-	
-	
-	/**
-	*	Outputs the framework for an HTTP Pipeline HTML document - this is essentially html and Javascript libraries. Note the html is unclosed (no ending body and html tags)
-	*	@return void
-	*/
-	protected function header(){
-		$header  = '<!DOCTYPE html><html><head>';
-		$header .= "<script type='text/javascript' src='{$this->js_path}/libs/jquery.js' ></script>";
-		$header .= "<script type='text/javascript' src='{$this->js_path}/libs/underscore.js'></script>";
-		$header .= "<script type='text/javascript' src='{$this->js_path}/openpipe.js'></script>";
-		$header .= '</head><body><div id="op-container"></div>';
-		
-		op_output_echo($header);
-		
-	}
-	
-	/**
-	*	Outputs the closing framework elements for an HTTP Pipeline HTML document - sends shutdown (done) method for client library and close initially open body and html tags.
-	*	@return void
-	*/
-	protected function footer(){
-		op_output_echo_js('op.done();');
-		op_output_echo('</body></html>');
-	}
-	
-	
-	
-	
 
+	
 	
 }

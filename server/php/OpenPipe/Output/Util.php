@@ -10,6 +10,45 @@
 
 class OpenPipe_Output_Util  {
 	
+	
+	/**
+	*	Given an html string extract the style information from the raw data and return
+	*	@param $html string the html string to extract style tags from
+	*	@return array array of strings containing style tags found within the html string
+	*/
+	public static function extractStyleTags(&$html){
+		preg_match_all('/<style.*?>.*?<\/style>/ms', $html, $matches, PREG_SET_ORDER);
+		$html = preg_replace('/<style.*?>.*<\/style>/ms', '', $html);
+		
+		$styles = array();
+		foreach($matches as $match){
+			$styles[] = $match[0];
+		}
+		
+		return $styles;
+	}
+	
+	
+	/**
+	*	Given an html string extract the  information from the raw data and return
+	*	@param $html string the html string to extract script tags from
+	*	@return array array of strings containing script tags found within the html string
+	*/
+	public static function extractScriptTags(&$html){
+		preg_match_all('/<script.*?>.*?<\/script>/ms', $html, $matches, PREG_SET_ORDER);
+		$html = preg_replace('/<script.*?>.*<\/script>/ms', '', $html);
+		
+		$scripts = array();
+		foreach($matches as $match){
+			$scripts[] = $match[0];
+		}
+		
+		return $scripts;
+	}
+	
+	
+	
+	
 	/**
 	*	Outputs javascript data in piped format. Piped format implies minimized and able to be placed in a pipe JavaScript array
 	*

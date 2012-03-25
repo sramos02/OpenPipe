@@ -53,10 +53,10 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods</li>
 <li class="method public "><a href="#__construct" title="__construct :: Constructs an OpenPipe_Runner object that communicated with the given OpenPipe_Adapter_Interface based object"><span class="description">Constructs an OpenPipe_Runner object that communicated with the given OpenPipe_Adapter_Interface based object</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#run" title="run :: Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanUp, and shutdown"><span class="description">Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanUp, and shutdown</span><pre>run()</pre></a></li>
+<li class="method public "><a href="#run" title="run :: Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, Script, and shutdown"><span class="description">Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, Script, and shutdown</span><pre>run()</pre></a></li>
 <li class="nav-header protected">» Protected</li>
 <li class="method protected "><a href="#bootstrap" title="bootstrap :: Performs bootstrapping of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface bootstrap() method at the very end"><span class="description">Performs bootstrapping of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface bootstrap() method at the very end</span><pre>bootstrap()</pre></a></li>
-<li class="method protected "><a href="#cleanUp" title="cleanUp :: Performs cleanUp of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanUp() method at the very end"><span class="description">Performs cleanUp of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanUp() method at the very end</span><pre>cleanUp()</pre></a></li>
+<li class="method protected "><a href="#Script" title="Script :: Performs Script of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface clean() method at the very end"><span class="description">Performs Script of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface clean() method at the very end</span><pre>clean()</pre></a></li>
 <li class="method protected "><a href="#extractCssJsonArray" title="extractCssJsonArray :: Given an OpenPipe_Pipelet_Interface object extract the css information from the raw data and encode in a JSON array"><span class="description">Given an OpenPipe_Pipelet_Interface object extract the css information from the raw data and encode in a JSON array</span><pre>extractCssJsonArray()</pre></a></li>
 <li class="method protected "><a href="#extractHtml" title="extractHtml :: Obtain raw output from the given pipelet"><span class="description">Obtain raw output from the given pipelet</span><pre>extractHtml()</pre></a></li>
 <li class="method protected "><a href="#extractJsJsonArray" title="extractJsJsonArray :: Given an OpenPipe_Pipelet_Interface object extract the JavaScript information from the raw data and encode in a JSON array"><span class="description">Given an OpenPipe_Pipelet_Interface object extract the JavaScript information from the raw data and encode in a JSON array</span><pre>extractJsJsonArray()</pre></a></li>
@@ -94,7 +94,7 @@
 </div></div>
 </div>
 <a name="run" id="run"></a><div class="element clickable method public run" data-toggle="collapse" data-target=".run .collapse">
-<h2>Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanUp, and shutdown</h2>
+<h2>Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, Script, and shutdown</h2>
 <pre>run() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8"><p class="long_description"><p>@return void</p></p></div></div>
@@ -105,9 +105,9 @@
 <div class="labels"></div>
 <div class="row collapse"><div class="span8"><p class="long_description"><p>@return void</p></p></div></div>
 </div>
-<a name="cleanUp" id="cleanUp"></a><div class="element clickable method protected cleanUp" data-toggle="collapse" data-target=".cleanUp .collapse">
-<h2>Performs cleanUp of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanUp() method at the very end</h2>
-<pre>cleanUp() </pre>
+<a name="Script" id="Script"></a><div class="element clickable method protected Script" data-toggle="collapse" data-target=".Script .collapse">
+<h2>Performs Script of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface clean() method at the very end</h2>
+<pre>clean() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="span8"><p class="long_description"><p>@return void</p></p></div></div>
 </div>

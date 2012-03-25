@@ -22,6 +22,6 @@ interface OpenPipe_Output_Interface {
 	
 	public function postContent();
 	
-	public function cleanUp();
+	public function clean();
 	
 }

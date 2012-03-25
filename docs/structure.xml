@@ -79,10 +79,10 @@
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="71" package="">
-        <name>cleanUp</name>
+        <name>Script</name>
         <type>function</type>
         <docblock line="68">
-          <description><![CDATA[This abstract class does not provided any cleanUp logic]]></description>
+          <description><![CDATA[This abstract class does not provided any Script logic]]></description>
           <long-description><![CDATA[]]></long-description>
         </docblock>
       </method>
@@ -252,7 +252,7 @@
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="default" line="30" package="">
-        <name>cleanUp</name>
+        <name>Script</name>
         <type>function</type>
         <docblock line="27">
           <description><![CDATA[called once during the shut down of an OpenPipe runner]]></description>
@@ -984,7 +984,7 @@
         <name>run</name>
         <type>function</type>
         <docblock line="43">
-          <description><![CDATA[Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanUp, and shutdown]]></description>
+          <description><![CDATA[Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, Script, and shutdown]]></description>
           <long-description><![CDATA[<p>@return void</p>]]></long-description>
         </docblock>
       </method>
@@ -1061,10 +1061,10 @@
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="protected" namespace="default" line="167" package="">
-        <name>cleanUp</name>
+        <name>Script</name>
         <type>function</type>
         <docblock line="163">
-          <description><![CDATA[Performs cleanUp of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanUp() method at the very end]]></description>
+          <description><![CDATA[Performs Script of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface clean() method at the very end]]></description>
           <long-description><![CDATA[<p>@return void</p>]]></long-description>
         </docblock>
       </method>

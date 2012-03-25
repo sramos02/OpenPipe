@@ -47,7 +47,7 @@ class OpenPipe_Runner {
 
 	
 	/**
-	*	Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, cleanUp, and shutdown
+	*	Is responsible for the ENTIRE OpenPipe HTTP pipelining lifecycle - handle all bootstrapping, base client library loading, output gathering, output transmission, Script, and shutdown
 	*	@return void
 	*/
 	public function run(){
@@ -57,13 +57,12 @@ class OpenPipe_Runner {
 		$layout = $this->frameworkAdapter->getOutput();
 		$this->output->content($layout);
 	
-	
+		$phase = 0;
+		$this->output->phaseStart($phase);
+		
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
 		$pipeletsQueue = array();
 		
-		
-		$phase = 0;
-		$this->output->phaseStart($phase);
 		
 		while(!empty($pipelets)){
 			
@@ -85,8 +84,7 @@ class OpenPipe_Runner {
 			
 		}
 		
-		$this->footer();
-		$this->cleanUp();
+		$this->clean();
 	}
 
 	
@@ -102,12 +100,12 @@ class OpenPipe_Runner {
 	}
 	
 	/**
-	*   Performs cleanUp of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface cleanUp() method at the very end
+	*   Performs Script of OpenPipe runner object and calls the injected OpenPipe_Adapter_Interface clean() method at the very end
 	*	@return void
 	*/
-	protected function cleanUp(){
-		$this->frameworkAdapter->cleanUp();
-		$this->output->cleanUp();
+	protected function clean(){
+		$this->frameworkAdapter->clean();
+		$this->output->clean();
 	}
 
 	

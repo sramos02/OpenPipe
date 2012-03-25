@@ -1,38 +1,79 @@
 <?php
 
 
+require_once('Interface.php');
+require_once('Util.php');
+
 
 class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 	
-
+	protected $styles;
+	protected $scripts;
+	protected $content;
+	
+	
 	public function bootstrap(){
-		
+		$this->styles = array();
+		$this->scripts = array();
+		$this->content = '';
 	}
 	
 	
 	public function preContent(){
-		
+		//nothing to do for standard based output
 	}
 	
 	
-	public function phaseStart(){
-		
+	public function phaseStart($phase){
+		//nothing to do for standard based output
 	}
 	
-	public function content(){
+	public function content($content){
+		if(is_string($content)){
+			$id = 'op-container';
+			$html = $content;
+		}else{
+			$id = $content->getId();
+			$html = $content->getOutput();
+		}
 		
+		//get the style and script tages in each content section
+		$this->styles = array_merge($this->styles, OpenPipe_Output_Util::extractStyleTags($html));
+		$this->scripts = array_merge($this->scripts, OpenPipe_Output_Util::extractScriptTags($html));
+				
+		$this->content .= $html;
 	}
-	public function phaseEnd(){
-		
+	
+	
+	public function phaseEnd($phase){ 
+		//nothing to do for standard based output
 	}
 	
 	
 	public function postContent(){
-		
+		//nothing to do for standard based output
 	}
 	
-	public function cleanUp(){
+	public function clean(){
+	 	$finalOutput = "<!DOCTYPE HTML>\n<html><head>";
 		
+		//put the collected styles in the head;
+		foreach($this->styles as $style){
+			$finalOutput .= $style;
+		}
+		
+		$finalOutput .= '</head><body>';
+		$finalOutput .= $this->content;
+		
+		//put the collected scripts before body close
+		foreach($this->scripts as $script){
+			$finalOutput .= $script;
+		}
+		
+		$finalOutput .= '</body></html>';
+		
+		echo $finalOutput;
 	}
+	
 	
 }

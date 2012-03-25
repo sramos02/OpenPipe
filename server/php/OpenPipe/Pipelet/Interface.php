@@ -10,7 +10,7 @@
 *	- A phase is used to determine the timing and priority of a pipelet when it is received by an end client browser
 *	- The output is any data gathered from the OpenPipe adapter (utilizing the pipelet id). This data is subsequently piped to an end client browser
 *
-*	@author Sean Kenny
+*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Pipelet
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>

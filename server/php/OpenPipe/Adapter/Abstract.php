@@ -4,7 +4,7 @@
 *	output for pipelets that are requested. Any object which extends this class will implement the getLayout() and getContent() methods. This abtract class will
 *	handle the details in regards to buffering output and sending it back to the requesting object.
 *
-*	@author Sean Kenny
+*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Adapter
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>

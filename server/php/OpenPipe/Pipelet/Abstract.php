@@ -2,7 +2,7 @@
 /**
 *	Abstract implementation of the OpenPipe_Pipelet_Interface. Provided basic bindings for all methods defined in the interface.
 *
-*	@author Sean Kenny
+*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Pipelet
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>

@@ -4,7 +4,7 @@
 *	In essence the adapter is responsible for making sure that the php based application is instantiated, bootstrapped, and run appropriately to obtain
 * 	the request element (either layout or pipelet)
 *
-*	@author Sean Kenny
+*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Adapter
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>

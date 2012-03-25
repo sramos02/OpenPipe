@@ -6,7 +6,7 @@
 *
 *	Once constructed calling this object run() method will kickoff the OpenPipe HTTP pipelining process
 *
-*	@author Sean Kenny
+*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version <version_id>
@@ -56,7 +56,7 @@ class OpenPipe_Runner {
 
 		$layout = $this->frameworkAdapter->getOutput();
 		$layout = str_replace("'", "\\'", $layout);
-		op_piped_echo_js("op.load({'id': 'op-container', 'html': '$layout' });");
+		op_output_echo_js("op.load({'id': 'op-container', 'html': '$layout' });");
 	
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
 		
@@ -73,7 +73,7 @@ class OpenPipe_Runner {
 				$pipelets = $pipeletsQueue;
 				$pipeletsQueue = array();
 				
-				op_piped_echo_js("op.phaseComplete($phase);");
+				op_output_echo_js("op.phaseComplete($phase);");
 				++$phase;
 				
 			}
@@ -96,7 +96,7 @@ class OpenPipe_Runner {
 		$js = $this->extractJsJsonArray($pipelet);
 		$html = $this->extractHtml($pipelet);
 
-		op_piped_echo_js("op.load({'id': '$id', 'html': '$html', 'css': $css, 'scripts': $js});");
+		op_output_echo_js("op.load({'id': '$id', 'html': '$html', 'css': $css, 'scripts': $js});");
 
 	}
 	
@@ -180,7 +180,7 @@ class OpenPipe_Runner {
 		$header .= "<script type='text/javascript' src='{$this->js_path}/openpipe.js'></script>";
 		$header .= '</head><body><div id="op-container"></div>';
 		
-		op_piped_echo($header);
+		op_output_echo($header);
 		
 	}
 	
@@ -189,8 +189,8 @@ class OpenPipe_Runner {
 	*	@return void
 	*/
 	protected function footer(){
-		op_piped_echo_js('op.done();');
-		op_piped_echo('</body></html>');
+		op_output_echo_js('op.done();');
+		op_output_echo('</body></html>');
 	}
 	
 	

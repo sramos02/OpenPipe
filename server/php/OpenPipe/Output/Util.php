@@ -1,18 +1,18 @@
 <?php
 
 /**
-*	Utility object which provides reusable output based services for HTTP Pipeline based systems
-*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
-*	@package OpenPipe_Output
-*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version 1.0.0
+* Utility object which provides reusable output based services for HTTP Pipeline based systems
+* @author Sean Kenny <skenny214@gmail.com>
+* @package OpenPipe_Output
+* @license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
+* @version 1.0.0
 */
 class OpenPipe_Output_Util  {
 	
 	/**
-	*	Given an html string extract the link information from the raw data and return
-	*	@param string $html the html string to extract script tags from
-	*	@return array strings containing link tags found within the html string
+	* Given an html string extract the link information from the raw data and return
+	* @param string $html the html string to extract script tags from
+	* @return array strings containing link tags found within the html string
 	*/
 	public static function extractLinkTags(&$html){
 		preg_match_all('/<link.*?\/>/ms', $html, $matches, PREG_SET_ORDER);
@@ -28,9 +28,9 @@ class OpenPipe_Output_Util  {
 	
 	
 	/**
-	*	Given an html string extract the style information from the raw data and return
-	*	@param string $html the html string to extract style tags from
-	*	@return array strings containing style tags found within the html string
+	* Given an html string extract the style information from the raw data and return
+	* @param string $html the html string to extract style tags from
+	* @return array strings containing style tags found within the html string
 	*/
 	public static function extractStyleTags(&$html){
 		preg_match_all('/<style.*?>.*?<\/style>/ms', $html, $matches, PREG_SET_ORDER);
@@ -46,9 +46,9 @@ class OpenPipe_Output_Util  {
 	
 	
 	/**
-	*	Given an html string extract the  information from the raw data and return
-	*	@param string $html the html string to extract script tags from
-	*	@return array strings containing script tags found within the html string
+	* Given an html string extract the  information from the raw data and return
+	* @param string $html the html string to extract script tags from
+	* @return array strings containing script tags found within the html string
 	*/
 	public static function extractScriptTags(&$html){
 		preg_match_all('/<script.*?>.*?<\/script>/ms', $html, $matches, PREG_SET_ORDER);
@@ -66,9 +66,11 @@ class OpenPipe_Output_Util  {
 		
 	
 	/**
-	*	Outputs javascript data in piped format. Piped format implies minimized and able to be placed in a pipe JavaScript array
-	*	@param string $output the output data (javascript) to be wrapped in a javascript tagged and echoed immediately
-	*	@param boolean $wrapTags wrap the output in a script opening and closing tag
+	* Outputs javascript data in piped format - Piped format implies minimized and able to be placed in a pipe JavaScript array
+	* @param string $output the output data (javascript) to be wrapped in a javascript tagged and echoed immediately
+	* @param boolean $wrapTags wrap the output in a script opening and closing tag
+	* @param int|null $outputBufferSize the size of the buffer currently in use - used to determine how much passing must be used for output to skip buffering
+	* @param string $paddingCharacter the character that will be used if padding must occur
 	*/
 	public static function echoJsNow($output, $wrapTags=true, $outputBufferSize=null, $paddingCharacter=' '){
 		$output = str_replace("\n", '', $output);
@@ -79,13 +81,12 @@ class OpenPipe_Output_Util  {
 	
 	
 	/**
-	*   Highly reusable output method which echos data NOW. by NOW we mean in an intelligent way that takes into account output buffering in PHP
-	*	as well as browser based deferred display of data (until data is of x bytes). Using this utility method one should not have to worry about how 
-	*	to immediately send data to an end client browser NOW.
-	*	@param string $output the data to output NOW!
-	*	@param	int|null $outputBufferSize the output buffer currently in use. if a string is not of an output buffer length it will be padded to meet the minimum buffer size. If not provided this value will be looked up from the PHP ini configuration value 
-	*	@param string $paddingCharacter the character to pad output with if the buffer is larger than the data to output. Default to a space  - ' '
-	*	@return void doesn't return anything - output data directly. Catch in output buffer (ob_start()) if you need it for some weird reason.
+	* Highly reusable output method which echos data NOW - by NOW we mean in an intelligent way that takes into account output buffering in PHP
+	* as well as browser based deferred display of data (until data is of x bytes) - Using this utility method one should not have to worry about how 
+	* to immediately send data to an end client browser NOW
+	* @param string $output the data to output NOW!
+	* @param int|null $outputBufferSize the output buffer currently in use -if a string is not of an output buffer length it will be padded to meet the minimum buffer size - If not provided this value will be looked up from the PHP ini configuration value 
+	* @param string $paddingCharacter the character to pad output with if the buffer is larger than the data to output
 	*/
 	public static function echoNow($output, $outputBufferSize=null, $paddingCharacter = ' '){
 		

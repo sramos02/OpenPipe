@@ -7,32 +7,32 @@ $BM; $CFG; $UNI;
 
 
 /**
-*	A PMVC adapter which provides an implementation of for CodeIgniter 2.x applications to take advantage of piped output
-*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
-*	@package OpenPipe_Adapter
-*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version 1.0.0
+* A PMVC adapter which provides an implementation of for CodeIgniter 2.x applications to take advantage of piped output
+* @author Sean Kenny <skenny214@gmail.com>
+* @package OpenPipe_Adapter
+* @license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
+* @version 1.0.0
 */
 class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	
 	/**
-	*	The root path of the currently active CodeIgniter application
-	*	@var string
+	* The root path of the currently active CodeIgniter application
+	* @var string
 	*/
 	protected $appRootPath;
 	
 	
 	/**
-	*	The file name within the $appRootPath that bootstraps and runs a CodeIgniter application
-	*	@var string 
+	* The file name within the $appRootPath that bootstraps and runs a CodeIgniter application
+	* @var string 
 	*/
 	protected $indexFileName;
 	
 	/**
-	*	Constructs a new CodeIgniter pipe adapter
-	*	@param string $appRootPath the root path of the currently active CodeIgniter application
-	*	@param string $indexFileName the file name within the $appRootPath that bootstraps and runs a CodeIgniter application
-	*	@return OpenPipe_Adapter_Pvc_CodeIgniter new instance of this object
+	* Constructs a new CodeIgniter pipe adapter
+	* @param string $appRootPath the root path of the currently active CodeIgniter application
+	* @param string $indexFileName the file name within the $appRootPath that bootstraps and runs a CodeIgniter application
+	* @return OpenPipe_Adapter_Pvc_CodeIgniter new instance of this object
 	*/
 	public function __construct($appRootPath, $indexFileName='index.pipe.php'){
 		$this->appRootPath = rtrim($appRootPath, '/');
@@ -40,8 +40,7 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	}
 	
 	/**
-	*	loads a php layout by starting the code igniter index file
-	*	@param string $indexFileName the index file name which bootstraps and loads the CodeIgniter applications
+	* loads a php layout by starting the code igniter index file
 	*/
  	protected function getLayout(){
 		global $BM, $CFG, $UNI;	
@@ -50,8 +49,8 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	}
 
 	/**
-	*	loads a php pipelet via CodeIgniter controller - being sure to play nice with output class
-	*	@param OpenPipe_Pipelet_Interface $pipelet the pipelet to be used.
+	* loads a php pipelet via CodeIgniter controller - being sure to play nice with output class
+	* @param OpenPipe_Pipelet_Interface $pipelet the pipelet to be used.
 	*/	
 	protected function getContent(OpenPipe_Pipelet_Interface $pipelet){
 		global $BM, $CFG, $UNI;	

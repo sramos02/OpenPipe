@@ -3,16 +3,16 @@
 require_once('Interface.php');
 
 /**
-*	Abstract implementation of the OpenPipe_Pipelet_Interface. Provided basic bindings for all methods defined in the interface.
-*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
-*	@package OpenPipe_Pipelet
-*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version 1.0.0
+* Abstract implementation of the OpenPipe_Pipelet_Interface. Provided basic bindings for all methods defined in the interface.
+* @author Sean Kenny <skenny214@gmail.com>
+* @package OpenPipe_Pipelet
+* @license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
+* @version 1.0.0
 */
 abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	
 	/**
-     * The unique identifier for this pipelet. that distinguishes it from all others.
+     * The unique identifier for this pipelet - that distinguishes it from all others.
      * @var string
      */
 	protected $id;
@@ -32,15 +32,15 @@ abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	
 	
 	/**
-	*	Sets the id of the pipelet (used to determine what content to gather from a Pipe Adapter)
-	*	@param string $id a unique identifier for the pipelet that will signify importance to the client adapter and allow data to be looked up/generated accordingly
+	* Sets the id of the pipelet (used to determine what content to gather from a Pipe Adapter)
+	* @param string $id a unique identifier for the pipelet that will signify importance to the client adapter and allow data to be looked up/generated accordingly
 	*/
 	public function setId($id){
 		$this->id = $id;
 	}
 	
 	/**
-	*	Returns the current set pipelet id
+	* Returns the current set pipelet id
 	*/
 	public function getId(){
 		return $this->id;
@@ -48,16 +48,15 @@ abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	
 	
 	/**
-	*	Sets the phase of the pipelet (used to determine loading priorities and sequences)
-	*	
-	*	@param int|string $phase to set. Lower numbers are higher priority (1), than higher numbers (999)
+	* Sets the phase of the pipelet (used to determine loading priorities and sequences)
+	* @param int|string $phase to set - Lower numbers are higher priority (1), than higher numbers (999)
 	*/
 	public function setPhase($phase){
 		$this->phase = $phase;
 	}
 	
 	/**
-	*	Return the current set phase number
+	* Return the current set phase number
 	*/
 	public function getPhase(){
 		return $this->phase;
@@ -65,16 +64,15 @@ abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	
 
 	/**
-	*  Set the output that has been gathered for this pipelet from a Pipelet_Adapter
-	*  @param string $output the output string that has been generated/gathered for this given pipelet
+	* Set the output that has been gathered for this pipelet from a Pipelet_Adapter
+	* @param string $output the output string that has been generated/gathered for this given pipelet
 	*/
 	public function setOutput($output){
 		$this->output = $output;
 	}
 
 	/**
-	*	Return the output that is currently set for the pipelet
-	*	@param string the current output recorded for this pipelet
+	* Return the output that is currently set for the pipelet
 	*/	
 	public function getOutput(){
 		return $this->output;

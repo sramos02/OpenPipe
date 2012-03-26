@@ -1,39 +1,32 @@
 <?php
-/**
-*	Abstract implementation of the OpenPipe_Pipelet_Interface. Provided basic bindings for all methods defined in the interface.
-*
-*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
-*	@package OpenPipe_Pipelet
-*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version 1.0.0
-**/
 
 require_once('Interface.php');
 
+/**
+*	Abstract implementation of the OpenPipe_Pipelet_Interface. Provided basic bindings for all methods defined in the interface.
+*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
+*	@package OpenPipe_Pipelet
+*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
+*	@version 1.0.0
+*/
 abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	
 	/**
      * The unique identifier for this pipelet. that distinguishes it from all others.
-     *
      * @var string
-     * @access protected
      */
 	protected $id;
 	
 	/**
      * The numbered phase of the pipelet to signify priority low-to-high
-     *
      * @var string
-     * @access protected
      */
 	protected $phase;
 	
 	
 	/**
      * The output that is potentially gathered and piped as output for this pipelet
-     *
      * @var string
-     * @access protected
      */
 	protected $output;
 	
@@ -57,7 +50,7 @@ abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 	/**
 	*	Sets the phase of the pipelet (used to determine loading priorities and sequences)
 	*	
-	*	@param	int|string phase to set. Lower numbers are higher priority (1), than higher numbers (999)
+	*	@param int|string $phase to set. Lower numbers are higher priority (1), than higher numbers (999)
 	*/
 	public function setPhase($phase){
 		$this->phase = $phase;
@@ -73,8 +66,7 @@ abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 
 	/**
 	*  Set the output that has been gathered for this pipelet from a Pipelet_Adapter
-	*
-	*  param string $output the output string that has been generated/gathered for this given pipelet
+	*  @param string $output the output string that has been generated/gathered for this given pipelet
 	*/
 	public function setOutput($output){
 		$this->output = $output;
@@ -82,6 +74,7 @@ abstract class OpenPipe_Pipelet_Abstract implements OpenPipe_Pipelet_Interface {
 
 	/**
 	*	Return the output that is currently set for the pipelet
+	*	@param string the current output recorded for this pipelet
 	*/	
 	public function getOutput(){
 		return $this->output;

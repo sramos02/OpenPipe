@@ -1,21 +1,19 @@
 <?php
+
+require_once('Interface.php');
+require_once('Util.php');
+
 /**
 *   Implementation of an OpenPipe output interface that sends data as a standard HTML document
 *	Content pieces are used to construct a complete HTML document, placing CSS and JavaScript in proper
 *	placement, and inject each content piece within a pipelet place holder on the server side. It's 
 *	important to note that no javascript is required to complete output on the client web browser while
 *	utilizing this output implementation
-*
-*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
+*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Output
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version 1.0.0
-**/
-
-require_once('Interface.php');
-require_once('Util.php');
-
-
+*/
 class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 	
 	/**
@@ -60,8 +58,7 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 	
 	/**
 	*	takes content and builds an complete html document piece by piece
-	*	
-	*	@param $content string|OpenPipe_Pipelet_Interface the html content that will have data extracted and assigned for final output
+	*	@param string|OpenPipe_Pipelet_Interface $content the html content that will have data extracted and assigned for final output
 	*/
 	public function content($content){
 		if(is_string($content)){
@@ -131,9 +128,8 @@ class OpenPipe_Output_Standard implements OpenPipe_Output_Interface {
 	
 	/**
 	*	Attempts to inject the given html data into the currently recorded data. The point of injection is determined by the id provided
-	*
-	*	@param $pipeletId string the identifier for the pipelet that will have html content injected within it
-	*	@param $html string the content that will be injected into the current gathered output
+	*	@param string $pipeletId the identifier for the pipelet that will have html content injected within it
+	*	@param string $html the content that will be injected into the current gathered output
 	*/
 	protected function injectHtml($pipeletId, $html){
 		

@@ -1,14 +1,12 @@
 <?php
+
 /**
 *	An interface defining the output mechanism for OpenPipe. This abstraction allows for the implementing class to handle individual pipelet output appropriately
-*
-*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
+*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Pipelet
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version 1.0.0
-**/
-
-
+*/
 interface OpenPipe_Output_Interface {
 	
 	/**
@@ -25,8 +23,7 @@ interface OpenPipe_Output_Interface {
 	
 	/**
 	*	Called when content is ready for output. This content is already generated HTML string
-	*
-	*	@param $content string html data
+	*	@param string $content html data
 	*/
 	public function content($content);
 	

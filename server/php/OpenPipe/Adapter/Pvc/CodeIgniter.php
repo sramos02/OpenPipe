@@ -1,12 +1,4 @@
 <?php
-/**
-*	A PMVC adapter which provides an implementation of for CodeIgniter 2.x applications to take advantage of piped output
-*
-*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
-*	@package OpenPipe_Adapter
-*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version 1.0.0
-**/
 
 require_once(dirname(__FILE__).'/../Abstract.php');
 
@@ -14,12 +6,18 @@ require_once(dirname(__FILE__).'/../Abstract.php');
 $BM; $CFG; $UNI;
 
 
+/**
+*	A PMVC adapter which provides an implementation of for CodeIgniter 2.x applications to take advantage of piped output
+*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
+*	@package OpenPipe_Adapter
+*	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
+*	@version 1.0.0
+*/
 class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	
 	/**
 	*	The root path of the currently active CodeIgniter application
 	*	@var string
-	*	@access protected
 	*/
 	protected $appRootPath;
 	
@@ -27,7 +25,6 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	/**
 	*	The file name within the $appRootPath that bootstraps and runs a CodeIgniter application
 	*	@var string 
-	*	@access protected
 	*/
 	protected $indexFileName;
 	
@@ -44,9 +41,7 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 	
 	/**
 	*	loads a php layout by starting the code igniter index file
-	*	
 	*	@param string $indexFileName the index file name which bootstraps and loads the CodeIgniter applications
-	*	@return void
 	*/
  	protected function getLayout(){
 		global $BM, $CFG, $UNI;	
@@ -56,9 +51,7 @@ class OpenPipe_Adapter_Pvc_CodeIgniter extends OpenPipe_Adapter_Abstract {
 
 	/**
 	*	loads a php pipelet via CodeIgniter controller - being sure to play nice with output class
-	*	
 	*	@param OpenPipe_Pipelet_Interface $pipelet the pipelet to be used.
-	*	@return void
 	*/	
 	protected function getContent(OpenPipe_Pipelet_Interface $pipelet){
 		global $BM, $CFG, $UNI;	

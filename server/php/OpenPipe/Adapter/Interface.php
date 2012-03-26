@@ -1,15 +1,14 @@
 <?php
+
 /**
 *	An interface defining an adapter which bridges php based applications with OpenPipe. OpenPipe will call the adapter to load layouts and pipelets. 
 *	In essence the adapter is responsible for making sure that the php based application is instantiated, bootstrapped, and run appropriately to obtain
 * 	the request element (either layout or pipelet)
-*
-*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
+*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Adapter
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version 1.0.0
-**/
-
+*/
 interface OpenPipe_Adapter_Interface {
 	
 	/**

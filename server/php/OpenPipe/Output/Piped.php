@@ -1,19 +1,18 @@
 <?php
+
+require_once('Interface.php');
+require_once('Util.php');
+
 /**
 *   Implementation of an OpenPipe output interface that sends data via an HTTP pipeline. 
 *	This is done by loading the openpipe.js client library and associated libraries.
 *	The output handler handles extracting pipelet html data, and transmitting it as packed JSON object -
 *	which will be unpacked by the client openpipe.js library
-*
-*	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
+*	@author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Output
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
 *	@version 1.0.0
-**/
-
-require_once('Interface.php');
-require_once('Util.php');
-
+*/
 class OpenPipe_Output_Piped implements OpenPipe_Output_Interface {
 	
 	/**
@@ -57,8 +56,7 @@ class OpenPipe_Output_Piped implements OpenPipe_Output_Interface {
 	
 	/**
 	*	Extracts and outputs data in an openpipe.js friendly way
-	*	
-	*	@param $content string the content to be piped immediately. If CSS/JS is contained within the content, this will be extracted and handled automatically
+	*	@param string $content the content to be piped immediately. If CSS/JS is contained within the content, this will be extracted and handled automatically
 	*/
 	public function content($content){
 		
@@ -92,7 +90,6 @@ class OpenPipe_Output_Piped implements OpenPipe_Output_Interface {
 
 	/**
 	*	Outputs the closing framework elements for an HTTP Pipeline HTML document - sends shutdown (done) method for client library and close initially open body and html tags.
-	*	@return void
 	*/	
 	public function postContent(){
 		OpenPipe_Output_Util::echoJsNow('op.done();');

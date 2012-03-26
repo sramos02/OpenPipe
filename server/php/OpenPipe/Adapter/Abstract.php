@@ -25,7 +25,7 @@ abstract class OpenPipe_Adapter_Abstract implements OpenPipe_Adapter_Interface{
 		if($pipelet === null){
 			$this->getLayout();
 		}else{
-			$this->getConten	t($pipelet);
+			$this->getContent($pipelet);
 			
 		}
 		

@@ -9,7 +9,7 @@
 *	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version <version_id>
+*	@version 1.0.0
 **/
 
 
@@ -54,15 +54,13 @@ class OpenPipe_Runner {
 		$this->bootstrap();
 		$this->output->preContent();
 
+		//ask the framework for the root output layer (the layout!). This contains the starting point for all pipelets to get recognized and loaded from
 		$layout = $this->frameworkAdapter->getOutput();
 		$this->output->content($layout);
 	
 		$phase = 0;
-		$this->output->phaseStart($phase);
-		
 		$pipelets= OpenPipe_Pipelet_Factory::buildFromHtml($layout, $phase);
 		$pipeletsQueue = array();
-		
 		
 		while(!empty($pipelets)){
 			
@@ -71,14 +69,16 @@ class OpenPipe_Runner {
 			$this->frameworkAdapter->getOutput($currentPipelet);
 			$this->output->content($currentPipelet);
 			
+			
+			//add piplets contained within the current pipelet to the the pipelet queue - the pipelet queue will get loaded as part of the next phase
 			$pipeletsQueue = array_merge($pipeletsQueue, OpenPipe_Pipelet_Factory::buildFromHtml($currentPipelet->getOutput(), $phase+1));
 			
+			//once the current pipelets have been completed. Check the queue. If the queue is not empty then move batch to the pipelets array for processing, and mark the current pahse complete
 			if(empty($pipelets)){
 				$pipelets = $pipeletsQueue;
 				$pipeletsQueue = array();
 
-				$this->output->phaseEnd(++$phase);
-				$this->output->phaseStart($phase);
+				$this->output->phaseComplete(++$phase);
 		
 			}
 			

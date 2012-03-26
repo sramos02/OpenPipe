@@ -5,7 +5,7 @@
 *	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Output
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version <version_id>
+*	@version 1.0.0
 **/
 
 class OpenPipe_Output_Util  {
@@ -109,21 +109,4 @@ class OpenPipe_Output_Util  {
 		flush();
 	}
 	
-}
-
-
-
-/**
-* Convenience function for OpenPipe_Output_Util::echoNow($output, $outputBufferSize, $paddingCharacter)
-*/
-function op_output_echo($output, $outputBufferSize=null, $paddingCharacter = ' '){
-	OpenPipe_Output_Util::echoNow($output, $outputBufferSize, $paddingCharacter);
-}
-
-
-/**
-*	Convenience function for OpenPipe_Output_Util::echoJsNow($output, $wrapTags, $outputBufferSize, $paddingCharacter);
-*/
-function op_output_echo_js($output, $wrapTags=true, $outputBufferSize=null, $paddingCharacter=' '){
-	OpenPipe_Output_Util::echoJsNow($output, $wrapTags, $outputBufferSize, $paddingCharacter);
 }

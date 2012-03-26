@@ -7,7 +7,7 @@
 *	@author Sean Kenny @author Sean Kenny <skenny214@gmail.com>|<kennys1@southernct.edu>
 *	@package OpenPipe_Adapter
 *	@license (c) 2011-2012 Sean Kenny, Southern Connecticut State University (SCSU).
-*	@version <version_id>
+*	@version 1.0.0
 **/
 
 require_once('Interface.php');

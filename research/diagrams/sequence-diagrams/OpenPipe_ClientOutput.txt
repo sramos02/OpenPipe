@@ -1,0 +1,23 @@
+title OpenPipe - Client Output
+
+Browser->OpenPipe_Client: init
+
+loop load-segments
+
+ Browser->OpenPipe_Client: loadSegment
+ OpenPipe_Client->OpenPipe_Client: registerPhase
+ OpenPipe_Client->OpenPipe_Client: loadCss
+ OpenPipe_Client->OpenPipe_Client: loadHtml
+ OpenPipe_Client->OpenPipe_Client: pushScripts
+
+ opt mark-phase-complete
+  Browser->OpenPipe_Client: phaseComplete
+  OpenPipe_Client->OpenPipe_Client: loadScripts
+ end
+
+ Browser->OpenPipe_Client: done
+
+end
+
+
+

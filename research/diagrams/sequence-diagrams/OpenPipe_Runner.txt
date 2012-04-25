@@ -1,0 +1,29 @@
+title OpenPipe - Pipelet Generation Runner
+
+
+OpenPipe_Runner->OpenPipe_Runner: bootstrap
+OpenPipe_Runner->OpenPipe_Adapter: bootstrap
+OpenPipe_Runner->OpenPipe_Output: bootstrap
+
+OpenPipe_Runner->OpenPipe_Output: preContent
+
+OpenPipe_Runner->OpenPipe_Adapter: getOutput
+OpenPipe_Runner->OpenPipe_Output: content
+OpenPipe_Runner->OpenPipe_Pipelet_Factory: buildFromHtml
+
+loop pipelet-generation-and-output
+ OpenPipe_Runner->OpenPipe_Adapter: getOutput 
+ OpenPipe_Runner->OpenPipe_Output: content
+OpenPipe_Runner->OpenPipe_Pipelet_Factory:buildFromHtml 
+
+ opt    
+  OpenPipe_Runner->OpenPipe_Output: phaseComplete
+ end
+
+end
+
+OpenPipe_Runner->OpenPipe_Runner: clean
+OpenPipe_Runner->OpenPipe_Adapter: clean
+OpenPipe_Runner->OpenPipe_Output: clean
+
+

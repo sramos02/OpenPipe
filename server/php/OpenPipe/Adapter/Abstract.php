@@ -63,7 +63,7 @@ abstract class OpenPipe_Adapter_Abstract implements OpenPipe_Adapter_Interface{
 	public function bootstrap(){ }
 	
 	/**
-	* This abstract class does not provided any Script logic
+	* This abstract class does not provided any clean logic
 	*/
 	public function clean(){ }
 		

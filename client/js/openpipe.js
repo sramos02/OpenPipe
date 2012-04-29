@@ -7,12 +7,12 @@
 	// Establish the root object, `window` in the browser, or `global` on the server.
 	var root = this;
 
-	// Save the previous value of the `|` variable.
+	// Save the previous value of the `op` variable.
 	var previousOpenPipe = root.op;
 	
 	var isFirstSegment = true;
 	
-	var lastPhase = -1;
+	var lastPhase = 0;
 	var phases = [];
 	var scripts = [];
 
@@ -103,18 +103,30 @@
 
 	};
 
-	//push a single script block onto a phase of the pipeline cycel. Once the phase is marked complete all the script in that pahse will be loaded (and execueted)
+	//push a single script block onto a phase of the pipeline cycle. Once the phase is marked complete all the script in that pahse will be loaded (and execueted)
 	op.pushScript = function(script, phase){
-		if(typeof(phase) == 'undefined') phase = 0;
+		if(typeof(phase) == 'undefined') phase=lastPhase+1;
 		if(typeof(scripts[phase]) == 'undefined') scripts[phase] = [];
-
 		scripts[phase].push(script);
 	};
  
 	op.loadScripts = function(phase){
 		var that = this;
-		_.each(scripts[phase], function(script){
-			$('body').append(script);
+		_.each(scripts[phase], function(script_item){
+			jq_script = $(script_item);
+
+			//if this is an external javascript then we make a new dom object to house it from the string data
+			if(typeof(jq_script.src) != 'undefined'){
+				var script = document.createElement( 'script' );
+				script.type = jq_script.attr('type') || '';
+				script.src = jq_script.attr('src') || '';
+				$('body').append(script);
+			
+			//if this was just an internal javascript append to body and jquery will execute it
+			} else {
+				$('body').append(script_item);
+			}
+			
 		});
 	};
 

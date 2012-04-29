@@ -1,5 +1,7 @@
 <?php usleep(200000); ?>
 <div id="posts">
+	<link rel="stylesheet" type="text/css" href="../public/css/content_posts.css" />
+
 	<div class="post">
 		<div class="post-image">
 			<img src="../public/images/fakebook/mock/profile_1.jpg" />

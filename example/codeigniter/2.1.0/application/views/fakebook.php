@@ -1,10 +1,10 @@
 
 <div id="container" >
 	
-	<link rel="stylesheet" type="text/css" href="../public/css/fakebook.css" />
+	<link rel="stylesheet" type="text/css" href="../public/css/global.css" />
 
 
-	<div id="header" pipelet-id="header" ></div>
+	<div pipelet-id="header" ></div>
 
 	<section id="content-wrapper" >
 

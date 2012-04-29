@@ -1,0 +1,33 @@
+/*---- POSTS ----*/
+
+#post-input {
+	margin-top: 10px;	
+}
+
+.post {
+	padding: 10px 0px;
+	margin: 10px 0px;
+	border-bottom: thin solid #CCCCCC;
+	clear: both;
+	overflow: auto;
+}
+
+.post .post-image{
+	float: left;
+	padding: 0px 10px;
+}
+
+.post .post-content {
+	float: right;
+	width: 470px;
+}
+.post h2 {
+	margin: 0px;
+	color: #3B5998;
+	font-size: 11px;
+}
+
+.post p {
+	margin: 5px;
+	padding: 0px;
+}

@@ -1,0 +1,114 @@
+body * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body{
+	color: #ccc;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+	text-align: center;
+	margin: 0px;
+	overflow: auto;
+}
+
+a {
+	color: #d8dfea;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+}
+
+
+
+
+#left-sidebar {
+	float: left;
+	width: 200px;
+	min-height: 600px;
+	border-right: 1px solid #ccc;
+}
+
+#content {
+	float: left;
+	width: 545px;
+	min-height: 600px;
+}
+
+#content-wrapper {
+	width: 960px;
+	margin: auto;
+	text-align: left;
+	
+	color: #000000;
+}
+
+#right-sidebar {
+	float: right;
+	width: 200px;
+	min-height: 600px;
+	border-right: 1px solid #ccc;
+}
+
+
+
+/*----- NAV CATS ----*/
+
+.nav-category {
+	font-size: 11px;
+	margin: 20px;
+}
+
+.nav-category h2 {
+	color: #999999;
+	font-size: 11px;
+	margin: 0px;
+}
+
+.nav-category ul {
+	margin: 0px;
+	padding: 0px;	
+}
+
+.nav-category ul li{
+	margin: 3px 0px;
+	padding: 2px 0px;
+	list-style-type: none;	
+	padding-left: 25px;
+	background-repeat: no-repeat;
+}
+
+
+.icon-news-feed {
+	background-image: url('../images/fakebook/icons/icon-news-feed.jpg');
+}
+
+.icon-messages {
+	background-image: url('../images/fakebook/icons/icon-messages.jpg');
+}
+
+.icon-events {
+	background-image: url('../images/fakebook/icons/icon-events.jpg');
+}
+
+.icon-find-friends {
+	background-image: url('../images/fakebook/icons/icon-find-friends.jpg');
+}
+
+.icon-groups {
+	background-image: url('../images/fakebook/icons/icon-groups.jpg');
+}
+
+.icon-friends {
+	background-image: url('../images/fakebook/icons/icon-friends.jpg');
+}
+
+.icon-apps{
+	background-image: url('../images/fakebook/icons/icon-apps.jpg');
+}
+
+
+

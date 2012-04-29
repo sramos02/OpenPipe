@@ -70,7 +70,7 @@ class OpenPipe_Output_Piped implements OpenPipe_Output_Interface {
 			$html = $content->getOutput();
 		}
 		
-		$css = OpenPipe_Output_Util::extractStyleTags($html);
+		$css = array_merge(OpenPipe_Output_Util::extractLinkTags($html), OpenPipe_Output_Util::extractStyleTags($html));
 		$js = OpenPipe_Output_Util::extractScriptTags($html);
 		
 		$html = str_replace("'", "\\'", $html);

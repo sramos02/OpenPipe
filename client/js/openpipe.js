@@ -110,6 +110,7 @@
 		scripts[phase].push(script);
 	};
  
+	//loads all the pusheds script for a given phase
 	op.loadScripts = function(phase){
 		var that = this;
 		_.each(scripts[phase], function(script_item){

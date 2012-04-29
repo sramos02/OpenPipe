@@ -49,7 +49,7 @@ class OpenPipe_Output_Piped implements OpenPipe_Output_Interface {
 		$header .= "<script type='text/javascript' src='{$this->jsPath}/libs/jquery.js' ></script>";
 		$header .= "<script type='text/javascript' src='{$this->jsPath}/libs/underscore.js'></script>";
 		$header .= "<script type='text/javascript' src='{$this->jsPath}/openpipe.js'></script>";
-		$header .= '</head><body><div id="op-container"></div>';
+		$header .= '</head><body><div pipelet-id="op-container"></div>';
 
 		OpenPipe_Output_Util::echoNow($header);
 	}

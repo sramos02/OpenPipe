@@ -33,18 +33,18 @@
 	
 	<div id="left-sidebar">
 		&nbsp;
-		<div id="pipelet3" pipelet-id="pipelet3" ></div>
+		<div pipelet-id="pipelet3" ></div>
 	</div>
 	
 	<div id="content">
 		&nbsp;
-		<div id="pipelet1" pipelet-id="pipelet1" pipelet-priority="1" ></div>
+		<div pipelet-id="pipelet1" pipelet-priority="1" ></div>
 		
 	</div>
 	
 	<div id="right-sidebar">
 		&nbsp;
-		<div id="pipelet2" pipelet-id="pipelet2" ></div>
+		<div pipelet-id="pipelet2" ></div>
 	</div>
 	
 </div>

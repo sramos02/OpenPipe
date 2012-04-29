@@ -21,8 +21,8 @@
 
 	//init the OpenPipe client - hide pipelets initally (no FLOCs)
 	op.init = function(){
-		$('html').append('<div id="op-loading">loading</div>');
-		$('.pipelet').hide();
+		$("*[pipelet-loading-indicator]").append('<div class="op-loading">loading</div>');
+		$("*[pipelet-auto-show='true']").hide();
 	};
 
 	//load a given segment object into the piplined document
@@ -59,14 +59,14 @@
 	op.loadSegment = function(segment){
 		if(isFirstSegment === true){
 			isFirstSegment = false;
-			$('#op-loading').hide();
+			$("*[pipelet-loading-indicator]").hide();
 		}
 		
 		this.registerPhase(segment.phase);
 		
 		if(typeof(segment.css) != 'undefined') this.loadCss(segment.css);
 		if(typeof(segment.html) != 'undefined') this.loadHtml(segment.html, segment.id);
-		$('#'+segment.id).show();
+		$("*[pipelet-id='"+segment.id+"']").show();
 		
 		if(typeof(segment.scripts) != 'undefined') this.pushScripts(segment.scripts, segment.phase);
 	};
@@ -77,7 +77,7 @@
 	op.loadHtml = function(html, id){
 		if(typeof(id) == 'undefined') id = 'content';
 		
-		$('#'+id).append(html);
+		$("*[pipelet-id='"+id+"']").append(html);
 	};
 
 	//load css into the head of the documents

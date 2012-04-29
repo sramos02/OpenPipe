@@ -12,7 +12,7 @@
 				diam egestas. Integer a dolor nec justo
 			</p>
 			
-			<div id="post_comments" pipelet-id="post_comments" ></div>
+			<div pipelet-id="post_comments" ></div>
 
 		</div>
 		

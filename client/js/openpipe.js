@@ -118,7 +118,7 @@
 
 			//if this is an external javascript then we make a new dom object to house it from the string data
 			if(typeof(jq_script.src) != 'undefined'){
-				var script = document.createElement( 'script' );
+				var script = document.createElement('script');
 				script.type = jq_script.attr('type') || '';
 				script.src = jq_script.attr('src') || '';
 				$('body').append(script);

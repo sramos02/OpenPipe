@@ -3,6 +3,13 @@
 //     OpenPipe is freely distributable under the MIT license.
 
 (function() {
+
+	//debug vars - for timing
+	var isDebug = (document.location.search.indexOf('debug=true') != -1);
+	var debugInitTime;
+	var debugDoneTime;
+	var debugLastSegmentLoadTime;
+
 	
 	// Establish the root object, `window` in the browser, or `global` on the server.
 	var root = this;
@@ -21,6 +28,12 @@
 
 	//init the OpenPipe client - hide pipelets initally (no FLOCs)
 	op.init = function(){
+		//record times for logging
+		if(isDebug === true){
+			debugInitTime = new Date().getTime();
+			debugLastSegmentLoadTime = debugInitTime;
+		}
+
 		$("*[pipelet-loading-indicator]").append('<div class="op-loading">loading</div>');
 		$("*[pipelet-auto-show='true']").hide();
 	};
@@ -28,6 +41,14 @@
 	//load a given segment object into the piplined document
 	op.load = function(segment){
 		this.loadSegment(segment);
+
+		//record times and output to the log
+		if(isDebug === true){
+			var debugCurrentSegmentLoadTime = new Date().getTime();
+			console.log('SEGMENT "'+segment.id+'" LOAD TIME: '+(debugCurrentSegmentLoadTime-debugLastSegmentLoadTime));
+			console.log('TIME UNTIL SEGMENT: '+(debugCurrentSegmentLoadTime-debugInitTime));
+			debugLastSegmentLoadTime = debugCurrentSegmentLoadTime;
+		}
 	};
 
 
@@ -50,6 +71,11 @@
 		_.each(phases, function(phase){
 			if(phase > lastPhase) that.phaseComplete(phase);
 		});
+
+		if(isDebug === true){
+			debugDoneTime = new Date().getTime();
+			console.log('TOTAL LOAD TIME: '+(debugDoneTime-debugInitTime));
+		}
 			
 	};
 

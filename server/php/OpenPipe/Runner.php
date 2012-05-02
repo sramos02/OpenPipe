@@ -78,6 +78,7 @@ class OpenPipe_Runner {
 			
 		}
 		
+		$this->output->postContent();
 		$this->clean();
 	}
 

@@ -1,4 +1,3 @@
-<?php usleep(200000); ?>
 <div id="ads">
 	<link rel="stylesheet" type="text/css" href="../public/css/sidebar_ads.css" />
 	

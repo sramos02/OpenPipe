@@ -1,4 +1,3 @@
-<?php usleep(200000); ?>
 <h2>Groups</h2>
 <ul>
 	<li class="icon-groups" >2012 Snowbird Utah</li>

@@ -1,4 +1,3 @@
-<?php usleep(200000); ?>
 <h2>Favorites</h2>
 <ul>
 	<li class="icon-news-feed" >News Feed</li>

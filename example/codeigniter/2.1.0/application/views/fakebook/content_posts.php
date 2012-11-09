@@ -1,4 +1,3 @@
-<?php usleep(200000); ?>
 <div id="posts">
 	<link rel="stylesheet" type="text/css" href="../public/css/content_posts.css" />
 

@@ -1,4 +1,3 @@
-<?php usleep(200000); ?>
 <h2>Friends</h2>
 <ul>
 	<li class="icon-friends" >Close Friends</li>

@@ -15,7 +15,6 @@ class OpenPipe_Output_Util  {
 	* @return array strings containing link tags found within the html string
 	*/
 	public static function extractLinkTags(&$html){
-		error_log('test');
 		preg_match_all('/<link.*?\/>/ms', $html, $matches, PREG_SET_ORDER);
 		$html = preg_replace('/<link.*?\/>/ms', '', $html);
 		

@@ -1,4 +1,3 @@
-<?php usleep(200000); ?>
 <header>
 	<link rel="stylesheet" type="text/css" href="../public/css/header.css" />
 

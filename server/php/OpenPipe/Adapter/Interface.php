@@ -16,7 +16,7 @@ interface OpenPipe_Adapter_Interface {
 	* @param OpenPipe_Pipelet_Interface $pipelet a pipelet which supplies information on 
 	* @return mixed implementors are free to return what they will
 	*/
-	function getOutput(OpenPipe_Pipelet_Interface $pipelet);
+	function getOutput(OpenPipe_Pipelet_Interface $pipelet = null);
 	
 	/**
 	* called once during the initialization of an OpenPipe runner

@@ -1,5 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/**
+* Calls an 'External system' for data
+* An external system is a web service or database
+*/
 class Externalevent {
 	const WEBSERVICE = 'webservice';
 	const DATABASE = 'database';
@@ -20,7 +23,6 @@ class Externalevent {
 				break;
 
 			default:
-				$this->webService($magnitude);
 				break;
 		}
 	}

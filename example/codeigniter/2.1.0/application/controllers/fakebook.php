@@ -4,7 +4,7 @@ class Fakebook extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->type = $this->input->get('type', Externalevent::WEBSERVICE);
+		$this->type = $this->input->get('type', '');
     }
 	
 	/* --- Main layout ---- */

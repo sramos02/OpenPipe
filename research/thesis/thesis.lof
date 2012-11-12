@@ -1,5 +1,5 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Layers of the Open Systems Interconnection model (OSI model).}}{8}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Layers of the Open Systems Interconnection model (OSI model). OpenPipe resides in the application level of the OSI model.}}{8}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Comparison of a traditional HTTP web request with the operation of an HTTP web request Pipeline. A pipeline approach will deliver visible content sooner, as all parts of the document are delivered in parallel.}}{10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -35,7 +35,10 @@
 \contentsline {figure}{\numberline {11.1}{\ignorespaces A selenium script that retrieves performance and timing data from websites}}{46}
 \contentsline {figure}{\numberline {11.2}{\ignorespaces DOM performance timing data made available via JavaScript \cite {w3cNavigationTiming}}}{47}
 \contentsline {figure}{\numberline {11.3}{\ignorespaces DOM performance timing data show as linear request \cite {w3cNavigationTiming}}}{48}
-\contentsline {figure}{\numberline {11.4}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium}}{50}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{50}
+\contentsline {figure}{\numberline {11.5}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{51}
+\contentsline {figure}{\numberline {11.6}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{52}
+\contentsline {figure}{\numberline {11.7}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{53}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12.1}{\ignorespaces An explicit version of an OpenPipe output API}}{51}
+\contentsline {figure}{\numberline {12.1}{\ignorespaces An explicit version of an OpenPipe output API}}{54}
 \addvspace {10\p@ }

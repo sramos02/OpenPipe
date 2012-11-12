@@ -58,6 +58,12 @@
 
 \maketitle
 
+
+\begin{abstract}
+
+This project intends to improve upon the current HTTP based web request and response system utilized by modern web browsers and servers today. This improvement will be made possible through the creation of a software HTTP web request pipelining framework named OpenPipe. The OpenPipe framework will attempt to increase the perceived speed of web content delivery through the optimization of communication sequences that occur during a standard HTTP web request cycle. The OpenPipe framework will be provided as a PHP library for Apache based web servers, and a client side cross-browser JavaScript library. The existence of this library will allow for a greater level of transparency to web developers whom wish to provide advanced HTTP request pipelining  to their web sites and web application in a more pluggable way, that can be extended to integrate with new and existing web based MVC frameworks. Once this library has been developed the final stage of this project will be to collect, analyze, and compare data for non-pipelined and pipelined web pages. The overall goal of this analysis will be to provide a clear picture of where the performance benefits occur when utilizing an HTTP request pipelining framework that OpenPipe provides.
+\end{abstract}
+
 \begin{dedication}
 To my daughters, Paige and Jocelyn - for inspiration I will cherish always.
 \linebreak\linebreak
@@ -79,7 +85,7 @@ Modern web sites and web applications provide valuable information and services 
 
 If speed is recognized as a critical factor for today's web then the current HTTP protocol used to deliver this web content should be examined as the source of a possible bottleneck when trying to deliver it. Web content has become increasingly more dynamic and interactive over the last ten years, and this current standard for web content delivery can be tailored for meeting the current pressures of the modern web.
 
-Since the introduction of HTTP, web developers have built an ever-growing repertoire of tips and tricks to squeeze the most out of the HTTP-based web. These methods include, but are not limited to the following:
+Since the introduction of HTTP, web developers have built an ever-growing repertoire of tips and tricks to squeeze the most out of the HTTP-based web. These methods include, but are not limited to the following \cite{highPerformanceWebsites}:
 
 \begin{itemize}
 	\item Use a content delivery network
@@ -100,15 +106,15 @@ Today's web sites and web applications employ many of these techniques to help d
 The HTTP protocol is part of the application layer of the OSI model [see figure \ref{fig:osiModel}].  When an HTTP request is issued from a web browser for an initial HTML document, related elements such as images, JavaScript, and Cascading Style Sheet (CSS) are subsequently retrieved using additional HTTP requests. Therefore, the rendering of a single web page could involve many HTTP web requests. An HTTP pipeline is presented as a thin layer of application logic on top of HTTP which attempts to optimize the request cycle in a manner that allow pieces of a full web page to load and display independently.  This added layer is developed as a software library containing both server-side and client-side application code.
 
 \begin{figure}[H]
-\caption{Layers of the Open Systems Interconnection model (OSI model).}
+\caption{Layers of the Open Systems Interconnection model (OSI model). OpenPipe resides in the application level of the OSI model.}
 \label{fig:osiModel}
 \centering
-\includegraphics[width=125mm]{figures/images/osi_model.png}
+\includegraphics[width=90mm]{figures/images/osi_model.png}
 \end{figure}
 
 The resulting framework processes, requests, and delivers responses in an optimized manner taking into account current HTTP limitations that are inherent to the overhead created by the connect and request style of communication. The result of this response optimization through a pipeline is an increase in perceived speed that is accomplished by displaying fully functional content as quickly as possible – even before the entire document is completely processed by the web server.
 
-HTTP pipelining is inspired from traditional pipelining technologies utilized by today’s modern CPU's, where an instruction's life cycle is broken into multiple stages. Instead of instructions, HTTP pipelining breaks the page generation process into several stages [see figure \ref{fig:HTTPRequestCycles}] which include [SOURCE-FB?]:
+HTTP pipelining is inspired from traditional pipelining technologies utilized by today’s modern CPU's, where an instruction's life cycle is broken into multiple stages. Instead of instructions, HTTP pipelining breaks the page generation process into several stages [see figure \ref{fig:HTTPRequestCycles}] which include \cite{facebookBigpipe}:
 
 \begin{enumerate}
   \item Request parsing: web server parses and sanity checks the HTTP request. 
@@ -153,7 +159,7 @@ Git (a command line tool) is available with many Linux distributions, and is fre
 
 The core server components of OpenPipe were all written with PHP 5.3. PHP is a general-purpose server-side scripting language originally designed for web development to produce dynamic web pages.
 
-PHP can be deployed on most Web servers and as a standalone shell on almost every operating system and platform free of charge.  PHP is installed on more than 20 million Web sites and 1 million Web servers [SOURCE]. These statitistics make PHP a very good option to build and develop new web technologies and frameworks which will then be available to a large communitiry of software developers.
+PHP can be deployed on most Web servers and as a standalone shell on almost every operating system and platform free of charge.  PHP is installed on more than 20 million Web sites and 1 million Web servers \cite{phpWiki}. These statistics make PHP a very good option to build and develop new web technologies and frameworks which will then be available to a large community of software developers.
 
 
 \section{phpDocumentor}
@@ -173,7 +179,7 @@ OpenPipe has been built and tested using the Apache HTTP server. OpenPipe is not
 
 Apache is a web server software notable for playing a key role in the initial growth of the World Wide Web. Apache is developed and maintained by an open community of developers under the Apache Software Foundation. Apache is available with many Linux distributions, and is freely available to download and compile. Prebuilt binary installers exist for all major operating systems.  
 
-Since April 1996 Apache has been the most popular HTTP server software in use. As of March 2012 Apache was estimated to serve 57.46\% of all active websites and 65.24\% of the top servers across all domains [SOURCE]
+Since April 1996 Apache has been the most popular HTTP server software in use. As of March 2012 Apache was estimated to serve 57.46\% of all active websites and 65.24\% of the top servers across all domains \cite{webserverSurvey}.
 
 
 \section{FireFox}
@@ -207,7 +213,7 @@ Selenium automates browsers by providing a common API that is provided in the fo
 \item iOS
 \end{enumerate}
 
-Selenium is primarily used for the automated testing of web applications, and is ofter used in conjunction with a unit testng framework.  Selenium is however not limited to this set of tasks and can be extremely useful for other tasks such as performance testing and analysis. OpenPipe utilized Selenium to help clarify the performance gains and penalities when using the framework under differant usage scenarios and server load. Utilizing Selenium it became trivial to automate web page loading, and record large datasets of performance data.
+Selenium is primarily used for the automated testing of web applications, and is often used in conjunction with a unit testing framework.  Selenium is however not limited to this set of tasks and can be extremely useful for other tasks such as performance testing and analysis. OpenPipe utilized Selenium to help clarify the performance gains and penalties when using the framework under different usage scenarios and server load. Utilizing Selenium it became trivial to automate web page loading, and record large datasets of performance data.
 
 
 
@@ -721,7 +727,7 @@ flush();
 
 \section{Dynamic JavaScript DOM Insertion}
 
-Inserting JavaScript into an existing DOM document needs to be done in a slightly differant way than just appending the raw JavaScript data to the current HTML document being loaded. To do this in a reliable and cross browser way the boiler plate DOM function, 'createElement', is used to create a new script tag. Once the script tag is created the type and source code attributes are set indepentatly using the JSON data that is sent with a piplet's JavaScript component. The code that accomplishes the JavaScript insertion can be found in figure \ref{fig:javascriptInsertion}
+Inserting JavaScript into an existing DOM document needs to be done in a slightly different way than just appending the raw JavaScript data to the current HTML document being loaded. To do this in a reliable and cross browser way the boiler plate DOM function, 'createElement', is used to create a new script tag. Once the script tag is created the type and source code attributes are set independently using the JSON data that is sent with a piplet's JavaScript component. The code that accomplishes the JavaScript insertion can be found in figure \ref{fig:javascriptInsertion}
 
 \begin{figure}[H]
 \caption{JavaScript code segment that allows for reliable cross browser insertion of dynamic JavaScript code into the DOM}
@@ -742,7 +748,7 @@ $('body').append(script);
 
 \section{Data Collection Methodology}
 
-To collect data a simple but powerful script [see figure \ref{fig:seleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for OpenPipe enabled web pages. The web page selected for data collection and analysis is provided in the set of example for OpenPipe. The URL  installed on a local system is  'HTTP://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook'. Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or Wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilizing of underlying browser API systems. The means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponse,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for an OpenPipe web page, since all data is unpacked and loaded in browser via JavaScript after it has been received from the server.
+To collect data a simple but powerful script [see figure \ref{fig:seleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for loaded web pages. The web page selected for data collection was the OpenPipe enabled static sample app previously illustrated [see figure \ref{fig:sampleApp}].  Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilizing of underlying browser API systems. The means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponses,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for a OpenPipe enabled web page, since all data is unpacked and loaded in the browser via JavaScript after it has been received from the server.
 
 \begin{figure}[H]
 \caption{A selenium script that retrieves performance and timing data from websites}
@@ -857,15 +863,15 @@ Once the performance timing data was collected additional data points were calcu
 	\item \textbf{Database} - The server creates a connection to a local database system and issues select queries over this connection to gather data. The data is not used in the display of the web page, but nevertheless this simulates the overhead necessary to connect to a local database system, loop through the data, and return a result.
 	\item \textbf{Web Service} - The server create a connection to an external REST based web service. For the purposes of these tests the server connect to the twitter REST API and issues REST based query commands. The data is not used in the display of the web page, but nevertheless this simulates the overhead necessary to connect to an external REST based system, loop through the data, and return a result.
 	\end{enumerate}
-\item \textbf{Load} - The ammount of load that is being put on the web server during the testing time. Load was simulated using the command line tool named, 'Siege'. The number presented in this column represents the total number of concurrent connection being issues from Siege during the tests.
-\item \textbf{Response} - The initial response time for a non piped page. \begin{math} responseStart - requestStart \end{math} 
-\item \textbf{Response Piped} - The initial response time for a non piped page. This is calculated by recording the load time of the first piece of content within a pipelet (users sees something) and comparing that to the request start time. \begin{math} firstPipeletLoadTimeEnd - requestStart \end{math} 
-\item \textbf{Total Time} and \textbf{Total Time Piped}   - The total time it took to the load the page, starting at request start and ending at the final DOM loaded event. \begin{math} loadEventEnd - requestStart \end{math} 
+\item \textbf{Load} - The ammount of load that is being put on the web server during the testing time. Load was simulated using the command line tool named, 'Siege'. The number presented in this column represents the total number of concurrent connection being issued from Siege during the tests.
+\item \textbf{Response} - The initial response time for a non piped page. The formula for this data point is: \begin{math} responseStart - requestStart \end{math} 
+\item \textbf{Response Piped} - The initial response time for a non piped page. This is calculated by recording the load time of the first piece of content within a pipelet (users sees something) and comparing that to the request start time. The formula for this data point is: \begin{math} firstPipeletLoadTimeEnd - requestStart \end{math} 
+\item \textbf{Total Time} and \textbf{Total Time Piped}   - The total time it took to the load the page, starting at request start and ending at the final DOM loaded event. The formula for this data point is: \begin{math} loadEventEnd - requestStart \end{math} 
 \end{enumerate}
 
 
 \begin{figure}[H]
-\caption{Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium}
+\caption{Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}
 \label{fig:performanceTimingTable}
 \small
 \begin{tabular}{llllll}
@@ -878,24 +884,44 @@ Once the performance timing data was collected additional data points were calcu
 \hline
 \emph{Plain HTML}	  	& 10				& 141.9183673	& 90.51020408    			& 187.4489796		& 172.3469388    			\\
 \emph{Database}		& 10 			& 408.8367347	& 231.8979592   			& 448.4081633		& 618.7142857  			\\
-\emph{Web Service}		& 10				& 5053.040816	& 767.5510204   			& 5110.591837		& 5110.591837    			\\
+\emph{Web Service}		& 10				& 5053.040816	& 767.5510204   			& 5110.591837		& 5114.691837    			\\
 \hline
-\emph{Plain HTML}		& 25						& 100						& 200    & 100						& 200    \\
-\emph{Database}		& 25						& 100						& 200    & 100						& 200    \\
-\emph{Web Service}		& 25						& 100						& 200    & 100						& 200    \\
+\emph{Plain HTML}		& 25				& 137.1836735	& 137.1836735    			& 184.4285714		& 192.8163265    			\\
+\emph{Database}		& 25				& 2583.612245	& 939.6530612    			& 2621.387755		& 2649.897959    			\\
+\emph{Web Service}		& 25				& 4872.367347	& 718.877551    			& 4912.204082		& 5177.857143   			 \\
 \hline
-\emph{Plain HTML}		& 50						& 100						& 200    & 100						& 200    \\
-\emph{Database}		& 50						& 100						& 200    & 100						& 200    \\
-\emph{Web Service}		& 50						& 100						& 200    & 100						& 200    \\
+\emph{Plain HTML}		& 50				& 146.9591837	& 111.5306122    			& 194				& 220.8979592   			\\
+\emph{Database}		& 50				& 6172.265306	& 2203.897959    			& 6214.673469		& 6244.55102    			\\
+\emph{Web Service}		& 50				& 4791.755102	& 750.2857143    			& 4848.040816		& 4790.081633    			\\
 \hline
-\emph{Plain HTML}		& 100					& 100						& 200    & 100						& 200    \\
-\emph{Database}		& 100					& 100						& 200    & 100						& 200    \\
-\emph{Web Service}		& 100					& 100						& 200    & 100						& 200    \\
+\emph{Plain HTML}		& 100			& 149.2653061	& 102.7959184    			& 192.8979592		& 195.3673469    			\\
+\emph{Database}		& 100			& 12139.69388	& 4530.346939    			& 12217.28571		& 12878.77551    			\\
+\emph{Web Service}		& 100			& 4742.285714	& 741.6734694    			& 4827.040816		& 4754.469388    			\\
 \end{tabular}
 \end{figure}
 
 
+\begin{figure}[H]
+\caption{OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}
+\label{fig:analysisChartPlain}
+\centering
+\includegraphics[width=\textwidth,keepaspectratio]{figures/images/analysis_chart_plain.png}
+\end{figure}
 
+\begin{figure}[H]
+\caption{OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}
+\label{fig:analysisChartDatabase}
+\centering
+\includegraphics[width=\textwidth,keepaspectratio]{figures/images/analysis_chart_database.png}
+\end{figure}
+
+
+\begin{figure}[H]
+\caption{OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}
+\label{fig:analysisChartWebService}
+\centering
+\includegraphics[width=\textwidth,keepaspectratio]{figures/images/analysis_chart_webservice.png}
+\end{figure}
 
 %------------------------------------------------------------------------------------------------------
 %--------------------Next Steps-------------------------------------------------------------------------
@@ -979,18 +1005,50 @@ Web servers like apache provide application interfaces for developing server ext
 %------------------------------------------------------------------------------------------------------
 %--------------------BIBLIOGRAPHY ---------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\begin{thebibliography}{9}
+\begin{thebibliography}{2}
+
+\bibitem{facebookBigpipe}
+"BigPipe: Pipelining web pages for high performance", Facebook, June 2010. [Online]
+Available: http://www.facebook.com/notes/facebook-engineering/bigpipe-pipelining-web-pages-for-high-performance/389414033919 [Retrieved December 2010]
+
+\bibitem{hypertextTransferProtocol}
+"Part of Hypertext Transfer Protocol -- HTTP/1.1 – 8 - Connections" [Online]
+Available: http://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html [Retrieved December 2010]
+
+\bibitem{optimizingPageLoadTime}
+"Optimizing Page Load Time", Aaron Hopkins [Online]
+Available: http://www.die.net/musings/page\_load\_time/ [Retrieved December 2010]
+
+\bibitem{whatIsPipelining}
+"What is HTTP pipelining", Darin Fisher [Online]
+Available: http://www.mozilla.org/projects/netlib/http/pipelining-faq.html [Retrieved December 2010]
 
 \bibitem{w3cNavigationTiming}
-Navigation Timing, Editor's Draft July 16th, 2012 [Online].
-Available: http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html
+"Navigation Timing", Editor's Draft July 16th, 2012 [Online]
+Available: dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html
 
 \bibitem{siegeHomepage}
-Siege Home,  January 30, 2012 [Online].
-Available: http://www.joedog.org/siege-home/
+"Siege Home",  January 30, 2012 [Online]
+Available: www.joedog.org/siege-home
 
+\bibitem{phpWiki}
+"PHP" [Online]
+Available: http://en.wikipedia.org/wiki/PHP
+
+\bibitem{webserverSurvey}
+"March 2012 Web Server Survey" [Online]
+Available: http://news.netcraft.com/archives/2012/03/05/march-2012-web-server-survey.html
+
+\bibitem{highPerformanceWebsites}
+Steve Souders, High Performance Websites, Oreilly Media, September 2007
+
+\bibitem{evenFasterWebsites}
+Steve Souders, Even Faster Web Sites: Performance Best Practices for Web Developers, Oreilly Media, June 2009
 
 \end{thebibliography}
+
+
+
 
 \end{document}
 

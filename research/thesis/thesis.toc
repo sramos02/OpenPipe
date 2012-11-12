@@ -36,9 +36,9 @@
 \contentsline {section}{\numberline {11.1}Data Collection Methodology}{45}
 \contentsline {section}{\numberline {11.2}Simulating Load}{48}
 \contentsline {section}{\numberline {11.3}Results}{49}
-\contentsline {chapter}{\numberline {12}Next Steps}{51}
-\contentsline {section}{\numberline {12.1}Expanded Output API}{51}
-\contentsline {section}{\numberline {12.2}Minification}{52}
-\contentsline {section}{\numberline {12.3}Addition of framework adapters}{52}
-\contentsline {section}{\numberline {12.4}Language agnostic Apache server extension}{52}
-\contentsline {chapter}{\numberline {13}Code Listings}{53}
+\contentsline {chapter}{\numberline {12}Next Steps}{54}
+\contentsline {section}{\numberline {12.1}Expanded Output API}{54}
+\contentsline {section}{\numberline {12.2}Minification}{55}
+\contentsline {section}{\numberline {12.3}Addition of framework adapters}{55}
+\contentsline {section}{\numberline {12.4}Language agnostic Apache server extension}{55}
+\contentsline {chapter}{\numberline {13}Code Listings}{56}

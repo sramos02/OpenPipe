@@ -97,7 +97,7 @@ Since the introduction of HTTP, web developers have built an ever-growing repert
 
 Today's web sites and web applications employ many of these techniques to help deliver content to end-users in an efficient manner. HTTP Pipelining is another technique that could be employed alongside any of these methods to increase web performance.
 
-The HTTP protocol is part of the application layer of the OSI model [see figure \ref{fig:osiModel}].  When an HTTP request is issued from a web browser for an initial HTML document, related elements such as images, JavaScript, and Cascading Style Sheet (CSS) are subsequently retrieved using additional HTTP requests. Therefore, the rendering of a single web page could involve many HTTP web requests. An HTTP pipeline presented as a thin layer of application logic on top of HTTP which attempts to optimize the request cycle in a manner that allow pieces of a full web page to load and display independently.  This added layer is developed as a software library containing both server-side and client-side application code.
+The HTTP protocol is part of the application layer of the OSI model [see figure \ref{fig:osiModel}].  When an HTTP request is issued from a web browser for an initial HTML document, related elements such as images, JavaScript, and Cascading Style Sheet (CSS) are subsequently retrieved using additional HTTP requests. Therefore, the rendering of a single web page could involve many HTTP web requests. An HTTP pipeline is presented as a thin layer of application logic on top of HTTP which attempts to optimize the request cycle in a manner that allow pieces of a full web page to load and display independently.  This added layer is developed as a software library containing both server-side and client-side application code.
 
 \begin{figure}[H]
 \caption{Layers of the Open Systems Interconnection model (OSI model).}
@@ -108,7 +108,7 @@ The HTTP protocol is part of the application layer of the OSI model [see figure 
 
 The resulting framework processes, requests, and delivers responses in an optimized manner taking into account current HTTP limitations that are inherent to the overhead created by the connect and request style of communication. The result of this response optimization through a pipeline is an increase in perceived speed that is accomplished by displaying fully functional content as quickly as possible – even before the entire document is completely processed by the web server.
 
-HTTP pipelining is inspired from traditional pipelining technologies utilized by today’s modern CPU's, where an instruction's life cycle is broken into multiple stages. Instead of instructions, HTTP pipelining breaks the page generation process into several stages [see figure \ref{fig:httpRequestCycles}] which include [SOURCE-FB?]:
+HTTP pipelining is inspired from traditional pipelining technologies utilized by today’s modern CPU's, where an instruction's life cycle is broken into multiple stages. Instead of instructions, HTTP pipelining breaks the page generation process into several stages [see figure \ref{fig:HTTPRequestCycles}] which include [SOURCE-FB?]:
 
 \begin{enumerate}
   \item Request parsing: web server parses and sanity checks the HTTP request. 
@@ -123,9 +123,9 @@ HTTP pipelining is inspired from traditional pipelining technologies utilized by
 
 \begin{figure}[H]
 \caption{Comparison of a traditional HTTP web request with the operation of an HTTP web request Pipeline. A pipeline approach will deliver visible content sooner, as all parts of the document are delivered in parallel.}
-\label{fig:httpRequestCycles}
+\label{fig:HTTPRequestCycles}
 \centering
-\includegraphics[width=145mm]{figures/images/http_request_cycles.jpg}
+\includegraphics[width=145mm]{figures/images/HTTP_request_cycles.jpg}
 \end{figure}
 
 
@@ -135,23 +135,23 @@ HTTP pipelining is inspired from traditional pipelining technologies utilized by
 %--------------------IMPLEMENTATION TOOLS ------------------------------------------------------------ 
 %------------------------------------------------------------------------------------------------------
 
-\chapter{Implementation Tools}
+\chapter{Implementation and Analysis Tools}
 
 \section{Git}
 \begin{center} 
 \includegraphics[width=30mm]{figures/images/git_logo.png}
 \end{center}
 
-This application makes use of Git to store the current codebase, examples, and documentation. Git is a modern distributed revision control and source code management tool. Through utilizing Git, developers are free to checkout, and even branch the existing code base to meet current and future needs.
+The OpenPipe project makes use of Git to store the current codebase, examples, documentation, and research data. Git is a modern distributed revision control and source code management tool. Through utilizing Git, developers are free to checkout, and even branch the existing code base to meet current and future needs.
 
-Git (a command line tool) is available with many Linux distributions, and is freely available to download and compile. Pre-built binary installers, and GUI interfaces exists for all major operating systems.  The SSH URL for accessing this project via git is git@github.com:polycoder/OpenPipe.git. All fork requests can be placed by visiting https://github.com/polycoder/OpenPipe.
+Git (a command line tool) is available with many Linux distributions, and is freely available to download and compile. Pre-built binary installers, and GUI interfaces exists for all major operating systems.  The SSH URL for accessing this project via git is git@github.com:polycoder/OpenPipe.git. All fork requests can be placed by visiting HTTPs://github.com/polycoder/OpenPipe.
 
 \section{PHP}
 \begin{center} 
 \includegraphics[width=30mm]{figures/images/php_logo.png}
 \end{center}
 
-The core server components were all written with PHP 5.3, PHP is a general-purpose server-side scripting language originally designed for web development to produce dynamic web pages.
+The core server components of OpenPipe were all written with PHP 5.3. PHP is a general-purpose server-side scripting language originally designed for web development to produce dynamic web pages.
 
 PHP can be deployed on most Web servers and as a standalone shell on almost every operating system and platform free of charge.  PHP is installed on more than 20 million Web sites and 1 million Web servers [SOURCE]. These statitistics make PHP a very good option to build and develop new web technologies and frameworks which will then be available to a large communitiry of software developers.
 
@@ -161,7 +161,7 @@ PHP can be deployed on most Web servers and as a standalone shell on almost ever
 \includegraphics[width=30mm]{figures/images/php_documentor_logo.png}
 \end{center}
 
-phpDocumentor is a tool with which it is possible to generate documentation from your PHP source code. With this documentation you can provide your consumers with more information regarding the functionality embedded within your source and not only what is usable to them from your user interface. phpDocumentor is heavily inspired by the JavaDoc tool available with the Java SDK. All code documentation is producted through the user of the phpDocumentor tool.
+OpenPipe uses phpDocumentor to generate all of the available PHP class documentation. phpDocumentor is a tool with which it is possible to generate documentation from your PHP source code using a standardized set of source code commenting conventions. With this documentation you can provide developers with more information regarding the functionality embedded within your source code. phpDocumentor is heavily inspired by the JavaDoc tool available with the Java SDK. 
 
 
 \section{Apache}
@@ -173,15 +173,15 @@ OpenPipe has been built and tested using the Apache HTTP server. OpenPipe is not
 
 Apache is a web server software notable for playing a key role in the initial growth of the World Wide Web. Apache is developed and maintained by an open community of developers under the Apache Software Foundation. Apache is available with many Linux distributions, and is freely available to download and compile. Prebuilt binary installers exist for all major operating systems.  
 
-Since April 1996 Apache has been the most popular HTTP server software in use. As of March 2012 Apache was estimated to serve 57.46% of all active websites and 65.24% of the top servers across all domains [SOURCE]
+Since April 1996 Apache has been the most popular HTTP server software in use. As of March 2012 Apache was estimated to serve 57.46\% of all active websites and 65.24\% of the top servers across all domains [SOURCE]
 
 
-\section{Chrome}
+\section{FireFox}
 \begin{center} 
-\includegraphics[width=30mm]{figures/images/chrome_logo.jpg}
+\includegraphics[width=30mm]{figures/images/firefox_logo.png}
 \end{center}
 
-All client side testing and analysis of OpenPipe was performed using the Chrome web browser. Chrome supplies a very advanced toolset for profiling HTTP requests, viewing and editing HTML, and debugging JavaScript. Chrome is freely available to download and compile. Prebuilt binary installers exist for all major operating systems. 
+All client side testing and analysis (manual and automated) of OpenPipe was performed using the FireFox web browser. FireFox supplies a very advanced toolset for profiling HTTP requests, viewing and editing HTML, and debugging JavaScript. FireFox is freely available to download and compile. Prebuilt binary installers exist for all major operating systems. 
  
 
 \section{CodeIgniter}
@@ -190,6 +190,26 @@ All client side testing and analysis of OpenPipe was performed using the Chrome 
 \end{center}
 
 The OpenPipe framework that has currently been developed provides an adapter that interfaces with the CodeIgniter framework. Using this adapter it is fairly straight forward and simple to convert an existing CodeIgniter application to take advantage of OpenPipe HTTP request pipelining. CodeIgniter is a powerful PHP framework with a very small footprint, built for PHP coders who need a simple and elegant toolkit to create full-featured web applications. 
+
+\section{Selenium}
+\begin{center}
+\includegraphics[width=30mm]{figures/images/selenium_logo.png}
+\end{center}
+
+Selenium automates browsers by providing a common API that is provided in the form of a, 'WebDriver'. WebDrivers exist for every major browser including:
+
+\begin{enumerate}
+\item Firefox
+\item Chrome
+\item Safari
+\item Internet Explorer
+\item Android
+\item iOS
+\end{enumerate}
+
+Selenium is primarily used for the automated testing of web applications, and is ofter used in conjunction with a unit testng framework.  Selenium is however not limited to this set of tasks and can be extremely useful for other tasks such as performance testing and analysis. OpenPipe utilized Selenium to help clarify the performance gains and penalities when using the framework under differant usage scenarios and server load. Utilizing Selenium it became trivial to automate web page loading, and record large datasets of performance data.
+
+
 
 
 
@@ -257,7 +277,7 @@ The final stage in the development cycle was to implement an adapter for an exis
 
 The PHP MVC framework chosen to create an adapter for is named CodeIgniter. CodeIgniter is a lightweight open-source MVC framework, that is relatively simple to work with and extend. 
 
-Utilizing CodeIgniter’s same system of controllers and views, a developer can easily convert any CodeIgniter page to an HTTP pipelined request. This is made possible by a simples series of installation steps illustrated in the provided sample application. The main index file ends of looking like figure \ref{fig:codeIgniterPvcCode}.
+Utilizing CodeIgniter’s same system of controllers and views, a developer can easily convert any CodeIgniter page to an HTTP pipelined request. This is made possible by a simples series of installation steps illustrated in the provided sample application. The main index file ends of looking like figure \ref{fig:codeIgniterPvcCode}, once the OpenPipe integration has taken place.
 
 \begin{figure}[H]
 \caption{OpenPipe adapter setup for CodeIgniter}
@@ -294,19 +314,19 @@ The server is composed of four main layers:
 
 \begin{enumerate}
 	\item \textbf{PHP} - The underlying scripting language. Run as a component of the web server.
-	\item \textbf{OpenPipe\_Runner} - The main loop of an OpenPipe application the runner interfaces orchestrates actions between the adapter being utilized, and the output that is generated.
+	\item \textbf{OpenPipe\_Runner} - The main loop of an OpenPipe application. The runner orchestrates actions between the adapter being utilized, and the output that is generated.
 		\begin{lstlisting}
 //starting an openpipe runner
 $openPipeRunner = new OpenPipe_Runner($openPipeAdapter, $openPipeOutput); $openPipeRunner->run(); //outputs openpipe content
 		\end{lstlisting}
 
-	\item \textbf{OpenPipe\_Adapter} - A pluggable interface which retrieves and returns pipelets components from the underlying architecture. An adapter can be used to interface preexisting PHP application Frameworks with OpenPipe, or whole new OpenPipe centric application frameworks.
+	\item \textbf{OpenPipe\_Adapter} - A pluggable interface which retrieves and returns pipelets components from the underlying web framework. An adapter can be used to interface pre-existing PHP application frameworks with OpenPipe, or whole new OpenPipe-centric application frameworks.
 		\begin{lstlisting}
 //loading an openpipe adapter
 $openPipeAdapter = OpenPipe_Adapter_Pvc_CodeIgniter(dirname(__FILE__));
 		\end{lstlisting}	
 
-	\item \textbf{Framework} - The framework being utilized with the OpenPipe adapter. The framework normally provides core web application components such as database libraries, request routing, session handling, and form validation.
+	\item \textbf{Framework} - The framework being utilized with the OpenPipe adapter. The framework normally provides core web application components such as database libraries, request routing, session handling, and form validation. The CodeIgniter MVC system is an example of framework.
 	
 		\begin{figure}[H]
 		\caption{Server side tecnology stack with OpenPipe components}
@@ -323,8 +343,11 @@ The client is composed of three main layers:
 
 \begin{enumerate}
 	\item \textbf{JavaScript} - The host environment (web browser) and core JavaScript libraries.
-	\item \textbf{Vendor Libraries} - OpenPipe makes use of two very popular, reliable, and lightweight cross-browser JavaScript frameworks. Underscore.js s a utility-belt library for JavaScript that provides functional programming support. jQuery provides simple and elegant client side scripting and manipulation of HTML DOM.
-	
+	\item \textbf{Vendor Libraries} - OpenPipe makes use of two very popular, reliable, and lightweight cross-browser JavaScript frameworks.
+		\begin{enumerate} 
+			\item \textbf{Underscore.js} - A utility-belt library for JavaScript that provides functional programming support.
+			\item \textbf{jQuery} - Provides simple and elegant client side scripting and manipulation of HTML DOM.
+		\end{enumerate}
 	\item \textbf{OpenPipe} - A client side library which is responsible for receiving events from an OpenPipe based server. These events are processed and associated data for these events is loaded into the HTML DOM as HTML, CSS, and JavaScript.
 		\begin{figure}[H]
 		\caption{Client side tecnology stack with OpenPipe components}
@@ -344,14 +367,14 @@ The client is composed of three main layers:
 
 \chapter{Pipelets}
 
-Every pipelined HTTP request is composed of pipelets. A pipelets represents an atomic composition of HTML, CSS, and JavaScript [see figure \ref{fig:samplePipelet}] . A web page request can be composed of one to many pipelets.
+Every OpenPipe HTTP request cycle is composed of pipelets. A pipelets represents an atomic composition of HTML, CSS, and JavaScript [see figure \ref{fig:samplePipelet}] . A web page request can be composed of one to many pipelets.
 
 \begin{figure}[H]
 \caption{Sample pipelet containing HTML, CSS, and JavaScript}
 \label{fig:samplePipelet}
 \begin{lstlisting}
 <!-- a simple pipelet containing css, javascript, and html -->
-<div pipelet_id="pipelet-1" ></div>
+<div pipelet-id="pipelet-1" ></div>
 	<link rel="stylesheet" type="text/css" href="css/pipelet-1.css" />
 	<script type="text/javascript" src="js/pipelet-1.js" ></script>
 	<h1>Hello world!</h1>
@@ -377,8 +400,8 @@ The root pipelet contains the root \textless html /\textgreater\ element and its
 </head>
 <body>
 <h1>Hello World!</h1>
-<div pipelet_id="pipelet-1"></div>
-<div pipelet_id="pipelet-2"></div>
+<div pipelet-id="pipelet-1"></div>
+<div pipelet-id="pipelet-2"></div>
 </body>
 </html>
 \end{lstlisting}
@@ -407,7 +430,7 @@ Figure \ref{fig:nestedPipelets} illustrates a nested pipelet page of depth 3. Ea
 
 \section{Pipelet Priority}
 
-Pipelets that are part of the same depth can prioritized explicitly using the pipelet\_priority OpenPipe HTML attribute [see figure \ref{fig:pipeletPriority}]. By default all pipelets are loaded in ascending alphanumeric order of the pipelet\_id OpenPipe HTML attribute. The addition of an explicit pipelet\_priority tag allows for a greater degree of control when loading pipelet components and, most importantly allows for the developer to choose which pieces of the page should be loaded and transmitted first.
+Pipelets that are part of the same depth can prioritized explicitly using the pipelet-priority OpenPipe HTML attribute [see figure \ref{fig:pipeletPriority}]. By default all pipelets are loaded in ascending alphanumeric order of the pipelet\_id OpenPipe HTML attribute. The addition of an explicit pipelet\_priority tag allows for a greater degree of control when loading pipelet components and, most importantly allows for the developer to choose which pieces of the page should be loaded and transmitted first.
 
 \begin{figure}[H]
 \caption{Sample pipelet containing HTML, CSS, and JavaScript}
@@ -422,8 +445,8 @@ Pipelets that are part of the same depth can prioritized explicitly using the pi
 </head>
 <body>
 	<h1>Hello World!</h1>
-	<div pipelet_id="pipelet-1"></div>
-	<div pipelet_id="pipelet-2" pipelet_priority="1" ></div>
+	<div pipelet-id="pipelet-1"></div>
+	<div pipelet-id="pipelet-2" pipelet-priority="1" ></div>
 </body>
 </html>
 \end{lstlisting}
@@ -467,7 +490,7 @@ Out of the box the core OpenPipe library provides two output interface implement
 	\item \textbf{OpenPipe\_Output\_Standard} - Implementation of an OpenPipe output interface that sends data as a standard HTML document. Content pieces are used to construct a complete HTML document, placing CSS and JavaScript in proper placement, and inject each content piece within a pipelet place holder on the server side. It's important to note that no javascript is required to complete output on the client web browser while using this output implementation.
 \end{enumerate}
 
-This illustrates the power of decoupling the output system into an interface which is chosen at runtime based on the needs and capabilities of a given client receiving the output information. Through the use of the same output interface the OpenPipe runner can transparently interface with JavaScript capable devices and not JavaScript capable devices such as web crawlers and bots without needing to alter any information retrieved from a corresponding framework interface.
+This illustrates the power of decoupling the output system into an interface which is chosen at runtime based on the needs and capabilities of a given client receiving the output information. Through the use of the same output interface the OpenPipe runner can transparently interface with JavaScript capable devices and non JavaScript capable devices such as web crawlers and bots without needing to alter any information retrieved from a corresponding framework interface.
 
 
 \section{Framework Adapter}
@@ -490,14 +513,14 @@ A framework's adapter [see figure \ref{fig:generalizationAdapter}]  is a crucial
 %------------------------------------------------------------------------------------------------------
 \chapter{Design Patterns}
 
-The OpenPipe library utilizes design patterns where appropriate to make the available components easier to comprehend from a conceptial level, and also easier to extend. The patterns explained below were chosen to provide maximum flexibility to the underlying system when integrating with PHP web application systems.
+The OpenPipe library utilizes design patterns where appropriate to make the available components easier to comprehend from a conceptial level, and also easier to extend for future use. The patterns explained below were chosen to provide maximum flexibility to the underlying system when integrating with existing PHP web application systems and frameworks.
 
 \section{Strategy Pattern}
 
 OpenPipe uses the strategy design pattern to define families of objects that can be utilized by the OpenPipe\_Runner class at runtime [see figure \ref{fig:strategyRunner}]. This helps effectively decouple the OpenPipe\_Runner from rendering and output concerns. These two concerns can vary depending on:
 
 \begin{enumerate}
-	\item The type of http client accessing the web page (web browser, bot, crawler).
+	\item The type of HTTP client accessing the web page (web browser, bot, crawler).
 	\item The type of framework that OpenPipe is using to access and render web page information (CodeIgniter, Zend Framework, CakePHP).
 \end{enumerate}
 
@@ -515,7 +538,8 @@ Another benefit of this design pattern implementation is that new adapters and o
 \label{fig:strategyRunnerCode}
 \begin{lstlisting}
 //starting an openpipe runner
-$openPipeRunner = new OpenPipe_Runner($openPipeAdapter, $openPipeOutput); $openPipeRunner->run(); //outputs openpipe content
+$openPipeRunner = new OpenPipe_Runner($openPipeAdapter, $openPipeOutput); 
+$openPipeRunner->run(); //outputs openpipe content
 \end{lstlisting}
 \end{figure}
 
@@ -551,7 +575,7 @@ Every open pipe request cycle is handle by a core class named OpenPipe\_Runner. 
 
 Once the OpenPipe\_Runner class has received information from the OpenPipe\_Adapter its passes any renderable content to a class that implements the OpenPipe\_Output interface. The OpenPipe\_Output class handles sending data to the client, and removes any special concerns for how this data is transmitted away from the OpenPipe\_Runner.
 
-The OpenPipe\_Runner is also responsible for calling upon a Pipelet\_Factory to build pipelets from content gathered from the Pipelet\_Adapter. The Pipelet\_Factory returns an array of pipelets which contain information that can be sent to the OpenPipe\_Adapter to gather the pipelet HTML and data, and then passed to the OpenPIpe\_Output class for rendering. The factory process is the main loop in the OpenPipe\_Runner application.
+The OpenPipe\_Runner is also responsible for calling upon a Pipelet\_Factory to build pipelets from content gathered from the Pipelet\_Adapter. The Pipelet\_Factory returns an array of pipelets which contain information that can be sent to the OpenPipe\_Adapter to gather the pipelet HTML and data, and then passed to the OpenPipe\_Output class for rendering. The factory process is the main loop in the OpenPipe\_Runner application.
 
 All components of this process are pluggable and determined at runtime. The OpenPipe\_Runner class depends only on the individual interfaced defined in the OpenPipe library, and utilizes specific design patterns such as the strategy and factory patterns to decouple it directly from any class instantiation.
 
@@ -574,7 +598,7 @@ Once a request is handled and output is sent through an OpenPipe\_Output class, 
 \item \textbf{registerPhase} - called when a segment is loaded. If the segment part of  a new phase then the phase is recorded as starting and any script received will be queued until this phases content (HTML and CSS) has been loaded and rendered.
 \item \textbf{loadCss} - loads a given array of CSS elements (\textless link /\textgreater\ and \textless style /\textgreater\ tags). The CSS information is inserted directly into the \textless head /\textgreater\ section of the HTML document].
 \item \textbf{loadHtml} - load a given HTML document into the layout’s pipelet placeholder. The placeholder to insert content to is determined using the segments corresponding id.
-\item \textbf{pushScripts} - pushes a segments set of script tags (both inline and external) onto a stack for later retrieval. JavaScript is loaded at the end of each loading phase. This allows for content represented as HTML and CSS to be loaded and viewable first before any possibly long JavaScript execution takes place.
+\item \textbf{pushScripts} - pushes a segment's set of script tags (both inline and external) onto a stack for later retrieval. JavaScript is loaded at the end of each loading phase. This allows for content represented as HTML and CSS to be loaded and viewable first before any possibly long JavaScript execution takes place.
 \item \textbf{phaseComplete} - marks a phase as complete. When a phase is marked complete all JavaScript queued from segments loaded during the same phase will be appended to the \textless head /\textgreater\ section of the HTML document and executed in the order received.
 \end{enumerate}
 
@@ -695,47 +719,181 @@ flush();
 \end{figure}
 
 
+\section{Dynamic JavaScript DOM Insertion}
+
+Inserting JavaScript into an existing DOM document needs to be done in a slightly differant way than just appending the raw JavaScript data to the current HTML document being loaded. To do this in a reliable and cross browser way the boiler plate DOM function, 'createElement', is used to create a new script tag. Once the script tag is created the type and source code attributes are set indepentatly using the JSON data that is sent with a piplet's JavaScript component. The code that accomplishes the JavaScript insertion can be found in figure \ref{fig:javascriptInsertion}
+
+\begin{figure}[H]
+\caption{JavaScript code segment that allows for reliable cross browser insertion of dynamic JavaScript code into the DOM}
+\label{fig:javascriptInsertion}
+\begin{lstlisting}
+var script = document.createElement('script');
+script.type = jq_script.attr('type') || '';
+script.src = jq_script.attr('src') || '';
+$('body').append(script);
+\end{lstlisting}
+\end{figure}
+
 %------------------------------------------------------------------------------------------------------
 %--------------------Analysis -------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
 \chapter{Analysis}
 
-\section{Initial Wait Time}
-Initial wait time was dramatically decreased when when utilizing OpenPipe. In fact since data is returned as soon as the initial page layout is ready. This results to just 3ms for data to be received by the browser. [figures-below]. This is much improved over the wait time for a non piped version of the same page
+
+\section{Data Collection Methodology}
+
+To collect data a simple but powerful script [see figure \ref{fig:seleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for OpenPipe enabled web pages. The web page selected for data collection and analysis is provided in the set of example for OpenPipe. The URL  installed on a local system is  'HTTP://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook'. Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or Wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilizing of underlying browser API systems. The means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponse,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for an OpenPipe web page, since all data is unpacked and loaded in browser via JavaScript after it has been received from the server.
 
 \begin{figure}[H]
-\caption{Initial wait times compared in Chrome with OpenPipe enabled and disabled}
-\label{fig:initialWaitTimesChrome}
-\centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/chrome_openpipe_ci_fakebook_enabled.png}
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/chrome_openpipe_ci_fakebook_disabled.png}
+\caption{A selenium script that retrieves performance and timing data from websites}
+\label{fig:seleniumScript}
+\begin{lstlisting}
+#------------------------------------------------------------
+# Script for recording performance timing of a given web page
+# @author Sean Kenny <skenny214@gmail.com>
+#------------------------------------------------------------
+require 'pp'
+require 'rubygems'
+require 'csv'
+require 'selenium-webdriver'
+
+#get arguments
+url = ARGV[0];
+cycles = ARGV[1] || '5'
+output_file = ARGV[2] || 'output.csv'
+
+#open client driver for firefox
+browser = Selenium::WebDriver.for :firefox
+
+#open csv for writing output data
+CSV.open(output_file, "w") do |csv|
+	#for the amount of times the user wanted, get the page, get the performance timing, and output to csv
+	cycles.to_i.times do |i|	
+		browser.get url
+		browser_timing = browser.execute_script("return window.performance.timing"); 
+		openpipe_timing = browser.execute_script("return typeof(op) !== 'undefined' ? op.performance.timing.segments : null");
+
+		# calculate wait time in two ways - if not openpipe then just use reponse start
+		if(openpipe_timing == nil)
+			browser_timing['responseWaitTime'] = browser_timing['responseStart'] - browser_timing['requestStart']
+
+		#if we have openpipe timing then the response wait time is for first piece of actual content (assumed to be pipelet of first priority)
+		else		
+			browser_timing['responseWaitTime'] = openpipe_timing[1] - browser_timing['requestStart']
+		end
+
+		browser_timing['totalLoadWaitTime'] = browser_timing['loadEventEnd'] - browser_timing['requestStart'] 
+		
+		sorted_timing_values = []
+		browser_timing.keys.sort.each do |key| 
+			sorted_timing_values << browser_timing[key]
+		end
+		
+		csv << browser_timing.keys.sort if i==0
+		csv << sorted_timing_values
+	end
+end
+
+browser.quit
+\end{lstlisting}
 \end{figure}
+
+Utilizing Selenium to load a web page also allowed for controlled access to performance timing information recorded by web browsers during each web request. This performance timing information can be found in the DOM javascript element, ' window.performance.timing'.  The data strucutre for window.performance.timing can be seen in figure \ref{fig:performanceTimingData}. To make the meaning of the data found withing the window.performance.timing data strucutre more clear a visualition timeline that illustrates when the performance timing events occur can be see in figure \ref{fig:performanceTimingChart}.
+
 
 \begin{figure}[H]
-\caption{Initial wait times compared in Firefox with OpenPipe enabled and disabled}
-\label{fig:initialWaitTimesFirefox}
-\centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/ff_openpipe_ci_fakebook_enabled.png}
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/ff_openpipe_ci_fakebook_disabled.png}
+\caption{DOM performance timing data made available via JavaScript \cite{w3cNavigationTiming}}
+\label{fig:performanceTimingData}
+\begin{lstlisting}
+interface PerformanceTiming {
+  readonly attribute unsigned long long navigationStart;
+  readonly attribute unsigned long long unloadEventStart;
+  readonly attribute unsigned long long unloadEventEnd;
+  readonly attribute unsigned long long redirectStart;
+  readonly attribute unsigned long long redirectEnd;
+  readonly attribute unsigned long long fetchStart;
+  readonly attribute unsigned long long domainLookupStart;
+  readonly attribute unsigned long long domainLookupEnd;
+  readonly attribute unsigned long long connectStart;
+  readonly attribute unsigned long long connectEnd;
+  readonly attribute unsigned long long secureConnectionStart;
+  readonly attribute unsigned long long requestStart;
+  readonly attribute unsigned long long responseStart;
+  readonly attribute unsigned long long responseEnd;
+  readonly attribute unsigned long long domLoading;
+  readonly attribute unsigned long long domInteractive;
+  readonly attribute unsigned long long domContentLoadedEventStart;
+  readonly attribute unsigned long long domContentLoadedEventEnd;
+  readonly attribute unsigned long long domComplete;
+  readonly attribute unsigned long long loadEventStart;
+  readonly attribute unsigned long long loadEventEnd;
+};
+\end{lstlisting}
 \end{figure}
+
 
 \begin{figure}[H]
-\caption{Initial wait times for all browsers with OpenPipe disabled and enabled}
-\label{fig:initialWaitTimesChart}
+\caption{DOM performance timing data show as linear request \cite{w3cNavigationTiming}}
+\label{fig:performanceTimingChart}
 \centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/initial_wait_time__sample_app_1.pdf}
+\includegraphics[width=150mm]{figures/images/timing_overview.png}
 \end{figure}
 
+\section{Simulating Load}
 
-\section{Total Load Time}
-Total load time remained similar between piped and non-piped output.  This signifies that the additional overhead introduced in using OpenPipe server and client libraries remains relatively insignificant.
+One important charactertistic to consider when developiong a web based library is how it performs unders load. The dimension of load that was considered when performance testing OpenPipe was the number of concurrent connections the server was able to process, and how this affected overall performance with and without the OpenPipe library outputting data through an HTTP data pipeline.
+
+To achieve an accurate simulation of load the freely available and opensource tool named, 'Siege'. Siege is an HTTP load testing and benchmarking utility. It was designed to let web developers measure their code under duress, to see how it will stand up to load on the internet \cite{siegeHomepage}. OpenPipe was tested while siege was run at concurrency levels 10, 25, 50, and 100. 
+ 
+
+\section{Results}
+
+Once the performance timing data was collected additional data points were calculated to clarify if any performance benefits could be found between a pipelined and non-pipelined version a webpage. This data was collected and laid out in a tabular format [see figure \ref{fig:performanceTimingTable}]. The columns in the presented table represent the following variables and formulas:
+
+\begin{enumerate}
+\item \textbf{Type} - Represents the type of external event that the server is issuing to complete the given web page request. Three types of web page requests were simulated:
+	\begin{enumerate}
+	\item \textbf{Plain HTML} - The server does not connect to any external system. It simply renders and return HTML content. This HTML content also includes CSS and JavaScript.
+	\item \textbf{Database} - The server creates a connection to a local database system and issues select queries over this connection to gather data. The data is not used in the display of the web page, but nevertheless this simulates the overhead necessary to connect to a local database system, loop through the data, and return a result.
+	\item \textbf{Web Service} - The server create a connection to an external REST based web service. For the purposes of these tests the server connect to the twitter REST API and issues REST based query commands. The data is not used in the display of the web page, but nevertheless this simulates the overhead necessary to connect to an external REST based system, loop through the data, and return a result.
+	\end{enumerate}
+\item \textbf{Load} - The ammount of load that is being put on the web server during the testing time. Load was simulated using the command line tool named, 'Siege'. The number presented in this column represents the total number of concurrent connection being issues from Siege during the tests.
+\item \textbf{Response} - The initial response time for a non piped page. \begin{math} responseStart - requestStart \end{math} 
+\item \textbf{Response Piped} - The initial response time for a non piped page. This is calculated by recording the load time of the first piece of content within a pipelet (users sees something) and comparing that to the request start time. \begin{math} firstPipeletLoadTimeEnd - requestStart \end{math} 
+\item \textbf{Total Time} and \textbf{Total Time Piped}   - The total time it took to the load the page, starting at request start and ending at the final DOM loaded event. \begin{math} loadEventEnd - requestStart \end{math} 
+\end{enumerate}
+
 
 \begin{figure}[H]
-\caption{Initial wait times for all browsers with OpenPipe disabled and enabled}
-\label{fig:initialWaitTimesChart}
-\centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/total_load_time__sample_app_1.pdf}
+\caption{Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium}
+\label{fig:performanceTimingTable}
+\small
+\begin{tabular}{llllll}
+\textbf{Type}			&\textbf{Load}		&\textbf{Response}	&\textbf{Response Piped}	&\textbf{Total Time}	&\textbf{Total Time Piped}  	\\
+\hline
+\hline
+\emph{Plain HTML}		& 0				& 80.81632653	& 56.10204082			& 102.6122449		& 144.0408163			\\
+\emph{Database}		& 0				& 149.0612245	& 74.14285714			& 166.5714286		& 127.6122449			\\
+\emph{Web Service}		& 0				& 5144.959184	& 795.2244898			& 5164.77551			& 5103.959184			\\
+\hline
+\emph{Plain HTML}	  	& 10				& 141.9183673	& 90.51020408    			& 187.4489796		& 172.3469388    			\\
+\emph{Database}		& 10 			& 408.8367347	& 231.8979592   			& 448.4081633		& 618.7142857  			\\
+\emph{Web Service}		& 10				& 5053.040816	& 767.5510204   			& 5110.591837		& 5110.591837    			\\
+\hline
+\emph{Plain HTML}		& 25						& 100						& 200    & 100						& 200    \\
+\emph{Database}		& 25						& 100						& 200    & 100						& 200    \\
+\emph{Web Service}		& 25						& 100						& 200    & 100						& 200    \\
+\hline
+\emph{Plain HTML}		& 50						& 100						& 200    & 100						& 200    \\
+\emph{Database}		& 50						& 100						& 200    & 100						& 200    \\
+\emph{Web Service}		& 50						& 100						& 200    & 100						& 200    \\
+\hline
+\emph{Plain HTML}		& 100					& 100						& 200    & 100						& 200    \\
+\emph{Database}		& 100					& 100						& 200    & 100						& 200    \\
+\emph{Web Service}		& 100					& 100						& 200    & 100						& 200    \\
+\end{tabular}
 \end{figure}
+
 
 
 
@@ -743,6 +901,33 @@ Total load time remained similar between piped and non-piped output.  This signi
 %--------------------Next Steps-------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
 \chapter{Next Steps}
+
+\section{Expanded Output API}
+
+Right now the OpenPipe system relies an an implicit layout output system that is integrated into a new or existing web framework. The API could be extended to provide a more explicit type of output system that may be useful in some scenarios that a developer may encounter. An example of an explicit API that could  be developed can be found in figure \ref{fig:explicitApi}
+
+\begin{figure}[H]
+\caption{An explicit version of an OpenPipe output API}
+\label{fig:explicitApi}
+\begin{lstlisting}
+<?php
+$layoutData = file_get_contents('layout.php');
+
+$pipe = new OpenPipe_Output_Handle();
+$pipe->sendLayout($layoutData);
+
+$dbRecords = mysql_query('select * from facts');
+$content = '';
+foreach($dbRecords as $dbRecord){
+	$content .= "<h1>User {$dbRecord['user_name']}</h1>";
+}
+
+$pipe->sendContent('user-names', $content);
+$pipe->endPhase(1);
+$pipe->close();
+?>
+\end{lstlisting}
+\end{figure}
 
 \section{Minification}
 The OpenPipe output adapter could add another output step where JavaScript, CSS, and HTML code is minified. Minified code has all unnecessary characters removed from its content, without changing the functionality of the original program. Minification can play an important role in further optimizing the pipeline by reducing the overall size of individual pipelet components.
@@ -789,6 +974,23 @@ Web servers like apache provide application interfaces for developing server ext
 %--------- CLIENT JS FILES---------- 
 \jslist{openpipe.js}
 
+
+
+%------------------------------------------------------------------------------------------------------
+%--------------------BIBLIOGRAPHY ---------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------
+\begin{thebibliography}{9}
+
+\bibitem{w3cNavigationTiming}
+Navigation Timing, Editor's Draft July 16th, 2012 [Online].
+Available: http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html
+
+\bibitem{siegeHomepage}
+Siege Home,  January 30, 2012 [Online].
+Available: http://www.joedog.org/siege-home/
+
+
+\end{thebibliography}
 
 \end{document}
 

@@ -19,14 +19,14 @@ class Fakebook extends CI_Controller {
 	}
 	
 	public function content_posts(){
-		$this->externalevent->execute($this->type, 50);
+		$this->externalevent->execute($this->type, 25);
 		$this->load->view('fakebook/content_posts');
 	}
 	
 	
 	/* --- Posts ---- */
 	public function post_comments(){
-		$this->externalevent->execute($this->type, 10);
+		$this->externalevent->execute($this->type, 5);
 		$this->load->view('fakebook/post_comments');
 	}
 	
@@ -56,12 +56,12 @@ class Fakebook extends CI_Controller {
 	}
 	
 	public function sidebar_groups(){
-		$this->externalevent->execute($this->type, 10);
+		$this->externalevent->execute($this->type, 5);
 		$this->load->view('fakebook/sidebar_groups');
 	}
 	
 	public function sidebar_friends(){
-		$this->externalevent->execute($this->type, 25);
+		$this->externalevent->execute($this->type, 10);
 		$this->load->view('fakebook/sidebar_friends');
 	}
 	
@@ -75,7 +75,7 @@ class Fakebook extends CI_Controller {
 	
 	/* --- Right sidebar ---- */
 	public function sidebar_ads(){
-		$this->externalevent->execute($this->type, 10);
+		$this->externalevent->execute($this->type, 5);
 		$this->load->view('fakebook/sidebar_ads');
 	}
 	

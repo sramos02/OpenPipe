@@ -26,6 +26,13 @@
 
 	var op = {};
 
+	//if this is debug then record performance statistics
+	if(isDebug === true){
+		op.performance = {};
+		op.performance.timing = {};
+		op.performance.timing.segments = [];
+	}
+
 	//init the OpenPipe client - hide pipelets initally (no FLOCs)
 	op.init = function(){
 		//record times for logging
@@ -45,6 +52,7 @@
 		//record times and output to the log
 		if(isDebug === true){
 			var debugCurrentSegmentLoadTime = new Date().getTime();
+			op.performance.timing.segments.push(debugCurrentSegmentLoadTime);
 			console.log('SEGMENT "'+segment.id+'" LOAD TIME: '+(debugCurrentSegmentLoadTime-debugLastSegmentLoadTime));
 			console.log('TIME UNTIL SEGMENT: '+(debugCurrentSegmentLoadTime-debugInitTime));
 			debugLastSegmentLoadTime = debugCurrentSegmentLoadTime;

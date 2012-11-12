@@ -54,6 +54,7 @@ class OpenPipe_Pipelet_Factory{
 		}
 		//now that all groups are accounted for sort by priority
 		krsort($pipeletGroups);
+
 		
 		//flatten all the segments to a single array
 		foreach($pipeletGroups as $pipeletGroup){

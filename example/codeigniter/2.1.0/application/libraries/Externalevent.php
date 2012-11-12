@@ -49,14 +49,14 @@ class Externalevent {
     public function database($magnitude) {
 		$CI =& get_instance();
     	$query = $CI->db->query(
-    		"select * from film".
+    		"SELECT * FROM film".
     		" LEFT JOIN film_actor ON film.film_id = film_actor.film_id".
     		" LEFT JOIN actor ON film_actor.actor_id = actor.actor_id".
     		" LEFT JOIN inventory ON film.film_id = inventory.film_id".
     		" LEFT JOIN rental ON inventory.inventory_id = rental.inventory_id".
     		" LIMIT ".$magnitude*25
     	);
-
+    	
     	foreach ($query->result() as $row){
     		$row->new_prop = true;
     	}

@@ -1,0 +1,5 @@
+# do performance testing for all lines in urls file
+cat urls | xargs -L1 ruby performance.rb
+
+# use awk as csv processor
+awk -F "\"*,\"*" '{print $3}' output-fakebook-*

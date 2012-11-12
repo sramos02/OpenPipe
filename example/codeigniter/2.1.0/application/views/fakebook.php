@@ -40,7 +40,7 @@
 		<section id="content" >
 		
 			<div pipelet-id="content_post_input" ></div>				
-			<div pipelet-id="content_posts" ></div>
+			<div pipelet-id="content_posts" pipelet-priority="1" ></div>
 		
 		</section>
 

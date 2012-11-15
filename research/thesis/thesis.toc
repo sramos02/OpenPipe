@@ -1,44 +1,44 @@
-\contentsline {chapter}{\numberline {1}Introduction}{6}
-\contentsline {chapter}{\numberline {2}Implementation and Analysis Tools}{11}
-\contentsline {section}{\numberline {2.1}Git}{11}
-\contentsline {section}{\numberline {2.2}PHP}{11}
-\contentsline {section}{\numberline {2.3}phpDocumentor}{12}
-\contentsline {section}{\numberline {2.4}Apache}{12}
-\contentsline {section}{\numberline {2.5}FireFox}{13}
-\contentsline {section}{\numberline {2.6}CodeIgniter}{13}
-\contentsline {section}{\numberline {2.7}Selenium}{14}
-\contentsline {chapter}{\numberline {3}Test Applications}{15}
-\contentsline {section}{\numberline {3.1}Static Sample App}{15}
-\contentsline {section}{\numberline {3.2}Basic Pipeline}{17}
-\contentsline {subsection}{\numberline {3.2.1}MVC Pipeline (PVC)}{17}
-\contentsline {chapter}{\numberline {4}Architectural Components}{19}
-\contentsline {section}{\numberline {4.1}Server components}{19}
-\contentsline {section}{\numberline {4.2}Client components}{20}
-\contentsline {chapter}{\numberline {5}Pipelets}{22}
-\contentsline {section}{\numberline {5.1}The Root Pipelet}{22}
-\contentsline {section}{\numberline {5.2}Nested Pipelets}{25}
-\contentsline {section}{\numberline {5.3}Pipelet Priority}{26}
-\contentsline {chapter}{\numberline {6}Class Interfaces}{28}
-\contentsline {section}{\numberline {6.1}Output}{29}
-\contentsline {section}{\numberline {6.2}Framework Adapter}{31}
-\contentsline {chapter}{\numberline {7}Design Patterns}{32}
-\contentsline {section}{\numberline {7.1}Strategy Pattern}{32}
-\contentsline {section}{\numberline {7.2}Factory Pattern}{33}
-\contentsline {chapter}{\numberline {8}Sequence Diagrams}{35}
-\contentsline {section}{\numberline {8.1}Server}{35}
-\contentsline {section}{\numberline {8.2}Client}{36}
-\contentsline {chapter}{\numberline {9}Data Objects}{40}
-\contentsline {section}{\numberline {9.1}Transmitted Data}{40}
-\contentsline {chapter}{\numberline {10}Things to Consider}{42}
-\contentsline {section}{\numberline {10.1}PHP Output Buffering}{42}
-\contentsline {section}{\numberline {10.2}Dynamic JavaScript DOM Insertion}{44}
-\contentsline {chapter}{\numberline {11}Analysis}{45}
-\contentsline {section}{\numberline {11.1}Data Collection Methodology}{45}
-\contentsline {section}{\numberline {11.2}Simulating Load}{48}
-\contentsline {section}{\numberline {11.3}Results}{49}
-\contentsline {chapter}{\numberline {12}Next Steps}{54}
-\contentsline {section}{\numberline {12.1}Expanded Output API}{54}
-\contentsline {section}{\numberline {12.2}Minification}{55}
-\contentsline {section}{\numberline {12.3}Addition of framework adapters}{55}
-\contentsline {section}{\numberline {12.4}Language agnostic Apache server extension}{55}
-\contentsline {chapter}{\numberline {13}Code Listings}{56}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {chapter}{\numberline {2}Implementation and Analysis Tools}{6}
+\contentsline {section}{\numberline {2.1}Git}{6}
+\contentsline {section}{\numberline {2.2}PHP}{7}
+\contentsline {section}{\numberline {2.3}phpDocumentor}{7}
+\contentsline {section}{\numberline {2.4}Apache}{8}
+\contentsline {section}{\numberline {2.5}FireFox}{8}
+\contentsline {section}{\numberline {2.6}CodeIgniter}{9}
+\contentsline {section}{\numberline {2.7}Selenium}{9}
+\contentsline {chapter}{\numberline {3}Test Applications}{11}
+\contentsline {section}{\numberline {3.1}Static Sample App}{11}
+\contentsline {section}{\numberline {3.2}Basic Pipeline}{13}
+\contentsline {subsection}{\numberline {3.2.1}MVC Pipeline (PVC)}{14}
+\contentsline {chapter}{\numberline {4}Architectural Components}{16}
+\contentsline {section}{\numberline {4.1}Server components}{16}
+\contentsline {section}{\numberline {4.2}Client components}{17}
+\contentsline {chapter}{\numberline {5}Pipelets}{19}
+\contentsline {section}{\numberline {5.1}The Root Pipelet}{19}
+\contentsline {section}{\numberline {5.2}Nested Pipelets}{22}
+\contentsline {section}{\numberline {5.3}Pipelet Priority}{24}
+\contentsline {chapter}{\numberline {6}Class Interfaces}{25}
+\contentsline {section}{\numberline {6.1}Output}{26}
+\contentsline {section}{\numberline {6.2}Framework Adapter}{28}
+\contentsline {chapter}{\numberline {7}Design Patterns}{30}
+\contentsline {section}{\numberline {7.1}Strategy Pattern}{30}
+\contentsline {section}{\numberline {7.2}Factory Pattern}{31}
+\contentsline {chapter}{\numberline {8}Sequence Diagrams}{33}
+\contentsline {section}{\numberline {8.1}Server}{33}
+\contentsline {section}{\numberline {8.2}Client}{35}
+\contentsline {chapter}{\numberline {9}Data Objects}{39}
+\contentsline {section}{\numberline {9.1}Transmitted Data}{39}
+\contentsline {chapter}{\numberline {10}Other Library Components}{41}
+\contentsline {section}{\numberline {10.1}PHP Output Buffering}{41}
+\contentsline {section}{\numberline {10.2}Dynamic JavaScript DOM Insertion}{42}
+\contentsline {chapter}{\numberline {11}Methodology}{44}
+\contentsline {section}{\numberline {11.1}Data Collection}{44}
+\contentsline {section}{\numberline {11.2}Simulating Load}{47}
+\contentsline {chapter}{\numberline {12}Results}{48}
+\contentsline {chapter}{\numberline {13}DIscussion}{53}
+\contentsline {section}{\numberline {13.1}Expanded Output API}{53}
+\contentsline {section}{\numberline {13.2}Minification}{54}
+\contentsline {section}{\numberline {13.3}Addition of framework adapters}{54}
+\contentsline {section}{\numberline {13.4}Language agnostic Apache server extension}{55}
+\contentsline {chapter}{\numberline {14}Code Listings}{56}

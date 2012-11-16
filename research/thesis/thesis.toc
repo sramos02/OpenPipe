@@ -35,10 +35,10 @@
 \contentsline {chapter}{\numberline {11}Methodology}{44}
 \contentsline {section}{\numberline {11.1}Data Collection}{44}
 \contentsline {section}{\numberline {11.2}Simulating Load}{47}
-\contentsline {chapter}{\numberline {12}Results}{48}
-\contentsline {chapter}{\numberline {13}DIscussion}{53}
-\contentsline {section}{\numberline {13.1}Expanded Output API}{53}
-\contentsline {section}{\numberline {13.2}Minification}{54}
-\contentsline {section}{\numberline {13.3}Addition of framework adapters}{54}
-\contentsline {section}{\numberline {13.4}Language agnostic Apache server extension}{55}
-\contentsline {chapter}{\numberline {14}Code Listings}{56}
+\contentsline {chapter}{\numberline {12}Results}{49}
+\contentsline {chapter}{\numberline {13}DIscussion}{54}
+\contentsline {section}{\numberline {13.1}Expanded Output API}{54}
+\contentsline {section}{\numberline {13.2}Minification}{55}
+\contentsline {section}{\numberline {13.3}Addition of framework adapters}{55}
+\contentsline {section}{\numberline {13.4}Language agnostic Apache server extension}{56}
+\contentsline {chapter}{\numberline {14}Code Listings}{57}

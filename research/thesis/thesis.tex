@@ -1,11 +1,13 @@
 %% thesis.tex
-%% 2012/08/25
+%% 2013/05
 %% by Sean Kenny
+%% in Partial Fulfillment of the Requirements for the Degree of Master of Science
 
 %--------------------------------------------------------------------------------------------
 %------------------DOCUMENT STYLE ---------------------------------------------------------- 
 %--------------------------------------------------------------------------------------------
 \documentclass[12pt]{report}
+\usepackage{textcase}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}
@@ -44,46 +46,109 @@
 %--------- NEW COMMANDS ---------- 
 %command for listing php files
 \newcommand{\phplist}[1]{\lstinputlisting[language=PHP,basicstyle=\footnotesize\ttfamily,tabsize=2,numbers=left,frame=single,caption="#1"]{\rootServerPhpPath #1}}
-
+ 
 %command for listing js files
 \newcommand{\jslist}[1]{\lstinputlisting[language=Java,basicstyle=\footnotesize\ttfamily,tabsize=2,numbers=left,frame=single,caption="#1"]{\rootClientJsPath #1}}
 \newcommand{\htmllist}[1]{\lstinputlisting[language=HTML,,basicstyle=\footnotesize\ttfamily,tabsize=2,numbers=left,frame=single,caption="#1"]{#1}}
 
-%---------- NEW ENVIRONMENTS ----------
+%--------- RENEWED COMMANDS ----------
+ \renewcommand{\abstractname}{\MakeTextUppercase{Abstract}}
 
+%---------- NEW ENVIRONMENTS ----------
 \newenvironment{dedication}
 	{\vspace{6ex}\begin{quotation}\begin{center}\begin{em}}
 	{\par\end{em}\end{center}\end{quotation}}
 
+
+
 \begin{document}
 \pagenumbering{roman}
 
-\title{
-	Implementation and Analysis of a Web Request Pipelining Framework \\ 
-	\footnotesize{
-		For a degree of Master of Science in Computer Science \\ 
-	 	at Southern Connecticut State University
-	}
-}
-\date{October 2012}
-\author{
-	Sean P. Kenny \\ 
-	Thesis Advisor: Dr. Hrvoje Podnar
-}
-
-\maketitle
-
+%--------------------------------------------------------------------------------------------
+%------------------ TITLE PAGE --------------------------------------------------------------- 
+%--------------------------------------------------------------------------------------------
 \newpage
-\setcounter{page}{2}
-\thispagestyle{plain}
-\mbox{}
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+	\large 
+	\MakeTextUppercase{Implementation and Analysis of a} \\
+	\MakeTextUppercase{Web Request Pipelining Framework} \\ 
+	\MakeTextUppercase{By} \\
+	\MakeTextUppercase{Sean Kenny} \\
+	A Thesis Submitted to the School of Graduate Studies \\
+	in Partial Fulfillment of the Requirements for the Degree of \\
+	Master of Science \\
+	\vspace{.5in}
+	Southern Connecticut State University \\
+	New Haven, Connecticut \\
+	May 2013
+\end{center}
+\vspace*{\fill}
 
+%--------------------------------------------------------------------------------------------
+%------------------ SIGNATURE PAGE ---------------------------------------------------------- 
+%--------------------------------------------------------------------------------------------
+\newpage
+\thispagestyle{plain}
+\setcounter{page}{2}
+\vspace{2in}
+\begin{center}
+	\large 
+	\MakeTextUppercase{Implementation and Analysis of a} \\
+	\MakeTextUppercase{Web Request Pipelining Framework} \\ 
+	\MakeTextUppercase{By} \\
+	\MakeTextUppercase{Sean Kenny} \\
+\end{center}
+This thesis was prepared under the direction of the candidate’s thesis advisor, Dr. Hrvoje Podnar, Department of Computer Science, and it has been approved by the members of the candidate’s thesis committee. It was submitted to the School of Graduate Studies and was accepted in partial fulfillment of the requirements for the degree of Master of Science.
+
+\begin{flushright}
+
+\makebox[2in]{\hrulefill} \\
+Hrvoje Podnar, Ph.D. \\
+Thesis Advisor
+
+\vspace{0.5in}
+
+\makebox[2in]{\hrulefill} \\
+Lisa Lancor, Ph.D. \\
+Second Reader
+
+\end{flushright}
+
+\begin{flushleft}
+\makebox[2in]{\hrulefill} \\
+Imad Antonios, Ph.D. \\
+Department Chairperson
+\end{flushleft}
+
+
+%--------------------------------------------------------------------------------------------
+%------------------ ABSTRACT PAGE ----------------------------------------------------------- 
+%--------------------------------------------------------------------------------------------
 \begin{abstract}
 \thispagestyle{plain}
 \setcounter{page}{3}
+
+\begin{flushleft}
+\begin{tabular}{ll}
+Author:  			& Sean Kenny 													\\
+Title: 			& Implementation and Analysis of a Web Request Pipelining Framework	\\
+Thesis Advisor: 	& Hrvoje Podnar, Ph.D.											\\
+Institution: 		& Southern Connecticut State University								\\
+Year: 			& 2012														\\
+\end{tabular}
+\end{flushleft}
+
+\begin{flushleft}
 This project intends to improve upon the current HTTP based web request and response system utilized by modern web browsers and servers today. This improvement will be made possible through the creation of a software HTTP web request pipelining framework named OpenPipe. The OpenPipe framework will attempt to increase the perceived speed of web content delivery through the optimization of communication sequences that occur during a standard HTTP web request cycle. The OpenPipe framework will be provided as a PHP library for Apache based web servers, and a client side cross-browser JavaScript library. The existence of this library will allow for a greater level of transparency to web developers whom wish to provide advanced HTTP request pipelining  to their web sites and web application in a more pluggable way, that can be extended to integrate with new and existing web based MVC frameworks. Once this library has been developed the final stage of this project will be to collect, analyze, and compare data for non-pipelined and pipelined web pages. The overall goal of this analysis will be to provide a clear picture of where the performance benefits occur when utilizing an HTTP request pipelining framework that OpenPipe provides.
+\end{flushleft}
 \end{abstract}
 
+
+%--------------------------------------------------------------------------------------------
+%------------------ DEDICATION -------------------------------------------------------------- 
+%--------------------------------------------------------------------------------------------
 \begin{dedication}
 \setcounter{page}{4}
 To my daughters, Paige and Jocelyn - for inspiration I will cherish always.
@@ -91,6 +156,27 @@ To my daughters, Paige and Jocelyn - for inspiration I will cherish always.
 To my wife, Kim - who’s selfless love, support, and encouragement has allowed me to fulfill new dreams and goals I never would have been able to imagine without her.
 \end{dedication}
 
+
+%--------------------------------------------------------------------------------------------
+%------------------ ACKNOWLEDGEMENT ------------------------------------------------------- 
+%--------------------------------------------------------------------------------------------
+\newpage
+\thispagestyle{plain}
+\setcounter{page}{5}
+\vspace{2in}
+\begin{center}
+\MakeTextUppercase{Acknowledgements} \\
+\end{center}
+
+I would like to thank Professor Hrvoje Podnar, who  in an exceptional way guided me through the thesis process and helped strengthen the research and results of this project.
+
+I would also like to thank Professor Lisa Lancor, for her feedback and enthusiasm during all phases of this thesis's development.
+
+
+
+%--------------------------------------------------------------------------------------------
+%------------------ TABLES ------------------------------------------------------------------- 
+%--------------------------------------------------------------------------------------------
 \tableofcontents
 \listoffigures
 
@@ -872,7 +958,13 @@ interface PerformanceTiming {
 
 One important charactertistic to consider when developiong a web based library is how it performs unders load. The dimension of load that was considered when performance testing OpenPipe was the number of concurrent connections the server was able to process, and how this affected overall performance with and without the OpenPipe library outputting data through an HTTP data pipeline.
 
-To achieve an accurate simulation of load the freely available and opensource tool named, 'Siege'. Siege is an HTTP load testing and benchmarking utility. It was designed to let web developers measure their code under duress, to see how it will stand up to load on the internet \cite{siegeHomepage}. OpenPipe was tested while siege was run at concurrency levels 10, 25, 50, and 100. 
+To achieve an accurate simulation of load the freely available and opensource tool named, 'Siege', was utilized. Siege is an HTTP web server load testing and benchmarking utility. It was designed to let web developers measure their code under stress, and see how it will stand up to load while in a production environment \cite{siegeHomepage}.  Siege allows for easily specificy the number of concurrent virtual users that should be tested accessing the site. The concurrency level is set using the -c flag when invoking the siege command line utility program. This concurrency option is descibed in the Siege manual in as the following:
+
+\begin{quote}
+This option allows the user to stress the web server with the number of simulated users. The amount is limited only by the computing resources available, but realistically a couple of hundred simulated users is equal to many times that that number in actual user sessions. The number you select represents the number of transactions your server is handling \cite{siegeManual}.
+\end{quote}
+
+ OpenPipe was tested while siege was run at concurrency levels 10, 25, 50, and 100. 
  
 
 \chapter{Results}
@@ -900,25 +992,25 @@ Once the performance timing data was collected additional data points were calcu
 \textbf{Type}			&\textbf{Load}		&\textbf{Response}	&\textbf{Response Piped}	&\textbf{Total Time}	&\textbf{Total Time Piped}  	\\
 \hline
 \hline
-\emph{Plain HTML}		& 0				& 80.81632653	& 56.10204082			& 102.6122449		& 144.0408163			\\
-\emph{Database}		& 0				& 149.0612245	& 74.14285714			& 166.5714286		& 127.6122449			\\
-\emph{Web Service}		& 0				& 5144.959184	& 795.2244898			& 5164.77551			& 5103.959184			\\
+\emph{Plain HTML}		& 0				& 80.81632653	& 56.10204082 (69\%)		& 102.6122449		& 144.0408163			\\
+\emph{Database}		& 0				& 149.0612245	& 74.14285714 (50\%)		& 166.5714286		& 127.6122449			\\
+\emph{Web Service}		& 0				& 5144.959184	& 795.2244898 (15\%)		& 5164.77551			& 5103.959184			\\
 \hline
-\emph{Plain HTML}	  	& 10				& 141.9183673	& 90.51020408    			& 187.4489796		& 172.3469388    			\\
-\emph{Database}		& 10 			& 408.8367347	& 231.8979592   			& 448.4081633		& 618.7142857  			\\
-\emph{Web Service}		& 10				& 5053.040816	& 767.5510204   			& 5110.591837		& 5114.691837    			\\
+\emph{Plain HTML}	  	& 10				& 141.9183673	& 90.51020408 (64\%)		& 187.4489796		& 172.3469388    			\\
+\emph{Database}		& 10 			& 408.8367347	& 231.8979592 (57\%)		& 448.4081633		& 618.7142857  			\\
+\emph{Web Service}		& 10				& 5053.040816	& 767.5510204 (15\%)		& 5110.591837		& 5114.691837    			\\
 \hline
-\emph{Plain HTML}		& 25				& 137.1836735	& 137.1836735    			& 184.4285714		& 192.8163265    			\\
-\emph{Database}		& 25				& 2583.612245	& 939.6530612    			& 2621.387755		& 2649.897959    			\\
-\emph{Web Service}		& 25				& 4872.367347	& 718.877551    			& 4912.204082		& 5177.857143   			 \\
+\emph{Plain HTML}		& 25				& 137.1836735	& 85.02040816 (62\%)		& 184.4285714		& 192.8163265    			\\
+\emph{Database}		& 25				& 2583.612245	& 939.6530612 (36\%)		& 2621.387755		& 2649.897959    			\\
+\emph{Web Service}		& 25				& 4872.367347	& 718.8775510 (15\%)		& 4912.204082		& 5177.857143   			 \\
 \hline
-\emph{Plain HTML}		& 50				& 146.9591837	& 111.5306122    			& 194				& 220.8979592   			\\
-\emph{Database}		& 50				& 6172.265306	& 2203.897959    			& 6214.673469		& 6244.55102    			\\
-\emph{Web Service}		& 50				& 4791.755102	& 750.2857143    			& 4848.040816		& 4790.081633    			\\
+\emph{Plain HTML}		& 50				& 146.9591837	& 111.5306122 (76\%)		& 194				& 220.8979592   			\\
+\emph{Database}		& 50				& 6172.265306	& 2203.897959 (36\%)		& 6214.673469		& 6244.55102    			\\
+\emph{Web Service}		& 50				& 4791.755102	& 750.2857143 (16\%)		& 4848.040816		& 4790.081633    			\\
 \hline
-\emph{Plain HTML}		& 100			& 149.2653061	& 102.7959184    			& 192.8979592		& 195.3673469    			\\
-\emph{Database}		& 100			& 12139.69388	& 4530.346939    			& 12217.28571		& 12878.77551    			\\
-\emph{Web Service}		& 100			& 4742.285714	& 741.6734694    			& 4827.040816		& 4754.469388    			\\
+\emph{Plain HTML}		& 100			& 149.2653061	& 102.7959184 (69\%)		& 192.8979592		& 195.3673469    			\\
+\emph{Database}		& 100			& 12139.69388	& 4530.346939 (37\%)		& 12217.28571		& 12878.77551    			\\
+\emph{Web Service}		& 100			& 4742.285714	& 741.6734694 (16\%)		& 4827.040816		& 4754.469388    			\\
 \end{tabular}
 \caption{Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}
 \end{figure}
@@ -1054,6 +1146,10 @@ Available: dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.h
 "Siege Home",  January 30, 2012 [Online]
 Available: www.joedog.org/siege-home
 
+\bibitem{siegeManual}
+"Siege Manual", January 30, 2012 [Online]
+Available: http://www.joedog.org/siege-manual/
+
 \bibitem{phpWiki}
 "PHP" [Online]
 Available: http://en.wikipedia.org/wiki/PHP
@@ -1070,8 +1166,4 @@ Steve Souders, Even Faster Web Sites: Performance Best Practices for Web Develop
 
 \end{thebibliography}
 
-
-
-
 \end{document}
-

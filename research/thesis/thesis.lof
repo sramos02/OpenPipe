@@ -36,10 +36,10 @@
 \contentsline {figure}{\numberline {11.2}{\ignorespaces DOM performance timing data made available via JavaScript \cite {w3cNavigationTiming}}}{46}
 \contentsline {figure}{\numberline {11.3}{\ignorespaces DOM performance timing data show as linear request \cite {w3cNavigationTiming}}}{47}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{50}
-\contentsline {figure}{\numberline {12.2}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{50}
-\contentsline {figure}{\numberline {12.3}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{51}
-\contentsline {figure}{\numberline {12.4}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{52}
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{51}
+\contentsline {figure}{\numberline {12.2}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{51}
+\contentsline {figure}{\numberline {12.3}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{52}
+\contentsline {figure}{\numberline {12.4}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{53}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {13.1}{\ignorespaces An explicit version of an OpenPipe output API}}{54}
+\contentsline {figure}{\numberline {13.1}{\ignorespaces An explicit version of an OpenPipe output API}}{55}
 \addvspace {10\p@ }

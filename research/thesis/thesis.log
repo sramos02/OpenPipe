@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 NOV 2012 23:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  18 NOV 2012 02:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,48 +319,113 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
+(/usr/local/texlive/2012/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count98
+\c@@ppsavesec=\count99
+\c@@ppsaveapp=\count100
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2010/10/13 v2.3e parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 43.
+\cftparskip=\skip43
+\cftbeforetoctitleskip=\skip44
+\cftaftertoctitleskip=\skip45
+\cftbeforepartskip=\skip46
+\cftpartnumwidth=\skip47
+\cftpartindent=\skip48
+\cftbeforechapskip=\skip49
+\cftchapindent=\skip50
+\cftchapnumwidth=\skip51
+\cftbeforesecskip=\skip52
+\cftsecindent=\skip53
+\cftsecnumwidth=\skip54
+\cftbeforesubsecskip=\skip55
+\cftsubsecindent=\skip56
+\cftsubsecnumwidth=\skip57
+\cftbeforesubsubsecskip=\skip58
+\cftsubsubsecindent=\skip59
+\cftsubsubsecnumwidth=\skip60
+\cftbeforeparaskip=\skip61
+\cftparaindent=\skip62
+\cftparanumwidth=\skip63
+\cftbeforesubparaskip=\skip64
+\cftsubparaindent=\skip65
+\cftsubparanumwidth=\skip66
+\cftbeforeloftitleskip=\skip67
+\cftafterloftitleskip=\skip68
+\cftbeforefigskip=\skip69
+\cftfigindent=\skip70
+\cftfignumwidth=\skip71
+\c@lofdepth=\count101
+\c@lotdepth=\count102
+\cftbeforelottitleskip=\skip72
+\cftafterlottitleskip=\skip73
+\cftbeforetabskip=\skip74
+\cfttabindent=\skip75
+\cfttabnumwidth=\skip76
+)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip43
+\FP@margin=\skip77
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/local/texlive/2012/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box30
+\beforetitleunit=\skip78
+\aftertitleunit=\skip79
+\ttl@plus=\dimen109
+\ttl@minus=\dimen110
+\ttl@toksa=\toks20
+\titlewidth=\dimen111
+\titlewidthlast=\dimen112
+\titlewidthfirst=\dimen113
+)
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 79.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count98
-\scratchdimen=\dimen109
-\scratchbox=\box30
-\nofMPsegments=\count99
-\nofMParguments=\count100
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count101
-\MPscratchDim=\dimen110
-\MPnumerator=\count102
-\makeMPintoPDFobject=\count103
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count103
+\scratchdimen=\dimen114
+\scratchbox=\box31
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen115
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -409,442 +474,436 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count104
+\c@lstlisting=\count109
 
 [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 129.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 144.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 134.
+(Font)              <12> on input line 149.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 134.
+(Font)              <8> on input line 149.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 134.
+(Font)              <6> on input line 149.
 
-Overfull \hbox (6.89145pt too wide) in paragraph at lines 134--141
+Overfull \hbox (6.89145pt too wide) in paragraph at lines 149--156
 []  
  []
 
 [3]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 152.
- [4] [5]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 180.
- (./thesis.toc [6
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 167.
+ [4] [5] (./thesis.toc [6] [7]
+Overfull \hbox (1.41573pt too wide) detected at line 63
+ \OT1/phv/b/n/12 103
+ []
 
-] [7])
+)
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [8] (./thesis.lof [9
-
-])
+ (./thesis.lof [8] [9])
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
- [10] [11]
+ [10]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 199.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 215.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 199.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 215.
  [1
 
 ]
-<figures/images/osi_model.png, id=44, 405.515pt x 468.75125pt>
+<figures/images/osi_model.png, id=41, 405.515pt x 468.75125pt>
 File: figures/images/osi_model.png Graphic file (type png)
 
 <use figures/images/osi_model.png>
-Package pdftex.def Info: figures/images/osi_model.png used on input line 219.
+Package pdftex.def Info: figures/images/osi_model.png used on input line 235.
 (pdftex.def)             Requested size: 256.0748pt x 296.0158pt.
  [2] [3 <./figures/images/osi_model.png>]
-<figures/images/HTTP_request_cycles.jpg, id=54, 626.34pt x 493.845pt>
+<figures/images/HTTP_request_cycles.jpg, id=51, 626.34pt x 493.845pt>
 File: figures/images/HTTP_request_cycles.jpg Graphic file (type jpg)
 
 <use figures/images/HTTP_request_cycles.jpg>
 Package pdftex.def Info: figures/images/HTTP_request_cycles.jpg used on input l
-ine 241.
+ine 257.
 (pdftex.def)             Requested size: 412.56496pt x 325.29819pt.
  [4] [5 <./figures/images/HTTP_request_cycles.jpg>]
 Chapter 2.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 254.
-<figures/images/git_logo.png, id=61, 281.05pt x 150.5625pt>
+<figures/images/git_logo.png, id=58, 281.05pt x 150.5625pt>
 File: figures/images/git_logo.png Graphic file (type png)
 
 <use figures/images/git_logo.png>
-Package pdftex.def Info: figures/images/git_logo.png used on input line 256.
+Package pdftex.def Info: figures/images/git_logo.png used on input line 272.
 (pdftex.def)             Requested size: 85.35826pt x 45.72736pt.
 
-<figures/images/php_logo.png, id=62, 95.35625pt x 51.19125pt>
+<figures/images/php_logo.png, id=59, 95.35625pt x 51.19125pt>
 File: figures/images/php_logo.png Graphic file (type png)
 
 <use figures/images/php_logo.png>
-Package pdftex.def Info: figures/images/php_logo.png used on input line 265.
+Package pdftex.def Info: figures/images/php_logo.png used on input line 281.
 (pdftex.def)             Requested size: 85.35826pt x 45.82564pt.
  [6
 
- <./figures/images/git_logo.png>]
-<figures/images/php_documentor_logo.png, id=67, 250.9375pt x 150.5625pt>
+ <./figures/images/git_logo.png> <./figures/images/php_logo.png>]
+<figures/images/php_documentor_logo.png, id=65, 250.9375pt x 150.5625pt>
 File: figures/images/php_documentor_logo.png Graphic file (type png)
 
 <use figures/images/php_documentor_logo.png>
 Package pdftex.def Info: figures/images/php_documentor_logo.png used on input l
-ine 275.
+ine 291.
 (pdftex.def)             Requested size: 85.35826pt x 51.21584pt.
 
-<figures/images/apache_logo.png, id=68, 351.3125pt x 185.69376pt>
+<figures/images/apache_logo.png, id=66, 351.3125pt x 185.69376pt>
 File: figures/images/apache_logo.png Graphic file (type png)
 
 <use figures/images/apache_logo.png>
-Package pdftex.def Info: figures/images/apache_logo.png used on input line 283.
+Package pdftex.def Info: figures/images/apache_logo.png used on input line 299.
 
 (pdftex.def)             Requested size: 85.35826pt x 45.1171pt.
- [7 <./figures/images/php_logo.png> <./figures/images/php_documentor_logo.png>]
-
-<figures/images/firefox_logo.png, id=74, 225.84375pt x 225.84375pt>
+ [7 <./figures/images/php_documentor_logo.png> <./figures/images/apache_logo.pn
+g (PNG copy)>]
+<figures/images/firefox_logo.png, id=71, 225.84375pt x 225.84375pt>
 File: figures/images/firefox_logo.png Graphic file (type png)
 
 <use figures/images/firefox_logo.png>
-Package pdftex.def Info: figures/images/firefox_logo.png used on input line 295
+Package pdftex.def Info: figures/images/firefox_logo.png used on input line 311
 .
 (pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
- [8 <./figures/images/apache_logo.png (PNG copy)> <./figures/images/firefox_log
-o.png>]
-<figures/images/ci_logo.jpg, id=80, 150.5625pt x 164.615pt>
+
+<figures/images/ci_logo.jpg, id=72, 150.5625pt x 164.615pt>
 File: figures/images/ci_logo.jpg Graphic file (type jpg)
 
 <use figures/images/ci_logo.jpg>
-Package pdftex.def Info: figures/images/ci_logo.jpg used on input line 303.
+Package pdftex.def Info: figures/images/ci_logo.jpg used on input line 319.
 (pdftex.def)             Requested size: 85.35826pt x 93.32915pt.
-
-<figures/images/selenium_logo.png, id=81, 166.13792pt x 150.35483pt>
+ [8 <./figures/images/firefox_logo.png>]
+<figures/images/selenium_logo.png, id=77, 166.13792pt x 150.35483pt>
 File: figures/images/selenium_logo.png Graphic file (type png)
 
 <use figures/images/selenium_logo.png>
-Package pdftex.def Info: figures/images/selenium_logo.png used on input line 31
-0.
+Package pdftex.def Info: figures/images/selenium_logo.png used on input line 32
+6.
 (pdftex.def)             Requested size: 85.35826pt x 77.2512pt.
  [9 <./figures/images/ci_logo.jpg> <./figures/images/selenium_logo.png>] [10]
 Chapter 3.
 [11
 
-] <figures/images/sample_app.jpg, id=92, 1178.4025pt x 629.35126pt>
+] <figures/images/sample_app.jpg, id=89, 1178.4025pt x 629.35126pt>
 File: figures/images/sample_app.jpg Graphic file (type jpg)
 
 <use figures/images/sample_app.jpg>
-Package pdftex.def Info: figures/images/sample_app.jpg used on input line 367.
+Package pdftex.def Info: figures/images/sample_app.jpg used on input line 383.
 (pdftex.def)             Requested size: 469.75502pt x 250.88136pt.
  [12 <./figures/images/sample_app.jpg>]
-<figures/images/basic_pipeline.jpg, id=96, 1174.3875pt x 624.3325pt>
+<figures/images/basic_pipeline.jpg, id=93, 1174.3875pt x 624.3325pt>
 File: figures/images/basic_pipeline.jpg Graphic file (type jpg)
 
 <use figures/images/basic_pipeline.jpg>
 Package pdftex.def Info: figures/images/basic_pipeline.jpg used on input line 3
-81.
+97.
 (pdftex.def)             Requested size: 469.75502pt x 249.72858pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 381--382
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
-[13 <./figures/images/basic_pipeline.jpg>]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 388.
- [14] [15]
+[13 <./figures/images/basic_pipeline.jpg>] [14]
 Chapter 4.
 
-Overfull \hbox (11.92058pt too wide) in paragraph at lines 437--438
+Overfull \hbox (11.92058pt too wide) in paragraph at lines 453--454
 \OT1/phv/m/n/12 face pre-existing PHP ap-pli-ca-tion frame-works with Open-Pipe
 , or whole new OpenPipe-
  []
 
-[16
 
-]
-Overfull \hbox (1.80342pt too wide) in paragraph at lines 443--444
+Overfull \hbox (1.80342pt too wide) in paragraph at lines 459--460
 \OT1/phv/m/n/12 work nor-mally pro-vides core web ap-pli-ca-tion com-po-nents s
 uch as database li-braries,
  []
 
-<figures/images/framework_stack.pdf, id=111, 445.665pt x 323.2075pt>
+[15
+
+] <figures/images/framework_stack.pdf, id=105, 445.665pt x 323.2075pt>
 File: figures/images/framework_stack.pdf Graphic file (type pdf)
 
 <use figures/images/framework_stack.pdf>
 Package pdftex.def Info: figures/images/framework_stack.pdf used on input line 
-448.
+464.
 (pdftex.def)             Requested size: 469.75502pt x 340.67987pt.
- [17 <./figures/images/framework_stack.pdf>]
-Overfull \hbox (5.91148pt too wide) in paragraph at lines 460--461
+
+Overfull \hbox (5.91148pt too wide) in paragraph at lines 476--477
 []\OT1/phv/b/n/12 Vendor Li-braries \OT1/phv/m/n/12 - Open-Pipe makes use of tw
 o very pop-u-lar, re-li-able, and lightweight
  []
 
-<figures/images/client_stack.pdf, id=146, 402.50375pt x 189.70876pt>
+[16 <./figures/images/framework_stack.pdf>]
+<figures/images/client_stack.pdf, id=140, 402.50375pt x 189.70876pt>
 File: figures/images/client_stack.pdf Graphic file (type pdf)
 
 <use figures/images/client_stack.pdf>
-Package pdftex.def Info: figures/images/client_stack.pdf used on input line 470
+Package pdftex.def Info: figures/images/client_stack.pdf used on input line 486
 .
 (pdftex.def)             Requested size: 469.75502pt x 221.40544pt.
- [18 <./figures/images/client_stack.pdf>]
+ [17 <./figures/images/client_stack.pdf>]
 Chapter 5.
-LaTeX Font Info:    Try loading font information for OML+phv on input line 505.
+LaTeX Font Info:    Try loading font information for OML+phv on input line 521.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omlphv.fd
 File: omlphv.fd 
 )
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 505.
- [19
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 521.
+ [18
 
 ]
-<figures/images/root_pipelet.pdf, id=185, 564.1075pt x 725.71124pt>
+<figures/images/root_pipelet.pdf, id=179, 564.1075pt x 725.71124pt>
 File: figures/images/root_pipelet.pdf Graphic file (type pdf)
 
 <use figures/images/root_pipelet.pdf>
-Package pdftex.def Info: figures/images/root_pipelet.pdf used on input line 530
+Package pdftex.def Info: figures/images/root_pipelet.pdf used on input line 546
 .
 (pdftex.def)             Requested size: 469.75502pt x 604.3334pt.
- [20]
+ [19]
 Overfull \vbox (11.07336pt too high) has occurred while \output is active []
 
 
-[21 <./figures/images/root_pipelet.pdf>]
-<figures/images/nested_pipelets.pdf, id=206, 681.54625pt x 698.61pt>
+[20 <./figures/images/root_pipelet.pdf>]
+<figures/images/nested_pipelets.pdf, id=199, 681.54625pt x 698.61pt>
 File: figures/images/nested_pipelets.pdf Graphic file (type pdf)
 
 <use figures/images/nested_pipelets.pdf>
 Package pdftex.def Info: figures/images/nested_pipelets.pdf used on input line 
-543.
+559.
 (pdftex.def)             Requested size: 469.75502pt x 481.51909pt.
- [22] [23 <./figures/images/nested_pipelets.pdf>] [24]
+ [21] [22 <./figures/images/nested_pipelets.pdf>] [23]
 Chapter 6.
-<figures/images/generalization_output.pdf, id=241, 491.8375pt x 353.32pt>
+<figures/images/generalization_output.pdf, id=235, 491.8375pt x 353.32pt>
 File: figures/images/generalization_output.pdf Graphic file (type pdf)
 
 <use figures/images/generalization_output.pdf>
 Package pdftex.def Info: figures/images/generalization_output.pdf used on input
- line 587.
+ line 603.
 (pdftex.def)             Requested size: 469.75502pt x 337.46893pt.
- [25
+ [24
 
-] [26 <./figures/images/generalization_output.pdf>] [27]
-<figures/images/generalization_adapters.pdf, id=287, 503.8825pt x 444.66125pt>
+] [25 <./figures/images/generalization_output.pdf>] [26]
+<figures/images/generalization_adapters.pdf, id=280, 503.8825pt x 444.66125pt>
 File: figures/images/generalization_adapters.pdf Graphic file (type pdf)
 
 <use figures/images/generalization_adapters.pdf>
 Package pdftex.def Info: figures/images/generalization_adapters.pdf used on inp
-ut line 617.
+ut line 633.
 (pdftex.def)             Requested size: 469.75502pt x 414.54843pt.
- [28 <./figures/images/generalization_adapters.pdf>] [29]
+ [27 <./figures/images/generalization_adapters.pdf>] [28]
 Chapter 7.
-<figures/images/strategy_runner.pdf, id=333, 773.89125pt x 446.66875pt>
+<figures/images/strategy_runner.pdf, id=327, 773.89125pt x 446.66875pt>
 File: figures/images/strategy_runner.pdf Graphic file (type pdf)
 
 <use figures/images/strategy_runner.pdf>
 Package pdftex.def Info: figures/images/strategy_runner.pdf used on input line 
-646.
+662.
 (pdftex.def)             Requested size: 469.75502pt x 271.13167pt.
- [30
+ [29
 
-] [31 <./figures/images/strategy_runner.pdf>]
-<figures/images/factory_pipelets.pdf, id=388, 483.8075pt x 124.465pt>
+] [30 <./figures/images/strategy_runner.pdf>]
+<figures/images/factory_pipelets.pdf, id=382, 483.8075pt x 124.465pt>
 File: figures/images/factory_pipelets.pdf Graphic file (type pdf)
 
 <use figures/images/factory_pipelets.pdf>
 Package pdftex.def Info: figures/images/factory_pipelets.pdf used on input line
- 670.
+ 686.
 (pdftex.def)             Requested size: 469.75502pt x 120.85434pt.
- [32 <./figures/images/factory_pipelets.pdf>]
+ [31 <./figures/images/factory_pipelets.pdf>]
 Chapter 8.
 
-Overfull \hbox (4.56085pt too wide) in paragraph at lines 692--693
+Overfull \hbox (4.56085pt too wide) in paragraph at lines 708--709
 []\OT1/phv/m/n/12 Once the Open-Pipe[]Runner class has re-ceived in-for-ma-tion
  from the Open-Pipe[]Adapter
  []
 
-[33
+[32
 
-] <figures/images/openpipe_runner.png, id=427, 679.53876pt x 660.4675pt>
+] <figures/images/openpipe_runner.png, id=420, 679.53876pt x 660.4675pt>
 File: figures/images/openpipe_runner.png Graphic file (type png)
 
 <use figures/images/openpipe_runner.png>
 Package pdftex.def Info: figures/images/openpipe_runner.png used on input line 
-703.
+719.
 (pdftex.def)             Requested size: 469.75502pt x 456.56961pt.
- [34] [35 <./figures/images/openpipe_runner.png>]
-<figures/images/openpipe_clientoutput.png, id=434, 324.21124pt x 584.1825pt>
+ [33 <./figures/images/openpipe_runner.png>] [34]
+<figures/images/openpipe_clientoutput.png, id=428, 324.21124pt x 584.1825pt>
 File: figures/images/openpipe_clientoutput.png Graphic file (type png)
 
 <use figures/images/openpipe_clientoutput.png>
 Package pdftex.def Info: figures/images/openpipe_clientoutput.png used on input
- line 726.
+ line 742.
 (pdftex.def)             Requested size: 227.62204pt x 410.14615pt.
- [36] [37 <./figures/images/openpipe_clientoutput.png>] [38]
+ [35 <./figures/images/openpipe_clientoutput.png>] [36]
 Chapter 9.
 
-<figures/images/client_segment_data_object.pdf, id=445, 436.63126pt x 194.7275p
+<figures/images/client_segment_data_object.pdf, id=435, 436.63126pt x 194.7275p
 t>
 File: figures/images/client_segment_data_object.pdf Graphic file (type pdf)
  <use figures/images/client_segment_data_object.pdf>
 Package pdftex.def Info: figures/images/client_segment_data_object.pdf used on 
-input line 786.
+input line 802.
 (pdftex.def)             Requested size: 469.75502pt x 209.50029pt.
- [39
+ [37
 
-] [40 <./figures/images/client_segment_data_object.pdf>]
+] [38 <./figures/images/client_segment_data_object.pdf>] [39] [40]
 Chapter 10.
 [41
-
-] [42] [43]
-Chapter 11.
-[44
 
 ]
 Overfull \vbox (75.13992pt too high) has occurred while \output is active []
 
 
-[45]
-Overfull \hbox (68.59904pt too wide) in paragraph at lines 916--917
+[42]
+Overfull \hbox (68.59904pt too wide) in paragraph at lines 924--925
 \OT1/phv/m/n/12 for-mance tim-ing in-for-ma-tion can be found in the DOM javasc
 ript el-e-ment, ' win-dow.performance.timing'.
  []
 
-<figures/images/timing_overview.png, id=495, 709.6914pt x 423.5022pt>
+<figures/images/timing_overview.png, id=482, 709.6914pt x 423.5022pt>
 File: figures/images/timing_overview.png Graphic file (type png)
 
 <use figures/images/timing_overview.png>
 Package pdftex.def Info: figures/images/timing_overview.png used on input line 
-954.
+962.
 (pdftex.def)             Requested size: 426.79134pt x 254.67839pt.
- [46] [47 <./figures/images/timing_overview.png>] [48]
-Chapter 12.
-[49
+ [43] [44 <./figures/images/timing_overview.png>] [45]
+Chapter 11.
+[46
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 991.
+(Font)              <10.95> on input line 1000.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 992.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1001.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 995.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1004.
 
-Overfull \hbox (1.4714pt too wide) in paragraph at lines 991--1015
+
+Overfull \hbox (1.4714pt too wide) in paragraph at lines 1000--1024
 [][] 
  []
 
-[50]
-<figures/images/analysis_chart_plain.png, id=513, 853.2678pt x 521.3076pt>
+[47]
+<figures/images/analysis_chart_plain.png, id=500, 853.2678pt x 521.3076pt>
 File: figures/images/analysis_chart_plain.png Graphic file (type png)
 
 <use figures/images/analysis_chart_plain.png>
 Package pdftex.def Info: figures/images/analysis_chart_plain.png used on input 
-line 1022.
+line 1034.
 (pdftex.def)             Requested size: 469.75502pt x 286.99847pt.
-
-<figures/images/analysis_chart_database.png, id=514, 842.1864pt x 517.4532pt>
+ [48]
+<figures/images/analysis_chart_database.png, id=504, 842.1864pt x 517.4532pt>
 File: figures/images/analysis_chart_database.png Graphic file (type png)
 
 <use figures/images/analysis_chart_database.png>
 Package pdftex.def Info: figures/images/analysis_chart_database.png used on inp
-ut line 1029.
+ut line 1041.
 (pdftex.def)             Requested size: 469.75502pt x 288.63483pt.
- [51 <./figures/images/analysis_chart_plain.png>]
-<figures/images/analysis_chart_webservice.png, id=520, 860.9766pt x 520.344pt>
+ [49 <./figures/images/analysis_chart_plain.png>]
+<figures/images/analysis_chart_webservice.png, id=509, 860.9766pt x 520.344pt>
 File: figures/images/analysis_chart_webservice.png Graphic file (type png)
 
 <use figures/images/analysis_chart_webservice.png>
 Package pdftex.def Info: figures/images/analysis_chart_webservice.png used on i
-nput line 1037.
+nput line 1048.
 (pdftex.def)             Requested size: 469.75502pt x 283.90341pt.
- [52 <./figures/images/analysis_chart_database.png>] [53 <./figures/images/anal
+ [50 <./figures/images/analysis_chart_database.png>] [51 <./figures/images/anal
 ysis_chart_webservice.png>]
-Chapter 13.
-[54
+[52]
+Chapter 12.
+[53
 
-] [55] [56]
-Chapter 14.
+] [54] [55]
+Appendix A.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
 )
-(../../server/php/OpenPipe/Runner.php [57
+(../../server/php/OpenPipe/Runner.php [56
 
-] [58]
+] [57]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 57.
- [59] [60])
-(../../server/php/OpenPipe/Pipelet/Interface.php [61] [62] [63])
-(../../server/php/OpenPipe/Pipelet/Abstract.php [64] [65] [66])
-(../../server/php/OpenPipe/Pipelet/Base.php [67])
-(../../server/php/OpenPipe/Pipelet/Factory.php [68] [69])
-(../../server/php/OpenPipe/Output/Interface.php [70] [71])
+ [58] [59])
+(../../server/php/OpenPipe/Pipelet/Interface.php [60] [61] [62])
+(../../server/php/OpenPipe/Pipelet/Abstract.php [63] [64] [65])
+(../../server/php/OpenPipe/Pipelet/Base.php [66])
+(../../server/php/OpenPipe/Pipelet/Factory.php [67] [68] [69])
+(../../server/php/OpenPipe/Output/Interface.php [70]) [71]
 (../../server/php/OpenPipe/Output/Piped.php [72] [73] [74] [75])
 (../../server/php/OpenPipe/Output/Standard.php [76] [77] [78] [79] [80]
-[81]) (../../server/php/OpenPipe/Output/Util.php [82] [83] [84] [85] [86])
+[81]) (../../server/php/OpenPipe/Output/Util.php [82] [83] [84] [85]) [86]
 (../../server/php/OpenPipe/Adapter/Interface.php [87])
-(../../server/php/OpenPipe/Adapter/Abstract.php [88] [89]) [90]
+(../../server/php/OpenPipe/Adapter/Abstract.php [88] [89] [90])
 (../../server/php/OpenPipe/Adapter/Basic.php [91] [92])
-(../../server/php/OpenPipe/Adapter/Pvc/CodeIgniter.php [93] [94])
+(../../server/php/OpenPipe/Adapter/Pvc/CodeIgniter.php [93] [94]) [95]
+Appendix B.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(../../client/js/openpipe.js [95] [96] [97] [98] [99] [100]) [101]
-Underfull \hbox (badness 1824) in paragraph at lines 1126--1128
+(../../client/js/openpipe.js [96
+
+] [97] [98] [99] [100] [101]) [102]
+Underfull \hbox (badness 1824) in paragraph at lines 1178--1180
 \OT1/phv/m/n/12 Avail-able: http://www.facebook.com/notes/facebook-engineering/
 bigpipe-pipelining-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1188
 []\OT1/phv/m/n/12 "Optimizing Page Load Time", Aaron Hop-kins [On-line] Avail-a
 ble:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1138--1140
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1192
 []\OT1/phv/m/n/12 "What is HTTP pipelin-ing", Darin Fisher [On-line] Avail-able
 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1138--1140
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1192
 \OT1/phv/m/n/12 http://www.mozilla.org/projects/netlib/http/pipelining-faq.html
  [Re-trieved De-cem-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1144
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1196
 []\OT1/phv/m/n/12 "Navigation Tim-ing", Ed-i-tor's Draft July 16th, 2012 [On-li
 ne] Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
+Underfull \hbox (badness 10000) in paragraph at lines 1210--1212
 []\OT1/phv/m/n/12 "March 2012 Web Server Sur-vey" [On-line] Avail-able:
  []
 
-[102
+[103
 
-] [103] (./thesis.aux) ) 
+] [104] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5919 strings out of 493488
- 92480 string characters out of 3141326
- 534220 words of memory out of 3000000
- 9076 multiletter control sequences out of 15000+200000
- 28592 words of font info for 54 fonts, out of 3000000 for 9000
+ 6611 strings out of 493488
+ 102221 string characters out of 3141326
+ 577523 words of memory out of 3000000
+ 9756 multiletter control sequences out of 15000+200000
+ 22481 words of font info for 46 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,43p,1258b,3542s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,43p,1258b,3540s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmi
 tt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
@@ -854,7 +913,7 @@ y10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
 10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/l
 ocal/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (114 pages, 1748160 bytes).
+Output written on thesis.pdf (114 pages, 1754667 bytes).
 PDF statistics:
  722 PDF objects out of 1000 (max. 8388607)
  456 compressed objects within 5 object streams

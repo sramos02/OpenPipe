@@ -12,16 +12,34 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{listings}
-
-%set arial font
+\usepackage[titletoc]{appendix}
+\usepackage[notindex,nottoc,notlot,notlof]{tocbibind}
+\usepackage{tocloft}
 \usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-
-%set 1 inch margins
 \usepackage{fullpage}
-
-%set double spacing
 \usepackage{setspace}
+\usepackage{titlesec}
+
+
+\titleformat{\chapter}[hang]{\normalfont\large\center}{\MakeTextUppercase{\chaptertitlename}\ \thechapter:}{1em}{} 
+\titleformat{\section}[hang]{\normalfont\large}{\thesection }{1em}{} 
+\titleformat{\subsection}[hang]{\normalfont\large}{\thesubsection }{1em}{} 
+
+\renewcommand{\abstractname}{\centering\normalfont\large\MakeTextUppercase{Abstract}}
+\renewcommand{\contentsname}{\centering\normalfont\large\MakeTextUppercase{Table of Contents}}
+\renewcommand{\cfttoctitlefont}{\hfill}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\listfigurename}{\centering\normalfont\large\MakeTextUppercase{List of Figures}}
+\renewcommand{\cftloftitlefont}{\hfill}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftchapfont}{}
+\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchappresnum}{CHAPTER }
+\renewcommand{\cftchapaftersnum}{:}
+\renewcommand{\cftchapnumwidth}{6.5em}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\bibname}{\large\MakeTextUppercase{References}}
+
 \doublespacing
 
 \lstset{
@@ -51,16 +69,13 @@
 \newcommand{\jslist}[1]{\lstinputlisting[language=Java,basicstyle=\footnotesize\ttfamily,tabsize=2,numbers=left,frame=single,caption="#1"]{\rootClientJsPath #1}}
 \newcommand{\htmllist}[1]{\lstinputlisting[language=HTML,,basicstyle=\footnotesize\ttfamily,tabsize=2,numbers=left,frame=single,caption="#1"]{#1}}
 
-%--------- RENEWED COMMANDS ----------
- \renewcommand{\abstractname}{\MakeTextUppercase{Abstract}}
-
 %---------- NEW ENVIRONMENTS ----------
 \newenvironment{dedication}
 	{\vspace{6ex}\begin{quotation}\begin{center}\begin{em}}
 	{\par\end{em}\end{center}\end{quotation}}
 
 
-
+%---------- START THE DOCUMENT ----------
 \begin{document}
 \pagenumbering{roman}
 
@@ -100,7 +115,7 @@
 	\MakeTextUppercase{By} \\
 	\MakeTextUppercase{Sean Kenny} \\
 \end{center}
-This thesis was prepared under the direction of the candidate’s thesis advisor, Dr. Hrvoje Podnar, Department of Computer Science, and it has been approved by the members of the candidate’s thesis committee. It was submitted to the School of Graduate Studies and was accepted in partial fulfillment of the requirements for the degree of Master of Science.
+This thesis was prepared under the direction of the candidate\'s thesis advisor, Dr. Hrvoje Podnar, Department of Computer Science, and it has been approved by the members of the candidate\'s thesis committee. It was submitted to the School of Graduate Studies and was accepted in partial fulfillment of the requirements for the degree of Master of Science.
 
 \begin{flushright}
 
@@ -165,13 +180,14 @@ To my wife, Kim - who’s selfless love, support, and encouragement has allowed 
 \setcounter{page}{5}
 \vspace{2in}
 \begin{center}
-\MakeTextUppercase{Acknowledgements} \\
+\MakeTextUppercase{\large{Acknowledgements}} \\
 \end{center}
 
 I would like to thank Professor Hrvoje Podnar, who  in an exceptional way guided me through the thesis process and helped strengthen the research and results of this project.
 
 I would also like to thank Professor Lisa Lancor, for her feedback and enthusiasm during all phases of this thesis's development.
 
+\newpage
 
 
 %--------------------------------------------------------------------------------------------
@@ -186,7 +202,7 @@ I would also like to thank Professor Lisa Lancor, for her feedback and enthusias
 %------------------INTRODUCTION ------------------------------------------------------------ 
 %--------------------------------------------------------------------------------------------
 
-\chapter{Introduction}
+\chapter{INTRODUCTION AND OVERVIEW}
 \pagenumbering{arabic}
 
 Modern web sites and web applications provide valuable information and services to an ever growing web audience. One of the most important requirements of web sites and web applications trying to deliver this important content is speed. Increased speed of a website can often determine an end user's perception of overall quality and value of a web-based service. Fast and responsive sites will be more likely to achieve higher monthly page views, adoption rates, and overall success
@@ -249,7 +265,7 @@ HTTP pipelining is inspired from traditional pipelining technologies utilized by
 %--------------------IMPLEMENTATION TOOLS ------------------------------------------------------------ 
 %------------------------------------------------------------------------------------------------------
 
-\chapter{Implementation and Analysis Tools}
+\chapter{IMPLEMENTATION AND ANALYSIS TOOLS}
 
 \section{Git}
 \begin{center} 
@@ -332,7 +348,7 @@ Selenium is primarily used for the automated testing of web applications, and is
 %--------------------TEST APPLICATIONS ----------------------------------------------------------------- 
 %------------------------------------------------------------------------------------------------------
 
-\chapter{Test Applications}
+\chapter{TEST APPLICATIONS}
 
 \section{Static Sample App}
 Before development on the server and client components was started a static web site was built using plain HTML and CSS [see figure \ref{fig:sampleApp}] . This static site’s main purpose is to provide a foundation for testing, while adding a clean visual experience that adequately illustrates the optimization of a pipelined HTML page. The main requirement for this static site was that it be composed of many individual components and page sections. OpenPipe is geared towards pages that load information that has many cross cutting concerns per request. The static sample application meets this requirement, and has various components that fall into the following defined sections:
@@ -420,7 +436,7 @@ $openPipeOutput = new OpenPipe_Output_Piped('../../../../client/js');
 %--------------------ARCHITECURAL COMPONENTS--------------------------------------------------------- 
 %------------------------------------------------------------------------------------------------------
 
-\chapter{Architectural Components}
+\chapter{ARCHITECTURAL COMPONENTS}
 
 \section{Server components}
 
@@ -481,7 +497,7 @@ The client is composed of three main layers:
 %------------------------------------------------------------------------------------------------------
 
 
-\chapter{Pipelets}
+\chapter{PIPELETS}
 
 Every OpenPipe HTTP request cycle is composed of pipelets. A pipelets represents an atomic composition of HTML, CSS, and JavaScript [see figure \ref{fig:samplePipelet}] . A web page request can be composed of one to many pipelets.
 
@@ -575,7 +591,7 @@ Pipelets that are part of the same depth can prioritized explicitly using the pi
 %--------------------CLASS INTERFACES------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
 
-\chapter{Class Interfaces}
+\chapter{CLASS INTERFACES}
 
 OpenPipe defines core interfaces for pluggable components of the system. Through utilizing provided interfaces developers can contour and extend the framework to meet new and existing needs. 
 
@@ -627,7 +643,7 @@ A framework's adapter [see figure \ref{fig:generalizationAdapter}]  is a crucial
 %------------------------------------------------------------------------------------------------------
 %--------------------DESIGN PATTERNS-------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{Design Patterns}
+\chapter{DESIGN PATTERNS}
 
 The OpenPipe library utilizes design patterns where appropriate to make the available components easier to comprehend from a conceptial level, and also easier to extend for future use. The patterns explained below were chosen to provide maximum flexibility to the underlying system when integrating with existing PHP web application systems and frameworks.
 
@@ -677,7 +693,7 @@ OpenPipe utilizes the factory design pattern to construct pipelets from output r
 %------------------------------------------------------------------------------------------------------
 %--------------------SEQUENCE DIAGRAMS ----------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{Sequence Diagrams}
+\chapter{SEQUENCE DIAGRAMS}
 
 \section{Server}
 
@@ -765,9 +781,9 @@ The sequence diagram for a complete OpenPipe client processing cycle is outlined
 
 
 %------------------------------------------------------------------------------------------------------
-%--------------------DATA OBJECT ----------------------------------------------------------------------
+%-------------------- Other Library Components -----------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{Data Objects}
+\chapter{OTHER LIBRARY COMPONENTS}
 
 \section{Transmitted Data}
 
@@ -786,14 +802,6 @@ Pipelet data is transmitted as JSON to the client. Each individual pipelet trans
 \includegraphics[width=\textwidth,keepaspectratio]{figures/images/client_segment_data_object.pdf}
 \caption{The client segment data object}
 \end{figure}
-
-
-
-
-%------------------------------------------------------------------------------------------------------
-%--------------------Things to Consider -----------------------------------------------------------------
-%------------------------------------------------------------------------------------------------------
-\chapter{Other Library Components}
 
 \section{PHP Output Buffering}
 PHP has built in functionality which prevents output data from being transmitted
@@ -853,7 +861,7 @@ $('body').append(script);
 %------------------------------------------------------------------------------------------------------
 %--------------------Methdology -----------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{Methodology}
+\chapter{METHODOLOGY}
 
 \section{Data Collection}
 
@@ -967,8 +975,9 @@ This option allows the user to stress the web server with the number of simulate
  OpenPipe was tested while siege was run at concurrency levels 10, 25, 50, and 100. 
  
 
-\chapter{Results}
+\chapter{RESULTS AND ANALYSIS}
 
+\section{Performance Timing Table Data}
 Once the performance timing data was collected additional data points were calculated to clarify if any performance benefits could be found between a pipelined and non-pipelined version a webpage. This data was collected and laid out in a tabular format [see figure \ref{fig:performanceTimingTable}]. The columns in the presented table represent the following variables and formulas:
 
 \begin{enumerate}
@@ -1016,6 +1025,9 @@ Once the performance timing data was collected additional data points were calcu
 \end{figure}
 
 
+\section{Charts}
+Utilizing the data collected in figure \ref{fig:performanceTimingTable} a bar chart was created for each external service type, and  each service type was compared with changes in load to the server.  The charts can be seen in figures 11.1, 11.2, and 11.3.
+
 \begin{figure}[H]
 \label{fig:analysisChartPlain}
 \centering
@@ -1030,7 +1042,6 @@ Once the performance timing data was collected additional data points were calcu
 \caption{OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}
 \end{figure}
 
-
 \begin{figure}[H]
 \label{fig:analysisChartWebService}
 \centering
@@ -1038,10 +1049,22 @@ Once the performance timing data was collected additional data points were calcu
 \caption{OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}
 \end{figure}
 
+\section{Conclusions}
+The following items can be extracted from the presented table data and charts:
+
+\begin{enumerate}
+\item On average across all type of requests and server load a piped request requires only 38\% of the time that would be needed to send a non-piped version of the same page.
+\item Requests that involve calls to external web services see the biggest performance gains. This is due to the overhead required for a server to send and receive requests from an external web service running on another server. If many requests to an external service must be made for a single page, then a piped version of the same page will gain a significent performance advantage over the non-piped counterpart.
+\item Piped versions of pages do. on average, require more time to load. Although the increased time is usually insignificent when compared to the speed gained in initial response time. Total page load time increasing is to be expected due to the additional overhead in client side processing to unpack and load the page pipelets when they arrive from the server. 
+\item Overall load on the server caused the greatest increase in response time when sending database type requests. This is due to the increased load on a single server environment caused by simultaneious connections to the local web server and local database server. 
+\end{enumerate}
+
+In general the results are very promising.  They illustrate how an an HTTP pipeline like OpenPipe can result in large benefits in terms of of response time for a given web page that requires access to one to many external systems for data or storage. This decreased initial response time can speed up the perceived load time of the web page. In general there seems to be very little negeative tradeoffs when incorporating OpenPipe into a web based system.
+
 %------------------------------------------------------------------------------------------------------
 %--------------------Discussion-------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{DIscussion}
+\chapter{DISCUSSION}
 
 \section{Expanded Output API}
 
@@ -1094,25 +1117,54 @@ Web servers like apache provide application interfaces for developing server ext
 %------------------------------------------------------------------------------------------------------
 %--------------------CODE LISTINGS ---------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{Code Listings}
+\appendix
+\addtocontents{toc}{\def\protect\cftchappresnum{APPENDIX }}
 
+\chapter{SERVER SOURCE CODE}
 %--------- SERVER PHP FILES ---------- 
+\section{Pipelet/Runner.php}
 \phplist{OpenPipe/Runner.php}
+
+\section{Pipelet/Interface.php}
 \phplist{OpenPipe/Pipelet/Interface.php}
+
+\section{Pipelet/Abstract.php}  
 \phplist{OpenPipe/Pipelet/Abstract.php}
+
+\section{Pipelet/Base.php} 
 \phplist{OpenPipe/Pipelet/Base.php}
+
+\section{Pipelet/Factory.php} 
 \phplist{OpenPipe/Pipelet/Factory.php}
+
+\section{Output/Interface.php} 
 \phplist{OpenPipe/Output/Interface.php}
+
+\section{Output/Piped.php} 
 \phplist{OpenPipe/Output/Piped.php}
+
+\section{Output/Standard.php} 
 \phplist{OpenPipe/Output/Standard.php}
+
+\section{Output/Util.php} 
 \phplist{OpenPipe/Output/Util.php}
+
+\section{Adapter/Interface.php} 
 \phplist{OpenPipe/Adapter/Interface.php}
+
+\section{Adapter/Abstract.php} 
 \phplist{OpenPipe/Adapter/Abstract.php}
+
+\section{Adapter/Basic.php} 
 \phplist{OpenPipe/Adapter/Basic.php}
+
+\section{Pvc/CodeIgniter.php} 
 \phplist{OpenPipe/Adapter/Pvc/CodeIgniter.php}
 
-
 %--------- CLIENT JS FILES---------- 
+\chapter{CLIENT SOURCE CODE}
+
+\section{openpipe.js} 
 \jslist{openpipe.js}
 
 

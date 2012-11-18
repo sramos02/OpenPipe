@@ -5,41 +5,41 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Feature rich OpenPipe sample application to illustrate nested pipelines}}{12}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Basic OpenPipe sample application to illustrate a basic pipelines}}{13}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces OpenPipe adapter setup for CodeIgniter}}{15}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces OpenPipe adapter setup for CodeIgniter}}{14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Server side tecnology stack with OpenPipe components}}{17}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Client side tecnology stack with OpenPipe components}}{18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Server side tecnology stack with OpenPipe components}}{16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Client side tecnology stack with OpenPipe components}}{17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Sample pipelet containing HTML, CSS, and JavaScript}}{19}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Root piplet HTML}}{20}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Root pipelet layout}}{21}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Nested Pipelets with a depth of 3}}{23}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Sample pipelet containing HTML, CSS, and JavaScript}}{24}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Sample pipelet containing HTML, CSS, and JavaScript}}{18}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Root piplet HTML}}{19}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Root pipelet layout}}{20}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Nested Pipelets with a depth of 3}}{22}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Sample pipelet containing HTML, CSS, and JavaScript}}{23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A generalization of the OpenPipe output object}}{26}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces A generalization of the OpenPipe adapter object}}{28}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A generalization of the OpenPipe output object}}{25}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A generalization of the OpenPipe adapter object}}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces The strategy pattern utilzed by OpenPipe for the main OpenPipe runner object}}{31}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Instantiation and running of an OpenPipe\_Runner object}}{31}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces The factory pattern utilized by OpenPipe}}{32}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The strategy pattern utilzed by OpenPipe for the main OpenPipe runner object}}{30}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Instantiation and running of an OpenPipe\_Runner object}}{30}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces The factory pattern utilized by OpenPipe}}{31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces OpenPipe Runner sequence diagram}}{35}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces OpenPipe output sequence diagram}}{37}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces OpenPipe client side pipelet load calls}}{38}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces OpenPipe Runner sequence diagram}}{33}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces OpenPipe output sequence diagram}}{35}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces OpenPipe client side pipelet load calls}}{36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces The client segment data object}}{40}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces The client segment data object}}{38}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces PHP function that helps bypass PHP output buffering that blocks the HTTP pipelining of data to the client browser}}{39}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces JavaScript code segment that allows for reliable cross browser insertion of dynamic JavaScript code into the DOM}}{40}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces PHP function that helps bypass PHP output buffering that blocks the HTTP pipelining of data to the client browser}}{42}
-\contentsline {figure}{\numberline {10.2}{\ignorespaces JavaScript code segment that allows for reliable cross browser insertion of dynamic JavaScript code into the DOM}}{43}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces A selenium script that retrieves performance and timing data from websites}}{42}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces DOM performance timing data made available via JavaScript \cite {w3cNavigationTiming}}}{43}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces DOM performance timing data show as linear request \cite {w3cNavigationTiming}}}{44}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {11.1}{\ignorespaces A selenium script that retrieves performance and timing data from websites}}{45}
-\contentsline {figure}{\numberline {11.2}{\ignorespaces DOM performance timing data made available via JavaScript \cite {w3cNavigationTiming}}}{46}
-\contentsline {figure}{\numberline {11.3}{\ignorespaces DOM performance timing data show as linear request \cite {w3cNavigationTiming}}}{47}
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{48}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{49}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{50}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{51}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{51}
-\contentsline {figure}{\numberline {12.2}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{51}
-\contentsline {figure}{\numberline {12.3}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{52}
-\contentsline {figure}{\numberline {12.4}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{53}
+\contentsline {figure}{\numberline {12.1}{\ignorespaces An explicit version of an OpenPipe output API}}{53}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {13.1}{\ignorespaces An explicit version of an OpenPipe output API}}{55}
 \addvspace {10\p@ }

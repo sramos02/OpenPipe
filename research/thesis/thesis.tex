@@ -7,6 +7,8 @@
 %------------------DOCUMENT STYLE ---------------------------------------------------------- 
 %--------------------------------------------------------------------------------------------
 \documentclass[12pt]{report}
+\usepackage{abstract}
+\usepackage[margin=1in]{geometry}
 \usepackage{textcase}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -22,6 +24,7 @@
 
 
 \titleformat{\chapter}[hang]{\normalfont\large\center}{\MakeTextUppercase{\chaptertitlename}\ \thechapter:}{1em}{} 
+% \titlespacing*{\chapter}{0pt}{0in}{1em}
 \titleformat{\section}[hang]{\normalfont\large}{\thesection }{1em}{} 
 \titleformat{\subsection}[hang]{\normalfont\large}{\thesubsection }{1em}{} 
 
@@ -33,7 +36,7 @@
 \renewcommand{\cftloftitlefont}{\hfill}
 \renewcommand{\cftafterloftitle}{\hfill}
 \renewcommand{\cftchapfont}{}
-\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchappagefont}{}
 \renewcommand{\cftchappresnum}{CHAPTER }
 \renewcommand{\cftchapaftersnum}{:}
 \renewcommand{\cftchapnumwidth}{6.5em}
@@ -107,7 +110,7 @@
 \newpage
 \thispagestyle{plain}
 \setcounter{page}{2}
-\vspace{2in}
+\vspace*{0in}
 \begin{center}
 	\large 
 	\MakeTextUppercase{Implementation and Analysis of a} \\
@@ -166,9 +169,11 @@ This project intends to improve upon the current HTTP based web request and resp
 %--------------------------------------------------------------------------------------------
 \begin{dedication}
 \setcounter{page}{4}
+\vspace*{\fill}
 To my daughters, Paige and Jocelyn - for inspiration I will cherish always.
 \linebreak\linebreak
 To my wife, Kim - who’s selfless love, support, and encouragement has allowed me to fulfill new dreams and goals I never would have been able to imagine without her.
+\vspace*{\fill}
 \end{dedication}
 
 
@@ -178,7 +183,7 @@ To my wife, Kim - who’s selfless love, support, and encouragement has allowed 
 \newpage
 \thispagestyle{plain}
 \setcounter{page}{5}
-\vspace{2in}
+\vspace*{0in}
 \begin{center}
 \MakeTextUppercase{\large{Acknowledgements}} \\
 \end{center}
@@ -202,7 +207,7 @@ I would also like to thank Professor Lisa Lancor, for her feedback and enthusias
 %------------------INTRODUCTION ------------------------------------------------------------ 
 %--------------------------------------------------------------------------------------------
 
-\chapter{INTRODUCTION AND OVERVIEW}
+\chapter{INTRODUCTION AND UNDERLYING TECHNOLOGIES}
 \pagenumbering{arabic}
 
 Modern web sites and web applications provide valuable information and services to an ever growing web audience. One of the most important requirements of web sites and web applications trying to deliver this important content is speed. Increased speed of a website can often determine an end user's perception of overall quality and value of a web-based service. Fast and responsive sites will be more likely to achieve higher monthly page views, adoption rates, and overall success
@@ -259,23 +264,6 @@ HTTP pipelining is inspired from traditional pipelining technologies utilized by
 \end{figure}
 
 
-
-
-%------------------------------------------------------------------------------------------------------
-%--------------------IMPLEMENTATION TOOLS ------------------------------------------------------------ 
-%------------------------------------------------------------------------------------------------------
-
-\chapter{IMPLEMENTATION AND ANALYSIS TOOLS}
-
-\section{Git}
-\begin{center} 
-\includegraphics[width=30mm]{figures/images/git_logo.png}
-\end{center}
-
-The OpenPipe project makes use of Git to store the current codebase, examples, documentation, and research data. Git is a modern distributed revision control and source code management tool. Through utilizing Git, developers are free to checkout, and even branch the existing code base to meet current and future needs.
-
-Git (a command line tool) is available with many Linux distributions, and is freely available to download and compile. Pre-built binary installers, and GUI interfaces exists for all major operating systems.  The SSH URL for accessing this project via git is git@github.com:polycoder/OpenPipe.git. All fork requests can be placed by visiting HTTPs://github.com/polycoder/OpenPipe.
-
 \section{PHP}
 \begin{center} 
 \includegraphics[width=30mm]{figures/images/php_logo.png}
@@ -292,6 +280,14 @@ PHP can be deployed on most Web servers and as a standalone shell on almost ever
 \end{center}
 
 OpenPipe uses phpDocumentor to generate all of the available PHP class documentation. phpDocumentor is a tool with which it is possible to generate documentation from your PHP source code using a standardized set of source code commenting conventions. With this documentation you can provide developers with more information regarding the functionality embedded within your source code. phpDocumentor is heavily inspired by the JavaDoc tool available with the Java SDK. 
+
+
+\section{CodeIgniter}
+\begin{center}
+\includegraphics[width=30mm]{figures/images/ci_logo.jpg}
+\end{center}
+
+The OpenPipe framework that has currently been developed provides an adapter that interfaces with the CodeIgniter framework. Using this adapter it is fairly straight forward and simple to convert an existing CodeIgniter application to take advantage of OpenPipe HTTP request pipelining. CodeIgniter is a powerful PHP framework with a very small footprint, built for PHP coders who need a simple and elegant toolkit to create full-featured web applications. 
 
 
 \section{Apache}
@@ -314,13 +310,6 @@ Since April 1996 Apache has been the most popular HTTP server software in use. A
 All client side testing and analysis (manual and automated) of OpenPipe was performed using the FireFox web browser. FireFox supplies a very advanced toolset for profiling HTTP requests, viewing and editing HTML, and debugging JavaScript. FireFox is freely available to download and compile. Prebuilt binary installers exist for all major operating systems. 
  
 
-\section{CodeIgniter}
-\begin{center}
-\includegraphics[width=30mm]{figures/images/ci_logo.jpg}
-\end{center}
-
-The OpenPipe framework that has currently been developed provides an adapter that interfaces with the CodeIgniter framework. Using this adapter it is fairly straight forward and simple to convert an existing CodeIgniter application to take advantage of OpenPipe HTTP request pipelining. CodeIgniter is a powerful PHP framework with a very small footprint, built for PHP coders who need a simple and elegant toolkit to create full-featured web applications. 
-
 \section{Selenium}
 \begin{center}
 \includegraphics[width=30mm]{figures/images/selenium_logo.png}
@@ -342,101 +331,25 @@ Selenium is primarily used for the automated testing of web applications, and is
 
 
 
-
-
-%------------------------------------------------------------------------------------------------------
-%--------------------TEST APPLICATIONS ----------------------------------------------------------------- 
-%------------------------------------------------------------------------------------------------------
-
-\chapter{TEST APPLICATIONS}
-
-\section{Static Sample App}
-Before development on the server and client components was started a static web site was built using plain HTML and CSS [see figure \ref{fig:sampleApp}] . This static site’s main purpose is to provide a foundation for testing, while adding a clean visual experience that adequately illustrates the optimization of a pipelined HTML page. The main requirement for this static site was that it be composed of many individual components and page sections. OpenPipe is geared towards pages that load information that has many cross cutting concerns per request. The static sample application meets this requirement, and has various components that fall into the following defined sections:
-
-\begin{enumerate}
-  \item Header
-	\begin{enumerate}
-		\item Navigation - main navigational links available to the user.
-	\end{enumerate}
-  \item Main Content Area
-	\begin{enumerate}
-		\item Post Input - an input box used for submitting posts of various types.
-		\item Posts list - a listing of main posts that the user has received.
-		\item Post comments - each post contains a potential list of comments that have recorded.
-	\end{enumerate}
-  \item Left Sidebar
-	\begin{enumerate}
-		\item Favorite - a sidebar item containing the areas most accessed by a user.
-		\item Apps - application currently installed by the user.
-		\item Groups - groups a user is a member of.
-		\item Friends - groupings of friends the user is related to.
-		\item Friends Search - A search input box for finding friends.
-		\item Friends Face-box - A graphical view of friends through their profile pictures.
-	\end{enumerate}
-  \item Right Sidebar
-\end{enumerate}
-
-
-\begin{figure}[H]
-\label{fig:sampleApp}
-\centering
-\includegraphics[width=\textwidth,keepaspectratio]{figures/images/sample_app.jpg}
-\caption{Feature rich OpenPipe sample application to illustrate nested pipelines}
-\end{figure}
-
-The static application contains a diverse amount of sections. The resulting HTML, CSS, and JavaScript code created during this page creation was migrated to an MVC Based system that implements the OpenPipe Adapter interface.
-
-
-\section{Basic Pipeline}
-
-During the initial prototyping phase for OpenPipe a basic pipelined base site was built to illustrate the core components that are applied during the main pipeline process.The basic pipeline example is composed of one default layout, and three separate page pipelets [see figure \ref{fig:basicPipeline}]. 
-
-\begin{figure}[H]
-\label{fig:basicPipeline}
-\centering
-\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/images/basic_pipeline.jpg}}
-\caption{Basic OpenPipe sample application to illustrate a basic pipelines}
-\end{figure}
-
-This simple design did not integrate with any existing PHP frameworks and relied on a very simple paradigm available in the PHP language called includes. Each pipelet being loaded is placed in an include file within a defined folder specified at runtime. The root Pipelet layout is placed within the layout.php include file,	 which is also specified at runtime. This simple and effective OpenPipe application was used to verify and test all the components of the OpenPipe system including the client side JavaScript library. 
-
-
-\subsection{MVC Pipeline (PVC)}
-
-The final stage in the development cycle was to implement an adapter for an existing PHP MVC framework. This adapter essentially retrofits the existing framework, and allows it to take advantage of HTTP pipelining provided by the OpenPipe framework. 
-
-The PHP MVC framework chosen to create an adapter for is named CodeIgniter. CodeIgniter is a lightweight open-source MVC framework, that is relatively simple to work with and extend. 
-
-Utilizing CodeIgniter’s same system of controllers and views, a developer can easily convert any CodeIgniter page to an HTTP pipelined request. This is made possible by a simples series of installation steps illustrated in the provided sample application. The main index file ends of looking like figure \ref{fig:codeIgniterPvcCode}, once the OpenPipe integration has taken place.
-
-\begin{figure}[H]
-\label{fig:codeIgniterPvcCode}
-\begin{lstlisting}
-<?php
-require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Adapter/Pvc/CodeIgniter.php');
-require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Output/Piped.php');
-require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Output/Standard.php');
-require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Runner.php');
-
-$openPipeAdapter = new OpenPipe_Adapter_Pvc_CodeIgniter(dirname(__FILE__));
-
-if(isset($_GET['nopipe'])){
-$openPipeOutput = new OpenPipe_Output_Standard();	
-}else{
-$openPipeOutput = new OpenPipe_Output_Piped('../../../../client/js');	
-}
-\end{lstlisting}
-\caption{OpenPipe adapter setup for CodeIgniter}
-\end{figure}
-
-
-
-
 %------------------------------------------------------------------------------------------------------
 %--------------------ARCHITECURAL COMPONENTS--------------------------------------------------------- 
 %------------------------------------------------------------------------------------------------------
 
 \chapter{ARCHITECTURAL COMPONENTS}
+
+\section{Client-server model}
+
+OpenPipe delivers data from an HTTP server in a customized way that allows a corresponding client to interpret and render the data as soon as possible. Because of this OpenPipe is the combination of both server side and client side libraries working as complements to each. The server side components package and send data to the client, and the clien side components unpack and utilize the received data [see figure \ref{fig:pipelinedRequestCycle}].
+
+\begin{figure}[H]
+\label{fig:pipelinedRequestCycle}
+\centering
+\includegraphics[width=65mm]{figures/images/pipeline_request_cycle.png}
+\caption{A pipeline HTTP approach representated a traditional client-server communciation process.}
+\end{figure}
+
+
+
 
 \section{Server components}
 
@@ -859,13 +772,93 @@ $('body').append(script);
 \end{figure}
 
 %------------------------------------------------------------------------------------------------------
-%--------------------Methdology -----------------------------------------------------------------------
+%-------------------- Testing Methdology ----------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{METHODOLOGY}
+\chapter{TESTING METHODOLOGY}
+
+\section{Static Sample App}
+Before development on the server and client components was started a static web site was built using plain HTML and CSS [see figure \ref{fig:sampleApp}] . This static site’s main purpose is to provide a foundation for testing, while adding a clean visual experience that adequately illustrates the optimization of a pipelined HTML page. The main requirement for this static site was that it be composed of many individual components and page sections. OpenPipe is geared towards pages that load information that has many cross cutting concerns per request. The static sample application meets this requirement, and has various components that fall into the following defined sections:
+
+\begin{enumerate}
+  \item Header
+	\begin{enumerate}
+		\item Navigation - main navigational links available to the user.
+	\end{enumerate}
+  \item Main Content Area
+	\begin{enumerate}
+		\item Post Input - an input box used for submitting posts of various types.
+		\item Posts list - a listing of main posts that the user has received.
+		\item Post comments - each post contains a potential list of comments that have recorded.
+	\end{enumerate}
+  \item Left Sidebar
+	\begin{enumerate}
+		\item Favorite - a sidebar item containing the areas most accessed by a user.
+		\item Apps - application currently installed by the user.
+		\item Groups - groups a user is a member of.
+		\item Friends - groupings of friends the user is related to.
+		\item Friends Search - A search input box for finding friends.
+		\item Friends Face-box - A graphical view of friends through their profile pictures.
+	\end{enumerate}
+  \item Right Sidebar
+\end{enumerate}
+
+
+\begin{figure}[H]
+\label{fig:sampleApp}
+\centering
+\includegraphics[width=\textwidth,keepaspectratio]{figures/images/sample_app.jpg}
+\caption{Feature rich OpenPipe sample application to illustrate nested pipelines}
+\end{figure}
+
+The static application contains a diverse amount of sections. The resulting HTML, CSS, and JavaScript code created during this page creation was migrated to an MVC Based system that implements the OpenPipe Adapter interface.
+
+
+\section{Basic Pipeline}
+
+During the initial prototyping phase for OpenPipe a basic pipelined base site was built to illustrate the core components that are applied during the main pipeline process.The basic pipeline example is composed of one default layout, and three separate page pipelets [see figure \ref{fig:basicPipeline}]. 
+
+\begin{figure}[H]
+\label{fig:basicPipeline}
+\centering
+\fbox{\includegraphics[width=\textwidth,keepaspectratio]{figures/images/basic_pipeline.jpg}}
+\caption{Basic OpenPipe sample application to illustrate a basic pipelines}
+\end{figure}
+
+This simple design did not integrate with any existing PHP frameworks and relied on a very simple paradigm available in the PHP language called includes. Each pipelet being loaded is placed in an include file within a defined folder specified at runtime. The root Pipelet layout is placed within the layout.php include file,	 which is also specified at runtime. This simple and effective OpenPipe application was used to verify and test all the components of the OpenPipe system including the client side JavaScript library. 
+
+
+\section{MVC Pipeline (PVC)}
+
+The final stage in the development cycle was to implement an adapter for an existing PHP MVC framework. This adapter essentially retrofits the existing framework, and allows it to take advantage of HTTP pipelining provided by the OpenPipe framework. 
+
+The PHP MVC framework chosen to create an adapter for is named CodeIgniter. CodeIgniter is a lightweight open-source MVC framework, that is relatively simple to work with and extend. 
+
+Utilizing CodeIgniter’s same system of controllers and views, a developer can easily convert any CodeIgniter page to an HTTP pipelined request. This is made possible by a simples series of installation steps illustrated in the provided sample application. The main index file ends of looking like figure \ref{fig:codeIgniterPvcCode}, once the OpenPipe integration has taken place.
+
+\begin{figure}[H]
+\label{fig:codeIgniterPvcCode}
+\begin{lstlisting}
+<?php
+require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Adapter/Pvc/CodeIgniter.php');
+require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Output/Piped.php');
+require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Output/Standard.php');
+require_once(dirname(__FILE__).'/../../../server/php/OpenPipe/Runner.php');
+
+$openPipeAdapter = new OpenPipe_Adapter_Pvc_CodeIgniter(dirname(__FILE__));
+
+if(isset($_GET['nopipe'])){
+$openPipeOutput = new OpenPipe_Output_Standard();	
+}else{
+$openPipeOutput = new OpenPipe_Output_Piped('../../../../client/js');	
+}
+\end{lstlisting}
+\caption{OpenPipe adapter setup for CodeIgniter}
+\end{figure}
+
 
 \section{Data Collection}
 
-To collect data a simple but powerful script [see figure \ref{fig:seleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for loaded web pages. The web page selected for data collection was the OpenPipe enabled static sample app previously illustrated [see figure \ref{fig:sampleApp}].  Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilizing of underlying browser API systems. The means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponses,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for a OpenPipe enabled web page, since all data is unpacked and loaded in the browser via JavaScript after it has been received from the server.
+To collect data from the test applications a simple but powerful script [see figure \ref{fig:seleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for loaded web pages. The web page selected for data collection was the OpenPipe enabled static sample app previously illustrated [see figure \ref{fig:sampleApp}].  Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilizing of underlying browser API systems. The means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponses,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for a OpenPipe enabled web page, since all data is unpacked and loaded in the browser via JavaScript after it has been received from the server.
 
 \begin{figure}[H]
 \label{fig:seleniumScript}
@@ -1064,7 +1057,7 @@ In general the results are very promising.  They illustrate how an an HTTP pipel
 %------------------------------------------------------------------------------------------------------
 %--------------------Discussion-------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
-\chapter{DISCUSSION}
+\chapter{FUTURE WORK}
 
 \section{Expanded Output API}
 
@@ -1118,6 +1111,7 @@ Web servers like apache provide application interfaces for developing server ext
 %--------------------CODE LISTINGS ---------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
 \appendix
+\singlespacing
 \addtocontents{toc}{\def\protect\cftchappresnum{APPENDIX }}
 
 \chapter{SERVER SOURCE CODE}
@@ -1173,42 +1167,43 @@ Web servers like apache provide application interfaces for developing server ext
 %--------------------BIBLIOGRAPHY ---------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------
 \begin{thebibliography}{2}
+\doublespacing
 
 \bibitem{facebookBigpipe}
-"BigPipe: Pipelining web pages for high performance", Facebook, June 2010. [Online]
+facebook.com, "BigPipe: Pipelining web pages for high performance", Facebook, June 2010 [Online]
 Available: http://www.facebook.com/notes/facebook-engineering/bigpipe-pipelining-web-pages-for-high-performance/389414033919 [Retrieved December 2010]
 
 \bibitem{hypertextTransferProtocol}
-"Part of Hypertext Transfer Protocol -- HTTP/1.1 – 8 - Connections" [Online]
+w3.org, "Part of Hypertext Transfer Protocol -- HTTP/1.1 – 8 - Connections", W3C/MIT, June 1999 [Online]
 Available: http://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html [Retrieved December 2010]
 
 \bibitem{optimizingPageLoadTime}
-"Optimizing Page Load Time", Aaron Hopkins [Online]
+Aaron Hopkins, "Optimizing Page Load Time", die.net [Online]
 Available: http://www.die.net/musings/page\_load\_time/ [Retrieved December 2010]
 
 \bibitem{whatIsPipelining}
-"What is HTTP pipelining", Darin Fisher [Online]
+Darin Fisher, "What is HTTP pipelining", Mozilla, April 2008 [Online]
 Available: http://www.mozilla.org/projects/netlib/http/pipelining-faq.html [Retrieved December 2010]
 
 \bibitem{w3cNavigationTiming}
-"Navigation Timing", Editor's Draft July 16th, 2012 [Online]
-Available: dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html
+Zhiheng Wang, "Navigation Timing", W3C, July 2012 [Online]
+Available: dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html [Retrieved November 2012]
 
 \bibitem{siegeHomepage}
-"Siege Home",  January 30, 2012 [Online]
-Available: www.joedog.org/siege-home
+Jeff Fulmer, "Siege Home",  joedog.org, January 2012 [Online]
+Available: www.joedog.org/siege-home [Retrieved November 2012]
 
 \bibitem{siegeManual}
-"Siege Manual", January 30, 2012 [Online]
-Available: http://www.joedog.org/siege-manual/
+Jeff Fulmer, "Siege Manual", joedog.org, January 2012 [Online]
+Available: http://www.joedog.org/siege-manual/ [Retrieved November 2012]
 
 \bibitem{phpWiki}
-"PHP" [Online]
-Available: http://en.wikipedia.org/wiki/PHP
+wikipedia.org, "PHP", Wikimedia Foundation [Online]
+Available: http://en.wikipedia.org/wiki/PHP [Retrieved October 2012]
 
 \bibitem{webserverSurvey}
-"March 2012 Web Server Survey" [Online]
-Available: http://news.netcraft.com/archives/2012/03/05/march-2012-web-server-survey.html
+netcraft.com, "March 2012 Web Server Survey", Netcraft [Online]
+Available: http://news.netcraft.com/archives/2012/03/05/march-2012-web-server-survey.html [Retrieved October 2012]
 
 \bibitem{highPerformanceWebsites}
 Steve Souders, High Performance Websites, Oreilly Media, September 2007

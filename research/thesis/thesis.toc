@@ -1,63 +1,61 @@
-\contentsline {chapter}{\numberline {1}INTRODUCTION AND OVERVIEW}{1}
-\contentsline {chapter}{\numberline {2}IMPLEMENTATION AND ANALYSIS TOOLS}{6}
-\contentsline {section}{\numberline {2.1}Git}{6}
-\contentsline {section}{\numberline {2.2}PHP}{6}
-\contentsline {section}{\numberline {2.3}phpDocumentor}{7}
-\contentsline {section}{\numberline {2.4}Apache}{7}
-\contentsline {section}{\numberline {2.5}FireFox}{8}
-\contentsline {section}{\numberline {2.6}CodeIgniter}{9}
-\contentsline {section}{\numberline {2.7}Selenium}{9}
-\contentsline {chapter}{\numberline {3}TEST APPLICATIONS}{11}
-\contentsline {section}{\numberline {3.1}Static Sample App}{11}
-\contentsline {section}{\numberline {3.2}Basic Pipeline}{13}
-\contentsline {subsection}{\numberline {3.2.1}MVC Pipeline (PVC)}{14}
-\contentsline {chapter}{\numberline {4}ARCHITECTURAL COMPONENTS}{15}
-\contentsline {section}{\numberline {4.1}Server components}{15}
-\contentsline {section}{\numberline {4.2}Client components}{16}
-\contentsline {chapter}{\numberline {5}PIPELETS}{18}
-\contentsline {section}{\numberline {5.1}The Root Pipelet}{18}
-\contentsline {section}{\numberline {5.2}Nested Pipelets}{21}
-\contentsline {section}{\numberline {5.3}Pipelet Priority}{22}
-\contentsline {chapter}{\numberline {6}CLASS INTERFACES}{24}
-\contentsline {section}{\numberline {6.1}Output}{25}
-\contentsline {section}{\numberline {6.2}Framework Adapter}{27}
-\contentsline {chapter}{\numberline {7}DESIGN PATTERNS}{29}
-\contentsline {section}{\numberline {7.1}Strategy Pattern}{29}
-\contentsline {section}{\numberline {7.2}Factory Pattern}{30}
-\contentsline {chapter}{\numberline {8}SEQUENCE DIAGRAMS}{32}
-\contentsline {section}{\numberline {8.1}Server}{32}
-\contentsline {section}{\numberline {8.2}Client}{34}
-\contentsline {chapter}{\numberline {9}OTHER LIBRARY COMPONENTS}{37}
-\contentsline {section}{\numberline {9.1}Transmitted Data}{37}
-\contentsline {section}{\numberline {9.2}PHP Output Buffering}{38}
-\contentsline {section}{\numberline {9.3}Dynamic JavaScript DOM Insertion}{39}
-\contentsline {chapter}{\numberline {10}METHODOLOGY}{41}
-\contentsline {section}{\numberline {10.1}Data Collection}{41}
-\contentsline {section}{\numberline {10.2}Simulating Load}{44}
-\contentsline {chapter}{\numberline {11}RESULTS AND ANALYSIS}{46}
-\contentsline {section}{\numberline {11.1}Performance Timing Table Data}{46}
-\contentsline {section}{\numberline {11.2}Charts}{48}
-\contentsline {section}{\numberline {11.3}Conclusions}{51}
-\contentsline {chapter}{\numberline {12}DISCUSSION}{53}
-\contentsline {section}{\numberline {12.1}Expanded Output API}{53}
-\contentsline {section}{\numberline {12.2}Minification}{54}
-\contentsline {section}{\numberline {12.3}Addition of framework adapters}{54}
-\contentsline {section}{\numberline {12.4}Language agnostic Apache server extension}{54}
+\contentsline {chapter}{\numberline {1}INTRODUCTION AND UNDERLYING TECHNOLOGIES}{1}
+\contentsline {section}{\numberline {1.1}PHP}{5}
+\contentsline {section}{\numberline {1.2}phpDocumentor}{6}
+\contentsline {section}{\numberline {1.3}CodeIgniter}{6}
+\contentsline {section}{\numberline {1.4}Apache}{7}
+\contentsline {section}{\numberline {1.5}FireFox}{7}
+\contentsline {section}{\numberline {1.6}Selenium}{8}
+\contentsline {chapter}{\numberline {2}ARCHITECTURAL COMPONENTS}{10}
+\contentsline {section}{\numberline {2.1}Client-server model}{10}
+\contentsline {section}{\numberline {2.2}Server components}{11}
+\contentsline {section}{\numberline {2.3}Client components}{13}
+\contentsline {chapter}{\numberline {3}PIPELETS}{15}
+\contentsline {section}{\numberline {3.1}The Root Pipelet}{15}
+\contentsline {section}{\numberline {3.2}Nested Pipelets}{18}
+\contentsline {section}{\numberline {3.3}Pipelet Priority}{19}
+\contentsline {chapter}{\numberline {4}CLASS INTERFACES}{21}
+\contentsline {section}{\numberline {4.1}Output}{22}
+\contentsline {section}{\numberline {4.2}Framework Adapter}{24}
+\contentsline {chapter}{\numberline {5}DESIGN PATTERNS}{26}
+\contentsline {section}{\numberline {5.1}Strategy Pattern}{26}
+\contentsline {section}{\numberline {5.2}Factory Pattern}{27}
+\contentsline {chapter}{\numberline {6}SEQUENCE DIAGRAMS}{29}
+\contentsline {section}{\numberline {6.1}Server}{29}
+\contentsline {section}{\numberline {6.2}Client}{31}
+\contentsline {chapter}{\numberline {7}OTHER LIBRARY COMPONENTS}{34}
+\contentsline {section}{\numberline {7.1}Transmitted Data}{34}
+\contentsline {section}{\numberline {7.2}PHP Output Buffering}{35}
+\contentsline {section}{\numberline {7.3}Dynamic JavaScript DOM Insertion}{36}
+\contentsline {chapter}{\numberline {8}TESTING METHODOLOGY}{38}
+\contentsline {section}{\numberline {8.1}Static Sample App}{38}
+\contentsline {section}{\numberline {8.2}Basic Pipeline}{40}
+\contentsline {section}{\numberline {8.3}MVC Pipeline (PVC)}{41}
+\contentsline {section}{\numberline {8.4}Data Collection}{42}
+\contentsline {section}{\numberline {8.5}Simulating Load}{45}
+\contentsline {chapter}{\numberline {9}RESULTS AND ANALYSIS}{47}
+\contentsline {section}{\numberline {9.1}Performance Timing Table Data}{47}
+\contentsline {section}{\numberline {9.2}Charts}{49}
+\contentsline {section}{\numberline {9.3}Conclusions}{52}
+\contentsline {chapter}{\numberline {10}FUTURE WORK}{54}
+\contentsline {section}{\numberline {10.1}Expanded Output API}{54}
+\contentsline {section}{\numberline {10.2}Minification}{55}
+\contentsline {section}{\numberline {10.3}Addition of framework adapters}{55}
+\contentsline {section}{\numberline {10.4}Language agnostic Apache server extension}{55}
 \def \cftchappresnum {APPENDIX }
-\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{56}
-\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{56}
-\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{60}
-\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{63}
-\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{66}
-\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{67}
-\contentsline {section}{\numberline {A.6}Output/Interface.php}{70}
-\contentsline {section}{\numberline {A.7}Output/Piped.php}{72}
-\contentsline {section}{\numberline {A.8}Output/Standard.php}{76}
-\contentsline {section}{\numberline {A.9}Output/Util.php}{82}
-\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{87}
-\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{88}
-\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{91}
-\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{93}
-\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{96}
-\contentsline {section}{\numberline {B.1}openpipe.js}{96}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont \MakeTextUppercase {References}}{103}
+\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{57}
+\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{57}
+\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{59}
+\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{61}
+\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{63}
+\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{64}
+\contentsline {section}{\numberline {A.6}Output/Interface.php}{65}
+\contentsline {section}{\numberline {A.7}Output/Piped.php}{67}
+\contentsline {section}{\numberline {A.8}Output/Standard.php}{69}
+\contentsline {section}{\numberline {A.9}Output/Util.php}{73}
+\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{76}
+\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{76}
+\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{78}
+\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{80}
+\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{82}
+\contentsline {section}{\numberline {B.1}openpipe.js}{82}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont \MakeTextUppercase {References}}{87}

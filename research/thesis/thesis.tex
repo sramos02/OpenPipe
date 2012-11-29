@@ -41,7 +41,7 @@
 \renewcommand{\cftchapaftersnum}{:}
 \renewcommand{\cftchapnumwidth}{6.5em}
 \renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\bibname}{\large\MakeTextUppercase{References}}
+\renewcommand{\bibname}{\small\MakeTextUppercase{References}}
 
 \doublespacing
 
@@ -118,7 +118,7 @@
 	\MakeTextUppercase{By} \\
 	\MakeTextUppercase{Sean Kenny} \\
 \end{center}
-This thesis was prepared under the direction of the candidate\'s thesis advisor, Dr. Hrvoje Podnar, Department of Computer Science, and it has been approved by the members of the candidate\'s thesis committee. It was submitted to the School of Graduate Studies and was accepted in partial fulfillment of the requirements for the degree of Master of Science.
+This thesis was prepared under the direction of the candidate's thesis advisor, Dr. Hrvoje Podnar, Department of Computer Science, and it has been approved by the members of the candidate's thesis committee. It was submitted to the School of Graduate Studies and was accepted in partial fulfillment of the requirements for the degree of Master of Science.
 
 \begin{flushright}
 
@@ -159,7 +159,7 @@ Year: 			& 2012														\\
 \end{flushleft}
 
 \begin{flushleft}
-This project intends to improve upon the current HTTP based web request and response system utilized by modern web browsers and servers today. This improvement will be made possible through the creation of a software HTTP web request pipelining framework named OpenPipe. The OpenPipe framework will attempt to increase the perceived speed of web content delivery through the optimization of communication sequences that occur during a standard HTTP web request cycle. The OpenPipe framework will be provided as a PHP library for Apache based web servers, and a client side cross-browser JavaScript library. The existence of this library will allow for a greater level of transparency to web developers whom wish to provide advanced HTTP request pipelining  to their web sites and web application in a more pluggable way, that can be extended to integrate with new and existing web based MVC frameworks. Once this library has been developed the final stage of this project will be to collect, analyze, and compare data for non-pipelined and pipelined web pages. The overall goal of this analysis will be to provide a clear picture of where the performance benefits occur when utilizing an HTTP request pipelining framework that OpenPipe provides.
+This project intends to improve upon the current HTTP based web request and response system utilized by modern web browsers and servers today. This improvement will be made possible through the creation of a software HTTP web request pipelining library named OpenPipe. The OpenPipe library will attempt to increase the perceived speed of web content delivery through the optimization of communication sequences that occur during a standard HTTP web request cycle. The OpenPipe library will be provided as a PHP library for Apache based web servers, and a client side cross-browser JavaScript library. The existence of this library will allow for a greater level of transparency to web developers whom wish to provide advanced HTTP request pipelining  to their web sites and web application in a more plugable way, that can be extended to integrate with new and existing web based MVC frameworks. Once this library has been developed the final stage of this project will be to collect, analyze, and compare data for non-pipelined and pipelined web pages. The overall goal of this analysis will be to provide a clear picture of where the performance benefits occur when utilizing an HTTP request pipelining library that OpenPipe provides.
 \end{flushleft}
 \end{abstract}
 
@@ -210,11 +210,11 @@ I would also like to thank Professor Lisa Lancor, for her feedback and enthusias
 \chapter{INTRODUCTION AND UNDERLYING TECHNOLOGIES}
 \pagenumbering{arabic}
 
-Modern web sites and web applications provide valuable information and services to an ever growing web audience. One of the most important requirements of web sites and web applications trying to deliver this important content is speed. Increased speed of a website can often determine an end user's perception of overall quality and value of a web-based service. Fast and responsive sites will be more likely to achieve higher monthly page views, adoption rates, and overall success
+Modern web sites and web applications provide valuable information and services to an ever growing web audience. One of the most important requirements of web sites and web applications trying to deliver this important content is speed. Increased speed of a website can often determine an end user's perception of overall quality and value of a web-based service. Fast and responsive sites will be more likely to achieve higher monthly page views, adoption rates, and overall success.
 
-If speed is recognized as a critical factor for today's web then the current HTTP protocol used to deliver this web content should be examined as the source of a possible bottleneck when trying to deliver it. Web content has become increasingly more dynamic and interactive over the last ten years, and this current standard for web content delivery can be tailored for meeting the current pressures of the modern web.
+The HTTP protocol is part of the application layer of the OSI model [see figure \ref{fig:osiModel}].  When an HTTP request is issued from a web browser for an initial HTML document, related elements such as images, JavaScript, and Cascading Style Sheet (CSS) are subsequently retrieved using additional HTTP requests. Therefore, the rendering of a single web page could involve many HTTP web requests. 
 
-Since the introduction of HTTP, web developers have built an ever-growing repertoire of tips and tricks to squeeze the most out of the HTTP-based web. These methods include, but are not limited to the following \cite{highPerformanceWebsites}:
+If speed is recognized as a critical factor for today's web then this current HTTP protocol used to deliver web content should be examined as the source of a possible bottleneck when trying to deliver performance. Web content has become increasingly more dynamic and interactive over the last ten years, and this current standard for web content delivery can be tailored for meeting the current pressures of the modern web. Since the introduction of HTTP, web developers have built an ever-growing repertoire of tips and tricks to squeeze the most out of the HTTP-based web. These methods include, but are not limited to the following \cite{highPerformanceWebsites}:
 
 \begin{itemize}
 	\item Use a content delivery network
@@ -232,7 +232,7 @@ Since the introduction of HTTP, web developers have built an ever-growing repert
 
 Today's web sites and web applications employ many of these techniques to help deliver content to end-users in an efficient manner. HTTP Pipelining is another technique that could be employed alongside any of these methods to increase web performance.
 
-The HTTP protocol is part of the application layer of the OSI model [see figure \ref{fig:osiModel}].  When an HTTP request is issued from a web browser for an initial HTML document, related elements such as images, JavaScript, and Cascading Style Sheet (CSS) are subsequently retrieved using additional HTTP requests. Therefore, the rendering of a single web page could involve many HTTP web requests. An HTTP pipeline is presented as a thin layer of application logic on top of HTTP which attempts to optimize the request cycle in a manner that allow pieces of a full web page to load and display independently.  This added layer is developed as a software library containing both server-side and client-side application code.
+ An HTTP pipeline is presented as a thin layer of application logic on top of HTTP which attempts to optimize the request cycle in a manner that allow pieces of a full web page to load and display independently.  This added layer is developed as a software library containing both server-side and client-side application code.
 
 \begin{figure}[H]
 \label{fig:osiModel}
@@ -241,7 +241,7 @@ The HTTP protocol is part of the application layer of the OSI model [see figure 
 \caption{Layers of the Open Systems Interconnection model (OSI model). OpenPipe resides in the application level of the OSI model.}
 \end{figure}
 
-The resulting framework processes, requests, and delivers responses in an optimized manner taking into account current HTTP limitations that are inherent to the overhead created by the connect and request style of communication. The result of this response optimization through a pipeline is an increase in perceived speed that is accomplished by displaying fully functional content as quickly as possible – even before the entire document is completely processed by the web server.
+The resulting library processes, requests, and delivers responses in an optimized manner taking into account current HTTP limitations that are inherent to the overhead created by the connect and request style of communication. The result of this response optimization through a pipeline is an increase in perceived speed that is accomplished by displaying fully functional content as quickly as possible – even before the entire document is completely processed by the web server.
 
 HTTP pipelining is inspired from traditional pipelining technologies utilized by today’s modern CPU's, where an instruction's life cycle is broken into multiple stages. Instead of instructions, HTTP pipelining breaks the page generation process into several stages [see figure \ref{fig:HTTPRequestCycles}] which include \cite{facebookBigpipe}:
 
@@ -262,6 +262,8 @@ HTTP pipelining is inspired from traditional pipelining technologies utilized by
 \includegraphics[width=145mm]{figures/images/HTTP_request_cycles.jpg}
 \caption{Comparison of a traditional HTTP web request with the operation of an HTTP web request Pipeline. A pipeline approach will deliver visible content sooner, as all parts of the  document are delivered in parallel.}
 \end{figure}
+
+Through the course of this paper we will review the implementation and design of an Opensource library called OpenPipe which implements a version of HTTP pipelining. This is accomplished through the development of both client and server side components that will be outlined in detail. Upon completion of the OpenPipe library testing and analysis was done to conclude how the differences in communication through HTTP pipelining really change the request and response times of a traditional client-server request model.
 
 
 \section{PHP}
@@ -287,7 +289,7 @@ OpenPipe uses phpDocumentor to generate all of the available PHP class documenta
 \includegraphics[width=30mm]{figures/images/ci_logo.jpg}
 \end{center}
 
-The OpenPipe framework that has currently been developed provides an adapter that interfaces with the CodeIgniter framework. Using this adapter it is fairly straight forward and simple to convert an existing CodeIgniter application to take advantage of OpenPipe HTTP request pipelining. CodeIgniter is a powerful PHP framework with a very small footprint, built for PHP coders who need a simple and elegant toolkit to create full-featured web applications. 
+The OpenPipe library that has currently been developed provides an adapter that interfaces with the CodeIgniter framework. Using this adapter it is fairly straight forward and simple to convert an existing CodeIgniter application to take advantage of OpenPipe HTTP request pipelining. CodeIgniter is a powerful PHP framework with a very small footprint, built for PHP coders who need a simple and elegant toolkit to create full-featured web applications. 
 
 
 \section{Apache}
@@ -339,13 +341,13 @@ Selenium is primarily used for the automated testing of web applications, and is
 
 \section{Client-server model}
 
-OpenPipe delivers data from an HTTP server in a customized way that allows a corresponding client to interpret and render the data as soon as possible. Because of this OpenPipe is the combination of both server side and client side libraries working as complements to each. The server side components package and send data to the client, and the clien side components unpack and utilize the received data [see figure \ref{fig:pipelinedRequestCycle}].
+OpenPipe delivers data from an HTTP server in a customized way that allows a corresponding client to interpret and render the data as soon as possible. Because of this OpenPipe is the combination of both server side and client side libraries working as complements to each. The server side components package and send data to the client, and the client side components unpack and utilize the received data [see figure \ref{fig:pipelinedRequestCycle}].
 
 \begin{figure}[H]
 \label{fig:pipelinedRequestCycle}
 \centering
 \includegraphics[width=65mm]{figures/images/pipeline_request_cycle.png}
-\caption{A pipeline HTTP approach representated a traditional client-server communciation process.}
+\caption{A pipeline HTTP approach represented a traditional client-server communication process.}
 \end{figure}
 
 
@@ -363,7 +365,7 @@ The server is composed of four main layers:
 $openPipeRunner = new OpenPipe_Runner($openPipeAdapter, $openPipeOutput); $openPipeRunner->run(); //outputs openpipe content
 		\end{lstlisting}
 
-	\item \textbf{OpenPipe\_Adapter} - A pluggable interface which retrieves and returns pipelets components from the underlying web framework. An adapter can be used to interface pre-existing PHP application frameworks with OpenPipe, or whole new OpenPipe-centric application frameworks.
+	\item \textbf{OpenPipe\_Adapter} - A plugable interface which retrieves and returns pipelets components from the underlying web framework. An adapter can be used to interface pre-existing PHP application frameworks with OpenPipe, or whole new OpenPipe-centric application frameworks.
 		\begin{lstlisting}
 //loading an openpipe adapter
 $openPipeAdapter = OpenPipe_Adapter_Pvc_CodeIgniter(dirname(__FILE__));
@@ -506,7 +508,7 @@ Pipelets that are part of the same depth can prioritized explicitly using the pi
 
 \chapter{CLASS INTERFACES}
 
-OpenPipe defines core interfaces for pluggable components of the system. Through utilizing provided interfaces developers can contour and extend the framework to meet new and existing needs. 
+OpenPipe defines core interfaces for pluggable components of the system. Through utilizing provided interfaces developers can contour and extend the library to meet new and existing needs. 
 
 \section{Output}
 
@@ -829,7 +831,7 @@ This simple design did not integrate with any existing PHP frameworks and relied
 
 \section{MVC Pipeline (PVC)}
 
-The final stage in the development cycle was to implement an adapter for an existing PHP MVC framework. This adapter essentially retrofits the existing framework, and allows it to take advantage of HTTP pipelining provided by the OpenPipe framework. 
+The final stage in the development cycle was to implement an adapter for an existing PHP MVC framework. This adapter essentially retrofits the existing framework, and allows it to take advantage of HTTP pipelining provided by the OpenPipe library. 
 
 The PHP MVC framework chosen to create an adapter for is named CodeIgniter. CodeIgniter is a lightweight open-source MVC framework, that is relatively simple to work with and extend. 
 
@@ -1100,7 +1102,7 @@ Out of the box OpenPipe allows for integration with the CodeIgniter MVC Framewor
 \end{enumerate}
 
 \section{Language agnostic Apache server extension}
-Currently the OpenPipe framework is limited to working with PHP based applications and websites. This is due to the fact that the entire server side implementation is built  using the PHP language and is executed by the web server using additional modules like mod\_php. 
+Currently the OpenPipe library is limited to working with PHP based applications and websites. This is due to the fact that the entire server side implementation is built  using the PHP language and is executed by the web server using additional modules like mod\_php. 
 
 Web servers like apache provide application interfaces for developing server extensions. OpenPipe development could progress to include an embedded apache module that allows for integration with any web based applications utilizing any web scripting language. This would allow OpenPipe to integrate with tools such as Python, Ruby, and Perl.
 

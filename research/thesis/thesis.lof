@@ -2,7 +2,7 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Layers of the Open Systems Interconnection model (OSI model). OpenPipe resides in the application level of the OSI model.}}{3}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Comparison of a traditional HTTP web request with the operation of an HTTP web request Pipeline. A pipeline approach will deliver visible content sooner, as all parts of the document are delivered in parallel.}}{5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A pipeline HTTP approach representated a traditional client-server communciation process.}}{11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A pipeline HTTP approach represented a traditional client-server communication process.}}{11}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Server side tecnology stack with OpenPipe components}}{13}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Client side tecnology stack with OpenPipe components}}{14}
 \addvspace {10\p@ }

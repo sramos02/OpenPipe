@@ -40,22 +40,54 @@
 					<p>
 						<small>Created by <a href="http://www.polycoder.net">Sean Kenny</a> / <a href="http://twitter.com/polycoder">@polycoder</a></small>
 					</p>
+
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					 <h2 class>Before I forget...</h2>
 					 <h1 class="fragment" >Thanks for coming!</h1>
+
+					 <aside class="notes">
+
+					</aside>
 				</section>
 
 				<section>
 					 <h2>Who's this guy?</h2>
+
+					 <ul>
+					 	<li class="fragment" >Sean Kenny - Resident of West Haven CT. Grew up in Syracuse NY.</li>
+					 	<li class="fragment" >
+					 		Currently Work for <a targte="_blank" href="http://www.napc.com">NAPC</a> as Chief Applications Architect</a>
+					 	<li class="fragment" >
+					 		Also work for sister company, <a target="_blank" href="https://www.toastedsnow.com" >Toasted Snow</a>, as Senior Software Engineer
+					 	</li>
+					 	<li class="fragment" >
+					 		Interested in all things web
+					 	</li>
+					 	<li class="fragment" >
+					 		PHP Fanboy
+					 	</li>
+					 </ul>
+
+					 <aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<h2>What are we trying to solve?</h2>
 					<p>
-						Increase, 'perceived', speed of web pages served via traditional HTTP web servers
+						Increase, 'perceived', speed of web pages served via traditional HTTP web servers. 
 					</p>
+					<p>
+						<a target="_blank" href="http://localhost/dev/openpipe/example/frameset.php" >Quick Detour</a>
+					</p>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 
@@ -64,6 +96,9 @@
 					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
 						<img src="images/http_request_cycles.jpg" alt="Meny">
 					</a>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -73,31 +108,49 @@
 						<p>
 							OpenPipe utilizes a set of applications and tools for operation and testing
 						</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 					<section>
 						<h2>PHP</h2>
 						<img src="images/php_logo.png" />
 						<p>The core server components of OpenPipe were all written with PHP 5.3. PHP is a general-purpose server-side scripting language originally designed for web development to produce dynamic web pages.</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 					<section>
 						<h2>CodeIgniter</h2>
 						<img src="images/ci_logo.jpg" />
 						<p>The OpenPipe library that has currently been developed provides an adapter that interfaces with the CodeIgniter framework.</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 					<section>
 						<h2>Apache</h2>
 						<img src="images/apache_logo.png" />
 						<p>OpenPipe has been built and tested using the Apache HTTP server. OpenPipe is not limited to running on this architecture, and can theoretically be run on any web server that supplies integration with PHP.</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 					<section>
 						<h2>FireFox</h2>
 						<img src="images/firefox_logo.png" />
-						<p>All client side testing and analysis (manual and automated) of OpenPipe was per- formed using the FireFox web browser.</p>
+						<p>All client side testing and analysis (manual and automated) of OpenPipe was performed using the FireFox web browser.</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 					<section>
 						<h2>Selenium</h2>
 						<img src="images/selenium_logo.png" />
-						<p>Selenium automates browsers by providing a common API that is provided in the form of a, ’WebDriver’</p>
+						<p>Selenium automates browsers by providing a common API that is provided in the form of a 'WebDriver'</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 				</section>
 
@@ -105,21 +158,30 @@
 					<h2>Client-server model</h2>
 					<p>A pipeline HTTP approach represented a traditional client-server communication process.</p>
 					<img height="400" src="images/pipeline_request_cycle.png" />
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<h2>Server components</h2>
 					<img height="500" src="images/framework_stack.png" />
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<h2>Client components</h2>
 					<img height="500" src="images/client_stack.png" />
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<h2>Pipelet</h2>
-					<p>Every OpenPipe HTTP request cycle is composed of pipelets. A pipelets represents an atomic composition of HTML, CSS, and JavaScript. A web page request can be composed of one to many pipelets.</p>
+					<p>Every OpenPipe HTTP request cycle is composed of pipelets. A pipelet represents an atomic composition of HTML, CSS, and JavaScript. A web page request can be composed of one to many pipelets.</p>
 					<pre><code contenteditable>
 &lt;!-- a simple pipelet containing css , javascript , and html --&gt;
 &lt;div pipelet-id="pipelet-1" &gt;
@@ -133,6 +195,9 @@
 	&lt;h1>Hello world!&lt/h1&gt;
 &lt;/div&gt;
 					</code></pre>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 
@@ -154,10 +219,16 @@
 &lt;/body&gt;
 &lt;/html&gt;
 					</pre></code>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<img  height="575" src="images/root_pipelet.png" />
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
@@ -168,12 +239,18 @@
 					<ul>
 						<li>mechanism to display content that contains n-levels of content depth</li>
 						<li>page being rendered can start to be divided into subcomponents</li>
-						<li>subcomponents can have more subcomponents of their own.</li>
+						<li>subcomponents can have more subcomponents of their own</li>
 					<ul>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<img height="575" src="images/nested_pipelets.png" />
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 
@@ -194,24 +271,36 @@
 	&lt;div pipelet-id="pipelet-2" pipelet-priority="1" &gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-				</code></pre>
+					</code></pre>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 
 				<section>
 					<section>
 						<h2>Class Interfaces</h2>
-						<p>OpenPipe defines core interfaces for pluggable components of the system. Through utilizing provided interfaces developers can contour and extend the library to meet new and existing needs.</p>
+						<p>OpenPipe defines core interfaces for pluggable components of the system. Through utilizing provided interfaces, developers can contour and extend the library to meet new and existing needs.</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Output</h2>
 						<img height="500" src="images/generalization_output.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Framework Adapter</h2>
 						<img height="500" src="images/generalization_adapters.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 				</section>
 
@@ -220,17 +309,26 @@
 				<section>
 					<section>
 						<h2>Design Patterns</h2>
-						<p>The OpenPipe library utilizes design patterns where appropriate to make the available components easier to comprehend from a conceptial level, and also easier to extend for future use. The patterns explained below were chosen to provide maximum flexibility to the underlying system when integrating with existing PHP web application systems and frameworks.</p>
+						<p>The OpenPipe library utilizes design patterns where appropriate to make the available components easier to comprehend from a conceptual level, and also easier to extend for future use. The patterns explained below were chosen to provide maximum flexibility to the underlying system when integrating with existing PHP web application systems and frameworks.</p>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>OpenPipe_Runner - Strategy</h2>
 						<img height="500" src="images/strategy_runner.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Pipelet Factory</h2>
 						<img height="400" src="images/factory_pipelets.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 				</section>
 
@@ -238,16 +336,25 @@
 				<section>
 					<section>
 						<h2>Sequence Diagrams</h2>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Server Sequence Diagram</h2>
 						<img height="500" src="images/openpipe_runner.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Client Sequence Diagram</h2>
 						<img height="500" src="images/openpipe_clientoutput.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 				</section>
 
@@ -255,23 +362,35 @@
 					<h2>Data Transmitted</h2>
 					<p>Pipelet data is transmitted as JSON to the client. Each individual pipelet transmitted as JSON is referred to as a segment in the OpenPipe.js client library. Everything transmitted from the server to client is sent as a segment.</p>
 					<img height="200" src="images/client_segment_data_object.png" />
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<section>
 						<h2>Testing Methodology</h2>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Create Static Sample App</h2>
-						<img height="500" src="images/sample_app.jpg" />
+						<a target="_blank" href="http://localhost/dev/openpipe/extra/site-template/" ><img height="500" src="images/sample_app.jpg" /></a>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Create Basic Prototype</h2>
-						<a href="http://localhost/dev/openpipe/example/basic/" >
+						<a target="_blank" href="http://localhost/dev/openpipe/example/basic/" >
 							<img height="500" src="images/basic_pipeline.jpg" />
 						</a>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
@@ -289,6 +408,9 @@ if(isset($_GET['nopipe'])){
 $openPipeRunner = new OpenPipe_Runner($openPipeAdapter, $openPipeOutput);	
 $openPipeRunner->run();
 </code></pre>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
@@ -317,6 +439,9 @@ interface PerformanceTiming {
 	long long loadEventEnd;
 };
 						</code></pre>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
@@ -329,11 +454,31 @@ interface PerformanceTiming {
 
 					<section>
 						<h2>Simulating Load</h2>
-						<p>To achieve an accurate simulation of load the freely available and opensource tool named, ’Siege’, was utilized.</p>
-						<p>OpenPipe was tested while siege was run at concurrency levels 10, 25, 50, and 100.</p>
+						<p>To achieve an accurate simulation of load the freely available and opensource tool named, 'Siege', was utilized.</p>
+						<p>OpenPipe was tested while Siege was run at concurrency levels 10, 25, 50, and 100.</p>
 
 						<aside class="notes" >	
 							to run: cat urls | xargs -L1 ruby performance.rb
+						</aside>
+					</section>
+
+
+					<section>
+						<h2>Simulating Resource Access</h2>
+						<p>To achieve an accurate simulation of using resources during a web request, a resource simulator was created in CodeIgniter. It allows for simulated access of:</p>
+						<ul>
+							<li>Local Database</li>
+							<li>External WebService</li>
+						</ul>
+						
+						<pre><code contenteditable >
+$this->externalevent->execute('webservice', 25);
+$this->externalevent->execute('database', 10);
+						</code></pre>
+
+						<aside class="notes" >	
+							<p>First param is type. Second is magnitude - size of select (db), ammount per page (webservice).</p>
+							<p>WebService used was twitter, test database set from mysql was used.</p>
 						</aside>
 					</section>
 
@@ -344,6 +489,9 @@ interface PerformanceTiming {
 				<section>
 					<section>
 						<h2>Results</h2>
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
@@ -364,38 +512,58 @@ interface PerformanceTiming {
 					<section>
 						<h2>Plain HTML Results</h1>
 						<img height="500" src="images/analysis_chart_plain.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 
 					<section>
 						<h2>Database Results</h1>
 						<img height="500" src="images/analysis_chart_database.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Web Service Results</h1>
 						<img height="500" src="images/analysis_chart_webservice.png" />
+
+						<aside class="notes">
+						</aside>
 					</section>
 
 					<section>
 						<h2>Conclusions</h2>
 						<ul>
-							<li>On average across all type of requests and server load a piped request requires only 38% of the time that would be needed to send a non-piped version of the same page.</li>
-							<li>Requests that involve calls to external web services see the biggest performance gains.</li>
-							<li>Piped versions of pages do. on average, require more time to load.</li>
-							<li>Overall load on the server caused the greatest increase in response time when sending database type requests.</li>
+							<li>On average across all types of requests and server load combinations, a piped request requires only 38% of the time that would be needed to send a non-piped version of the same page</li>
+							<li>Requests that involve calls to external web services see the biggest performance gains</li>
+							<li>Piped versions of pages do, on average, require more time to load</li>
+							<li>Overall load on the server caused the greatest increase in response time when sending database type requests</li>
 						</ul>
+
+						<aside class="notes">
+						</aside>
 					</section>
 				</section>
 
 				<section>
 					<h2>I get it! Lets see this in action!!</h2>
 					<p>Demo time</p>
+					<ul>
+						<li>
+							<a target="_blank" href="http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=webservice">WebService Piped</a>
+						</li>
+						<li>
+							<a targe="_blank" href="http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=webservice&nopipe=true" >WebService Normal</a>
+						</li>
+					</ul>
 
 					<aside class="notes">
 						<ul>
 							<li>Demo Items</li>
-							<li>Show Source Code</li>
+							<li>Show Source Code - controllers, actions, and views that get squased into single connection</li>
 						</ul>
 					</aside>
 				</section>
@@ -423,26 +591,51 @@ interface PerformanceTiming {
 				<section>
 					<h2>Future Work</h2>
 					<ul>
-						<li>Expanded Output API</li>
-						<li >Enhanced Minification</li>
-						<li >Addition of framework adapters</li>
-						<li >Language agnostic Apache server extension</li>
+						<li class="fragment" >Enhanced Minification</li>
+						<li class="fragment" >Addition of framework adapters</li>
+						<li class="fragment" >Language agnostic Apache server extension</li>
+						<li class="fragment" >
+							Expanded, 'Explicit' Output API
+
+							<pre><code contenteditable >
+&lt;?php
+$layoutData = file_get_contents(’layout.php’);
+$pipe = new OpenPipe_Output_Handle(); $pipe->sendLayout($layoutData);
+$dbRecords = mysql_query(’select * from facts ’); $content = ’’;
+
+foreach($dbRecords as $dbRecord){
+	$content .= "&lt;h1&gt;User {$dbRecord[’user_name ’]}&lt;/h1&gt;"; 
+}
+
+$pipe->sendContent(’user-names’, $content); $pipe->endPhase(1);
+$pipe->close();
+							</code></pre>
+						</li>
 					</ul>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 				<section>
 					<h2>OpenPipe Resources</h2>
 					<ul>
 						<li ><a target="_blank" href="http://www.open-pipe.com">open-pipe.com</a></li>
-						<li ><a target="_blank"  href="https://github.com/polycoder/OpenPipe">source code via GitHub (fork me!)</a></li>
+						<li ><a target="_blank"  href="https://github.com/polycoder/OpenPipe">Fork Me on GitHub</a></li>
 						<li ><a target="_blank"  href="http://localhost/dev/openpipe/docs/server/">class documentation (in source code)</a></li>
 					</ul>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 
 				<section>
 					<h1>THE END</h1>
 					<h3>BY Sean Kenny / polycoder.net</h3>
+
+					<aside class="notes">
+					</aside>
 				</section>
 
 			</div>

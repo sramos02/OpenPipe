@@ -78,13 +78,10 @@
 				</section>
 
 				<section>
-					<h2>What are we trying to solve?</h2>
-					<p>
-						Increase, 'perceived', speed of web pages served via traditional HTTP web servers. 
-					</p>
-					<p>
-						<a target="_blank" href="http://localhost/dev/openpipe/example/frameset.php" >Quick Detour</a>
-					</p>
+					<h2>What am I trying to solve?</h2>
+					<ul>
+						<li class="fragment">Increase, 'perceived', speed of web pages served via traditional HTTP web servers.</li> 
+					</ul>
 
 					<aside class="notes">
 					</aside>
@@ -92,12 +89,26 @@
 
 
 				<section>
-					<h2>How the magic happens.</h2>
+					<h2>How did I plan to do it?</h2>
+					<ul>
+						<li class="fragment">Create a conventions based software library that transparently allows for Pipelining of HTTP web based output data (HTML)</li>
+						<li class="fragment">Create a reusable/flexible library to build on and extend from</li>
+						<li class="fragment"><a target="_blank" href="http://localhost/dev/openpipe/example/frameset.php" >Quick Detour</a></li>
+					</ul>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h2>So What is a Pipeline Anyways?</h2>
 					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
 						<img src="images/http_request_cycles.jpg" alt="Meny">
 					</a>
 
 					<aside class="notes">
+						<p>Helps dissolve crosscutting concerns - this page was fast when i only had to load posts. But then adding more and more resources for sidebars etc causes page to slow down (espeically if not caching).</p>
+						<p>This is inspired by CPU/Parallel pipelining processes (data being transmitted/rendered on browser as new piece of content is being ready and prepared to send by server)</p>
 					</aside>
 				</section>
 
@@ -155,11 +166,12 @@
 				</section>
 
 				<section>
-					<h2>Client-server model</h2>
+					<h2>Client-server model revisited</h2>
 					<p>A pipeline HTTP approach represented a traditional client-server communication process.</p>
 					<img height="400" src="images/pipeline_request_cycle.png" />
 
 					<aside class="notes">
+						Partial HTML Document is Key! Visiblity is Key!
 					</aside>
 				</section>
 
@@ -168,6 +180,7 @@
 					<img height="500" src="images/framework_stack.png" />
 
 					<aside class="notes">
+						What this framework looks like form a server stack perspective
 					</aside>
 				</section>
 
@@ -176,6 +189,7 @@
 					<img height="500" src="images/client_stack.png" />
 
 					<aside class="notes">
+						What this framework looks like form a client stack perspective
 					</aside>
 				</section>
 
@@ -197,6 +211,7 @@
 					</code></pre>
 
 					<aside class="notes">
+						<p>Note special attributes</p>
 					</aside>
 				</section>
 
@@ -221,6 +236,7 @@
 					</pre></code>
 
 					<aside class="notes">
+						<p>Note special attributes</p>
 					</aside>
 				</section>
 
@@ -274,6 +290,7 @@
 					</code></pre>
 
 					<aside class="notes">
+						<p>Note special attributes</p>
 					</aside>
 				</section>
 
@@ -292,6 +309,7 @@
 						<img height="500" src="images/generalization_output.png" />
 
 						<aside class="notes">
+							<p>Choose output type at runtime</p>
 						</aside>
 					</section>
 
@@ -300,6 +318,7 @@
 						<img height="500" src="images/generalization_adapters.png" />
 
 						<aside class="notes">
+							<p>Able to extend to new frameworks</p>
 						</aside>
 					</section>
 				</section>
@@ -320,6 +339,7 @@
 						<img height="500" src="images/strategy_runner.png" />
 
 						<aside class="notes">
+							<p>Dependancy injection at runtime by runner</p>
 						</aside>
 					</section>
 
@@ -328,6 +348,7 @@
 						<img height="400" src="images/factory_pipelets.png" />
 
 						<aside class="notes">
+							<p>Used to create nested pipelets</p>
 						</aside>
 					</section>
 				</section>

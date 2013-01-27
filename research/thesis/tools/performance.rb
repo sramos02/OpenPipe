@@ -11,14 +11,23 @@ require 'selenium-webdriver'
 url = ARGV[0];
 cycles = ARGV[1] || '5'
 output_file = ARGV[2] || 'output.csv'
+do_cache = ARGV[3] || 1;
 
-#open client driver for firefox
-browser = Selenium::WebDriver.for :firefox
+if(do_cache.to_i == 1)
+	browser = Selenium::WebDriver.for :firefox
+	browser.get url
+end
 
 #open csv for writing output data
 CSV.open(output_file, "w") do |csv|
 	#for the amount of times the user wanted, get the page, get the performance timing, and output to csv
 	cycles.to_i.times do |i|	
+
+		if(do_cache.to_i == 0)
+			browser.quit if browser != nil
+			browser = Selenium::WebDriver.for :firefox
+		end
+
 		browser.get url
 		browser_timing = browser.execute_script("return window.performance.timing"); 
 		openpipe_timing = browser.execute_script("return typeof(op) !== 'undefined' ? op.performance.timing.segments : null");

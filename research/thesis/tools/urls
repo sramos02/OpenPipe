@@ -1,6 +1,6 @@
-http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?debug=true 50 output-fakebook-html-piped.csv
-http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?nopipe=true&debug=true 50 output-fakebook-html-nopipe.csv
-http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=database&debug=true 50 output-fakebook-database-piped.csv
-http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=database&nopipe=true&debug=true 50 output-fakebook-database-nopipe.csv
-http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=webservice&debug=true 50 output-fakebook-webservice-piped.csv
-http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=webservice&nopipe=true&debug=true 50 output-fakebook-webservice-nopipe.csv
+http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?debug=true 50 output-fakebook-html-piped.csv 0
+http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?nopipe=true&debug=true 50 output-fakebook-html-nopipe.csv 0
+http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=database&debug=true 50 output-fakebook-database-piped.csv 0
+http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=database&nopipe=true&debug=true 50 output-fakebook-database-nopipe.csv 0
+http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=webservice&debug=true 50 output-fakebook-webservice-piped.csv 0
+http://localhost/dev/openpipe/example/codeigniter/2.1.0/index.php/fakebook?type=webservice&nopipe=true&debug=true 50 output-fakebook-webservice-nopipe.csv 0

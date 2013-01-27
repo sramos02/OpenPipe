@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 JAN 2013 16:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 JAN 2013 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,7 +822,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 944.
 
-Overfull \hbox (1.4714pt too wide) in paragraph at lines 940--964
+Overfull \hbox (7.55952pt too wide) in paragraph at lines 940--964
 [][] 
  []
 
@@ -967,7 +967,7 @@ r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt1
 pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
 sr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (93 pages, 1267341 bytes).
+Output written on thesis.pdf (93 pages, 1267362 bytes).
 PDF statistics:
  654 PDF objects out of 1000 (max. 8388607)
  410 compressed objects within 5 object streams

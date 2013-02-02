@@ -32,29 +32,31 @@
 \contentsline {chapter}{\numberline {3}DATA COLLECTION AND ANALYSIS}{39}
 \contentsline {section}{\numberline {3.1}Data Collection}{39}
 \contentsline {section}{\numberline {3.2}Simulating Load}{42}
-\contentsline {section}{\numberline {3.3}Performance Timing Table Data}{42}
-\contentsline {section}{\numberline {3.4}Charts}{44}
-\contentsline {section}{\numberline {3.5}Conclusions}{47}
-\contentsline {chapter}{\numberline {4}FUTURE WORK}{49}
-\contentsline {section}{\numberline {4.1}Expanded Output API}{49}
-\contentsline {section}{\numberline {4.2}Minification}{50}
-\contentsline {section}{\numberline {4.3}Addition of framework adapters}{50}
-\contentsline {section}{\numberline {4.4}Language agnostic Apache server extension}{50}
+\contentsline {section}{\numberline {3.3}Performance Data}{42}
+\contentsline {section}{\numberline {3.4}Plain HTML Performance}{45}
+\contentsline {section}{\numberline {3.5}Local Database Performance}{46}
+\contentsline {section}{\numberline {3.6}Exteral Web Service Performance}{48}
+\contentsline {section}{\numberline {3.7}Conclusions}{49}
+\contentsline {chapter}{\numberline {4}FUTURE WORK}{50}
+\contentsline {section}{\numberline {4.1}Expanded Output API}{50}
+\contentsline {section}{\numberline {4.2}Minification}{51}
+\contentsline {section}{\numberline {4.3}Addition of framework adapters}{51}
+\contentsline {section}{\numberline {4.4}Language agnostic Apache server extension}{51}
 \def \cftchappresnum {APPENDIX }
-\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{52}
-\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{52}
-\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{54}
-\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{56}
-\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{58}
-\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{59}
-\contentsline {section}{\numberline {A.6}Output/Interface.php}{60}
-\contentsline {section}{\numberline {A.7}Output/Piped.php}{62}
-\contentsline {section}{\numberline {A.8}Output/Standard.php}{64}
-\contentsline {section}{\numberline {A.9}Output/Util.php}{68}
-\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{71}
-\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{71}
-\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{73}
-\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{75}
-\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{77}
-\contentsline {section}{\numberline {B.1}openpipe.js}{77}
-\contentsline {chapter}{\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \MakeTextUppercase {References}}{82}
+\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{53}
+\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{53}
+\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{55}
+\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{57}
+\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{59}
+\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{60}
+\contentsline {section}{\numberline {A.6}Output/Interface.php}{61}
+\contentsline {section}{\numberline {A.7}Output/Piped.php}{63}
+\contentsline {section}{\numberline {A.8}Output/Standard.php}{65}
+\contentsline {section}{\numberline {A.9}Output/Util.php}{69}
+\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{72}
+\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{72}
+\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{74}
+\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{76}
+\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{78}
+\contentsline {section}{\numberline {B.1}openpipe.js}{78}
+\contentsline {chapter}{\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \MakeTextUppercase {References}}{83}

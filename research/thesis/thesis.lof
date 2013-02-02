@@ -31,8 +31,8 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{44}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{45}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{46}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{47}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces An explicit version of an OpenPipe output API}}{49}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces An explicit version of an OpenPipe output API}}{50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

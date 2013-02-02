@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 JAN 2013 16:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 FEB 2013 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,6 +676,12 @@ o-nents of the sys-tem. Through
  []
 
 [16]
+Overfull \hbox (11.92058pt too wide) in paragraph at lines 442--443
+\OT1/phv/m/n/12 face pre-existing PHP ap-pli-ca-tion frame-works with Open-Pipe
+, or whole new OpenPipe-
+ []
+
+
 Overfull \hbox (1.80342pt too wide) in paragraph at lines 448--449
 \OT1/phv/m/n/12 work nor-mally pro-vides core web ap-pli-ca-tion com-po-nents s
 uch as database li-braries,
@@ -826,36 +832,34 @@ Overfull \hbox (7.55952pt too wide) in paragraph at lines 940--964
 [][] 
  []
 
-<figures/images/analysis_chart_plain.png, id=486, 852.786pt x 521.3076pt>
+<figures/images/analysis_chart_plain.png, id=485, 852.786pt x 521.3076pt>
 File: figures/images/analysis_chart_plain.png Graphic file (type png)
 
 <use figures/images/analysis_chart_plain.png>
 Package pdftex.def Info: figures/images/analysis_chart_plain.png used on input 
-line 974.
+line 973.
 (pdftex.def)             Requested size: 469.75502pt x 287.15756pt.
- [44]
-<figures/images/analysis_chart_database.png, id=490, 842.1864pt x 517.4532pt>
+ [44] [45 <./figures/images/analysis_chart_plain.png>]
+<figures/images/analysis_chart_database.png, id=495, 842.1864pt x 517.4532pt>
 File: figures/images/analysis_chart_database.png Graphic file (type png)
 
 <use figures/images/analysis_chart_database.png>
 Package pdftex.def Info: figures/images/analysis_chart_database.png used on inp
-ut line 981.
+ut line 990.
 (pdftex.def)             Requested size: 469.75502pt x 288.63483pt.
- [45 <./figures/images/analysis_chart_plain.png>]
-<figures/images/analysis_chart_webservice.png, id=496, 860.9766pt x 520.344pt>
+ [46 <./figures/images/analysis_chart_database.png>]
+<figures/images/analysis_chart_webservice.png, id=500, 860.9766pt x 520.344pt>
 File: figures/images/analysis_chart_webservice.png Graphic file (type png)
 
 <use figures/images/analysis_chart_webservice.png>
 Package pdftex.def Info: figures/images/analysis_chart_webservice.png used on i
-nput line 988.
+nput line 1009.
 (pdftex.def)             Requested size: 469.75502pt x 283.90341pt.
- [46 <./figures/images/analysis_chart_database.png>] [47 <./figures/images/anal
-ysis_chart_webservice.png>]
-[48]
+ [47] [48 <./figures/images/analysis_chart_webservice.png>] [49]
 Chapter 4.
-[49
+[50
 
-] [50] [51]
+] [51] [52]
 Appendix A.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -863,93 +867,93 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2004/09/05 1.3 listings language file
 )
-(../../server/php/OpenPipe/Runner.php [52
+(../../server/php/OpenPipe/Runner.php [53
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 57.
- [53])
-(../../server/php/OpenPipe/Pipelet/Interface.php [54] [55])
-(../../server/php/OpenPipe/Pipelet/Abstract.php [56] [57])
-(../../server/php/OpenPipe/Pipelet/Base.php [58])
-(../../server/php/OpenPipe/Pipelet/Factory.php [59])
-(../../server/php/OpenPipe/Output/Interface.php [60]) [61]
-(../../server/php/OpenPipe/Output/Piped.php [62] [63])
-(../../server/php/OpenPipe/Output/Standard.php [64] [65] [66] [67])
-(../../server/php/OpenPipe/Output/Util.php [68] [69] [70])
+ [54])
+(../../server/php/OpenPipe/Pipelet/Interface.php [55] [56])
+(../../server/php/OpenPipe/Pipelet/Abstract.php [57] [58])
+(../../server/php/OpenPipe/Pipelet/Base.php [59])
+(../../server/php/OpenPipe/Pipelet/Factory.php [60])
+(../../server/php/OpenPipe/Output/Interface.php [61]) [62]
+(../../server/php/OpenPipe/Output/Piped.php [63] [64])
+(../../server/php/OpenPipe/Output/Standard.php [65] [66] [67] [68])
+(../../server/php/OpenPipe/Output/Util.php [69] [70] [71])
 (../../server/php/OpenPipe/Adapter/Interface.php)
-(../../server/php/OpenPipe/Adapter/Abstract.php [71] [72])
-(../../server/php/OpenPipe/Adapter/Basic.php [73]) [74]
-(../../server/php/OpenPipe/Adapter/Pvc/CodeIgniter.php [75]) [76]
+(../../server/php/OpenPipe/Adapter/Abstract.php [72] [73])
+(../../server/php/OpenPipe/Adapter/Basic.php [74]) [75]
+(../../server/php/OpenPipe/Adapter/Pvc/CodeIgniter.php [76]) [77]
 Appendix B.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(../../client/js/openpipe.js [77
+(../../client/js/openpipe.js [78
 
-] [78] [79] [80]) [81]
-Underfull \hbox (badness 1742) in paragraph at lines 1119--1121
+] [79] [80] [81]) [82]
+Underfull \hbox (badness 1742) in paragraph at lines 1148--1150
 []\OT1/phv/m/n/12 facebook.com, "Big-Pipe: Pipelin-ing web pages for high per-f
 or-mance", Face-
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 1119--1121
+Underfull \hbox (badness 2744) in paragraph at lines 1148--1150
 \OT1/phv/m/n/12 book, June 2010 [On-line] Avail-able: http://www.facebook.com/n
 otes/facebook-
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 1127--1129
+Underfull \hbox (badness 6542) in paragraph at lines 1156--1158
 []\OT1/phv/m/n/12 Aaron Hop-kins, "Op-ti-miz-ing Page Load Time", die.net [On-l
 ine] Avail-able:
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 1131--1133
+Underfull \hbox (badness 2213) in paragraph at lines 1160--1162
 []\OT1/phv/m/n/12 Darin Fisher, "What is HTTP pipelin-ing", Mozilla, April 2008
  [On-line] Avail-
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 1135--1137
+Underfull \hbox (badness 7925) in paragraph at lines 1164--1166
 []\OT1/phv/m/n/12 Zhiheng Wang, "Nav-i-ga-tion Tim-ing", W3C, July 2012 [On-lin
 e] Avail-able:
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 1139--1141
+Underfull \hbox (badness 6110) in paragraph at lines 1168--1170
 []\OT1/phv/m/n/12 Jeff Ful-mer, "Siege Home", joe-dog.org, Jan-uary 2012 [On-li
 ne] Avail-able:
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 1143--1145
+Underfull \hbox (badness 4378) in paragraph at lines 1172--1174
 []\OT1/phv/m/n/12 Jeff Ful-mer, "Siege Man-ual", joe-dog.org, Jan-uary 2012 [On
 -line] Avail-able:
  []
 
-[82
+[83
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1149
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
 []\OT1/phv/m/n/12 wikipedia.org, "PHP", Wiki-me-dia Foun-da-tion [On-line] Avai
 l-able:
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 1151--1153
+Underfull \hbox (badness 2913) in paragraph at lines 1180--1182
 []\OT1/phv/m/n/12 netcraft.com, "March 2012 Web Server Sur-vey", Netcraft [On-l
 ine] Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1151--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1180--1182
 \OT1/phv/m/n/12 http://news.netcraft.com/archives/2012/03/05/march-2012-web-ser
 ver-survey.html
  []
 
-[83] (./thesis.aux) ) 
+[84] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
  7114 strings out of 493488
  109825 string characters out of 3141326
@@ -957,7 +961,7 @@ Here is how much of TeX's memory you used:
  10249 multiletter control sequences out of 15000+200000
  22481 words of font info for 46 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,43p,1249b,3546s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,43p,1250b,3546s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8
 r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt1
 0.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
@@ -967,10 +971,10 @@ r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt1
 pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
 sr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (93 pages, 1267362 bytes).
+Output written on thesis.pdf (94 pages, 1269415 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
+ 657 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

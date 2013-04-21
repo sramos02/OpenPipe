@@ -172,7 +172,7 @@ This project intends to improve upon the current HTTP based web request and resp
 \vspace*{\fill}
 To my daughters, Paige and Jocelyn - for inspiration I will cherish always.
 \linebreak\linebreak
-To my wife, Kim - who’s selfless love, support, and encouragement has allowed me to fulfill new dreams and goals I never would have been able to imagine without her.
+To my wife, Kim - whose selfless love, support, and encouragement has allowed me to fulfill new dreams and goals I never would have been able to imagine without her.
 \vspace*{\fill}
 \end{dedication}
 
@@ -867,7 +867,7 @@ $('body').append(script);
 \chapter{DATA COLLECTION AND ANALYSIS}
 
 \section{Data Collection}
-To collect data from the test applications a simple but powerful script [see figure \ref{fig:SeleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for loaded web pages. The web page selected for data collection was the OpenPipe enabled static sample application previously illustrated [see figure \ref{fig:sampleApp}].  Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilization of underlying browser API systems. The means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponses,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for a OpenPipe enabled web page, since all data is unpacked and loaded in the browser via JavaScript after it has been received from the server.
+To collect data from the test applications a simple but powerful script [see figure \ref{fig:SeleniumScript}] was developed utilizing the Selenium framework to automate the systematic retrieval of performance timing data for loaded web pages. The web page selected for data collection was the OpenPipe enabled static sample application previously illustrated [see figure \ref{fig:sampleApp}].  Selenium was a perfect candidate for automated retrieval of data, because unlike other types of web request tools such as cURL or wget which just send and receive raw HTTP data, Selenium drives a physical web browser through the utilization of underlying browser API systems. This means that data is loaded and processed exactly the same as when an end user accesses a given website. This includes web requests, web reponses,  loading and unloading of the DOM,  and JavaScript execution. JavaScript execution was a crucial component in determining the load time for a OpenPipe enabled web page, since all data is unpacked and loaded in the browser via JavaScript after it has been received from the server.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -1079,7 +1079,7 @@ The following items can be extracted from the presented table data and charts:
 \item Piped versions of pages do, on average, require more time to load. Although the increased time is usually insignificent when compared to the speed gained in initial response time. Total page load time increasing is to be expected due to the additional overhead in client side processing to unpack and load the page pipelets when they arrive from the server. 
 \end{enumerate}
 
-In general, the results are very promising.  They illustrate how an an HTTP pipeline like OpenPipe can result in large benefits in terms of of response time for a given web page that requires access to one to many external systems for data or storage. This decreased initial response time can speed up the perceived load time of the web page. In general there seems to be very little negeative tradeoffs when incorporating OpenPipe into a web based system.
+In general, the results are very promising.  They illustrate how an HTTP pipeline like OpenPipe can result in large benefits in terms of of response time for a given web page that requires access to one to many external systems for data or storage. This decreased initial response time can speed up the perceived load time of the web page. In general there seems to be very little negeative tradeoffs when incorporating OpenPipe into a web based system.
 
 %------------------------------------------------------------------------------------------------------
 %--------------------Discussion-------------------------------------------------------------------------
@@ -1087,7 +1087,7 @@ In general, the results are very promising.  They illustrate how an an HTTP pipe
 \chapter{FUTURE WORK}
 
 \section{Expanded Output API}
-Right now the OpenPipe system relies an an implicit layout output system that is integrated into a new or existing web framework. The API could be extended to provide a more explicit type of output system that may be useful in some scenarios that a developer may encounter. An example of an explicit API that could  be developed can be found in figure \ref{fig:explicitApi}
+Right now the OpenPipe system relies an implicit layout output system that is integrated into a new or existing web framework. The API could be extended to provide a more explicit type of output system that may be useful in some scenarios that a developer may encounter. An example of an explicit API that could  be developed can be found in figure \ref{fig:explicitApi}
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -1116,7 +1116,7 @@ $pipe->close();
 The OpenPipe output adapter could add another output step where JavaScript, CSS, and HTML code is minified. Minified code has all unnecessary characters removed from its content, without changing the functionality of the original program. Minification can play an important role in further optimizing the pipeline by reducing the overall size of individual pipelet components.
 
 \section{Addition of framework adapters}
-Out of the box OpenPipe allows for integration with the CodeIgniter MVC Framework. Utilizing the strategy design pattern it is possible to developer additional adapters that allow for integration with existing and future PHP frameworks. Some frameworks that would be next to integrate include:
+Out of the box OpenPipe allows for integration with the CodeIgniter MVC Framework. Utilizing the strategy design pattern, it is possible to develope additional adapters that allow for integration with existing and future PHP frameworks. Some frameworks that would be next to integrate include:
 
 \begin{enumerate}
 	\item Symfony

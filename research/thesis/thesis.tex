@@ -327,7 +327,13 @@ Selenium is primarily used for the automated testing of web applications, and is
 \section{Siege}
 One important characteristic to consider when developing a web based library is how it performs under load. The dimension of load that was considered when performance testing OpenPipe was the number of concurrent connections the server was able to process, and how this affected overall performance with and without the OpenPipe library outputting data through an HTTP data pipeline.
 
-To achieve an accurate simulation of load, the freely available and open source tool named, '\texttt{siege}', was utilized. Siege is an HTTP web server load testing and benchmarking utility. It was designed to let web developers measure their code under stress, and see how it will stand up to load while in a production environment \cite{SiegeHomepage}.  Siege allows to easily specify the number of concurrent virtual users accessing a site. The concurrency level is set using the \texttt{-c} flag when invoking the \texttt{siege} command line utility program. This concurrency option is described in the Siege manual as the following:
+To achieve an accurate simulation of load, the freely available and open source tool named, '\texttt{siege}', was utilized. Siege is an HTTP web server load testing and benchmarking utility. It was designed to let web developers measure their code under stress, and see how it will stand up to load while in a production environment \cite{SiegeHomepage}. Siege is described as having the following modes of operation:
+
+\begin{quote}
+Siege has three modes of operation - regression, internet simulation, and brute force. It can read a large number of URLs from a configuration file and run through them incrementally (regression), randomly (internet simulation), or simply pound a single URL with a runtime configuration at the command line (brute force) \cite{SiegeManual}.
+\end{quote}
+
+The brute force mode of operation described above was utilized for testing. While utilizing this mode of operation, Siege allows to easily specify the number of concurrent virtual users accessing a site. This concurrency level is set using the \texttt{-c} flag when invoking the \texttt{siege} command line utility program. This concurrency option is described in the Siege manual as the following:
 
 \begin{quote}
 This option allows the user to stress the web server with the number of simulated users. The amount is limited only by the computing resources available, but realistically a couple of hundred simulated users is equal to many times that number in actual user sessions. The number you select represents the number of transactions your server is handling \cite{SiegeManual}.

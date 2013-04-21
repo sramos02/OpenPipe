@@ -7,10 +7,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{1}}
 \citation{facebookBigpipe}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}HTTP Request Pipelining}{2}}
-\newlabel{fig:traditonalVsPipelineReqestCycle}{{1.2}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Traditional request cycle translated to an HTTP pipeline.}}{4}}
-\newlabel{fig:HTTPRequestCycles}{{1.2}{5}}
+\newlabel{fig:traditonalVsPipelineReqestCycle}{{1.1}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Comparison of a traditional HTTP web request with the operation of an HTTP web request Pipeline. A pipeline approach will deliver visible content sooner, as all parts of the document are delivered in parallel.}}{5}}
+\newlabel{fig:HTTPRequestCycles}{{1.2}{5}}
 \citation{phpWiki}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}PHP}{6}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}phpDocumentor}{6}}
@@ -19,154 +19,156 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.6}Apache}{7}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.7}FireFox}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.8}Selenium}{8}}
-\citation{siegeHomepage}
+\citation{SiegeHomepage}
 \@writefile{toc}{\contentsline {section}{\numberline {1.9}Siege}{9}}
-\citation{siegeManual}
+\citation{SiegeManual}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}IMPLEMENTATION AND ARCHITECTURE}{11}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Client-server model}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A pipeline HTTP approach represented as a traditional client-server communication process.}}{12}}
 \newlabel{fig:pipelinedRequestCycle}{{2.1}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A pipeline HTTP approach represented a traditional client-server communication process.}}{12}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Static Sample App}{12}}
-\newlabel{fig:sampleApp}{{2.2}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Feature rich OpenPipe sample application to illustrate nested pipelines}}{14}}
+\newlabel{fig:sampleApp}{{2.2}{14}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Basic Pipeline}{14}}
-\newlabel{fig:basicPipeline}{{2.3}{15}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Basic OpenPipe sample application to illustrate a basic pipelines}}{15}}
+\newlabel{fig:basicPipeline}{{2.3}{15}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}MVC Pipeline (PVC)}{15}}
-\newlabel{fig:codeIgniterPvcCode}{{2.4}{16}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces OpenPipe adapter setup for CodeIgniter}}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Server components}{16}}
-\newlabel{fig:frameworkStack}{{4}{18}}
+\newlabel{fig:codeIgniterPvcCode}{{2.4}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Server Components}{16}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Server side tecnology stack with OpenPipe components}}{18}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Client components}{18}}
-\newlabel{fig:clientFrameworkStack}{{3}{19}}
+\newlabel{fig:frameworkStack}{{2.5}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Client Components}{18}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Client side tecnology stack with OpenPipe components}}{19}}
+\newlabel{fig:clientFrameworkStack}{{2.6}{19}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.7}Pipelets}{19}}
-\newlabel{fig:samplePipelet}{{2.7}{20}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Sample pipelet containing HTML, CSS, and JavaScript}}{20}}
+\newlabel{fig:samplePipelet}{{2.7}{20}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.8}The Root Pipelet}{20}}
-\newlabel{fig:sampleRootPipelet}{{2.8}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Root piplet HTML}}{20}}
-\newlabel{fig:rootPipeletLayout}{{2.8}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Root pipelet layout}}{21}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.9}Nested Pipelets}{22}}
-\newlabel{fig:nestedPipelets}{{2.9}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Nested Pipelets with a depth of 3}}{23}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.10}Pipelet Priority}{23}}
-\newlabel{fig:pipeletPriority}{{2.10}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Sample pipelet containing HTML, CSS, and JavaScript}}{24}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.11}Output}{24}}
-\newlabel{fig:generalizationOutput}{{2.11}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces A generalization of the OpenPipe output object}}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.12}Framework Adapter}{27}}
-\newlabel{fig:generalizationAdapter}{{2.12}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces A generalization of the OpenPipe adapter object}}{27}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.13}Design Patterns}{28}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.14}Strategy Pattern}{28}}
-\newlabel{fig:strategyRunner}{{2.14}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces The strategy pattern utilzed by OpenPipe for the main OpenPipe runner object}}{29}}
-\newlabel{fig:strategyRunnerCode}{{2.14}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces Instantiation and running of an OpenPipe\_Runner object}}{29}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.15}Factory Pattern}{29}}
-\newlabel{fig:factoryPattern}{{2.15}{30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces The factory pattern utilized by OpenPipe}}{30}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.16}Server Request Cycle}{30}}
-\newlabel{fig:openPipeRunnerSequenceDiagram}{{2.16}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces OpenPipe Runner sequence diagram}}{32}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.17}Client Data Processing Cycle}{32}}
-\newlabel{fig:openPipeClientOutputSequenceDiagram}{{2.17}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces OpenPipe output sequence diagram}}{34}}
-\newlabel{fig:openPipeClientPipeletLoadCalls}{{2.17}{35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces OpenPipe client side pipelet load calls}}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.18}Transmitted Data}{35}}
-\newlabel{fig:clientSegmentDataObject}{{2.18}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces The client segment data object}}{36}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.19}PHP Output Buffering}{36}}
-\newlabel{fig:echoNowCode}{{2.19}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces PHP function that helps bypass PHP output buffering that blocks the HTTP request pipelining of data to the client browser}}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.20}Dynamic JavaScript DOM Insertion}{38}}
-\newlabel{fig:javascriptInsertion}{{2.20}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces JavaScript code segment that allows for reliable cross browser insertion of dynamic JavaScript code into the DOM}}{38}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}DATA COLLECTION AND ANALYSIS}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Root piplet HTML with references to child pipelets}}{21}}
+\newlabel{fig:sampleRootPipelet}{{2.8}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Root pipelet layout when rendered}}{22}}
+\newlabel{fig:rootPipeletLayout}{{2.9}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.9}Nested Pipelets}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Nested pipelets tree view with a depth of 3}}{24}}
+\newlabel{fig:nestedPipeletsTree}{{2.10}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Nested pipelets with a depth of 3 when rendered}}{25}}
+\newlabel{fig:nestedPipelets}{{2.11}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.10}Pipelet Priority}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Sample pipelet showing pipelet priority tag}}{26}}
+\newlabel{fig:pipeletPriority}{{2.12}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.11}Output}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces A generalization of the OpenPipe output object}}{27}}
+\newlabel{fig:generalizationOutput}{{2.13}{27}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.12}Framework Adapter}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces A generalization of the OpenPipe adapter object}}{29}}
+\newlabel{fig:generalizationAdapter}{{2.14}{29}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.13}Design Patterns}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.13.1}Strategy Pattern}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces The strategy pattern utilzed by OpenPipe for the main \texttt  {OpenPipe\_Runner} object}}{31}}
+\newlabel{fig:strategyRunner}{{2.15}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Instantiation and running of an \texttt  {OpenPipe\_Runner} object}}{31}}
+\newlabel{fig:strategyRunnerCode}{{2.16}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.13.2}Factory Pattern}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces The factory pattern utilized by OpenPipe}}{32}}
+\newlabel{fig:factoryPattern}{{2.17}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.14}Server Request Cycle}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces OpenPipe Runner sequence diagram}}{34}}
+\newlabel{fig:openPipeRunnerSequenceDiagram}{{2.18}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.15}Client Data Processing Cycle}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces OpenPipe output sequence diagram}}{36}}
+\newlabel{fig:openPipeClientOutputSequenceDiagram}{{2.19}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces OpenPipe client side pipelet load calls}}{37}}
+\newlabel{fig:openPipeClientPipeletLoadCalls}{{2.20}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.16}Transmitted Data}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces The client segment data object}}{38}}
+\newlabel{fig:clientSegmentDataObject}{{2.21}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.17}PHP Output Buffering}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces \texttt  {echoNow} PHP function that helps bypass PHP output buffering that blocks the HTTP request pipelining of data to the client browser}}{39}}
+\newlabel{fig:echoNowCode}{{2.22}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.18}Dynamic JavaScript DOM Insertion}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces JavaScript code segment that allows for reliable cross browser insertion of dynamic JavaScript code into the DOM}}{40}}
+\newlabel{fig:JavaScriptInsertion}{{2.23}{40}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}DATA COLLECTION AND ANALYSIS}{41}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Data Collection}{39}}
-\newlabel{fig:seleniumScript}{{3.1}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A selenium script that retrieves performance and timing data from websites}}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Data Collection}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A Selenium script that retrieves performance and timing data from websites}}{42}}
+\newlabel{fig:SeleniumScript}{{3.1}{42}}
 \citation{w3cNavigationTiming}
 \citation{w3cNavigationTiming}
-\newlabel{fig:performanceTimingData}{{3.1}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces DOM performance timing data made available via JavaScript \cite  {w3cNavigationTiming}}}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces DOM performance timing data show as linear request \cite  {w3cNavigationTiming}}}{42}}
-\newlabel{fig:performanceTimingChart}{{3.3}{42}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Simulating Load}{42}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Performance Data}{42}}
-\newlabel{fig:performanceTimingTable}{{3.3}{44}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{44}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Plain HTML Performance}{45}}
-\newlabel{fig:analysisChartPlain}{{3.4}{45}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times for plain HTML data}}{45}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Local Database Performance}{46}}
-\newlabel{fig:analysisChartDatabase}{{3.5}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to a local database system for data}}{46}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Exteral Web Service Performance}{48}}
-\newlabel{fig:analysisChartWebService}{{3.6}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces OpenPipe column chart comparing non-piped vs. piped response times and total load times when connecting to an external REST API for data}}{48}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Conclusions}{49}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}FUTURE WORK}{50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces DOM performance timing data made available via JavaScript \cite  {w3cNavigationTiming}}}{43}}
+\newlabel{fig:performanceTimingData}{{3.2}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces DOM performance timing data show as linear request \cite  {w3cNavigationTiming}}}{44}}
+\newlabel{fig:performanceTimingChart}{{3.3}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Simulating Load}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Performance Data}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Calculated response and load time in milliseconds. Data is based on timing data collected from automated browser runs via Selenium scripting.}}{46}}
+\newlabel{fig:performanceTimingTable}{{3.4}{46}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Plain HTML Performance}{47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces OpenPipe column chart comparing non piped vs. piped response times and total load times for plain HTML data}}{47}}
+\newlabel{fig:analysisChartPlain}{{3.5}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Local Database Performance}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces OpenPipe column chart comparing non piped vs. piped response times and total load times when connecting to a local database system for data}}{48}}
+\newlabel{fig:analysisChartDatabase}{{3.6}{48}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Exteral Web Service Performance}{50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces OpenPipe column chart comparing non piped vs. piped response times and total load times when connecting to an external REST API for data}}{50}}
+\newlabel{fig:analysisChartWebService}{{3.7}{50}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Conclusions}{51}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}FUTURE WORK}{52}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Expanded Output API}{50}}
-\newlabel{fig:explicitApi}{{4.1}{50}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An explicit version of an OpenPipe output API}}{50}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Minification}{51}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Addition of framework adapters}{51}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Language agnostic Apache server extension}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Expanded Output API}{52}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An explicit version of an OpenPipe output API}}{52}}
+\newlabel{fig:explicitApi}{{4.1}{52}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Minification}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Addition of framework adapters}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Language agnostic Apache server extension}{53}}
 \@writefile{toc}{\def \cftchappresnum {APPENDIX }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{53}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{55}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{53}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.1}"OpenPipe/Runner.php"}{53}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{55}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.2}"OpenPipe/Pipelet/Interface.php"}{55}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{57}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.3}"OpenPipe/Pipelet/Abstract.php"}{57}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{59}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.4}"OpenPipe/Pipelet/Base.php"}{59}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{60}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.5}"OpenPipe/Pipelet/Factory.php"}{60}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.6}Output/Interface.php}{61}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.6}"OpenPipe/Output/Interface.php"}{61}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.7}Output/Piped.php}{63}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.7}"OpenPipe/Output/Piped.php"}{63}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.8}Output/Standard.php}{65}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.8}"OpenPipe/Output/Standard.php"}{65}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.9}Output/Util.php}{69}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.9}"OpenPipe/Output/Util.php"}{69}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{72}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.10}"OpenPipe/Adapter/Interface.php"}{72}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{72}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.11}"OpenPipe/Adapter/Abstract.php"}{73}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{74}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.12}"OpenPipe/Adapter/Basic.php"}{74}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{76}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.13}"OpenPipe/Adapter/Pvc/CodeIgniter.php"}{76}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{78}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{55}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.1}"OpenPipe/Runner.php"}{55}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{57}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.2}"OpenPipe/Pipelet/Interface.php"}{57}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{59}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.3}"OpenPipe/Pipelet/Abstract.php"}{59}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{61}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.4}"OpenPipe/Pipelet/Base.php"}{61}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{62}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.5}"OpenPipe/Pipelet/Factory.php"}{62}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.6}Output/Interface.php}{63}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.6}"OpenPipe/Output/Interface.php"}{63}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.7}Output/Piped.php}{65}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.7}"OpenPipe/Output/Piped.php"}{65}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.8}Output/Standard.php}{67}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.8}"OpenPipe/Output/Standard.php"}{67}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.9}Output/Util.php}{71}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.9}"OpenPipe/Output/Util.php"}{71}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{74}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.10}"OpenPipe/Adapter/Interface.php"}{74}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{74}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.11}"OpenPipe/Adapter/Abstract.php"}{75}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{76}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.12}"OpenPipe/Adapter/Basic.php"}{76}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{78}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {A.13}"OpenPipe/Adapter/Pvc/CodeIgniter.php"}{78}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{80}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {B.1}openpipe.js}{78}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.1}"openpipe.js"}{78}}
+\@writefile{toc}{\contentsline {section}{\numberline {B.1}openpipe.js}{80}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.1}"openpipe.js"}{80}}
 \bibcite{facebookBigpipe}{1}
 \bibcite{hypertextTransferProtocol}{2}
 \bibcite{optimizingPageLoadTime}{3}
 \bibcite{whatIsPipelining}{4}
 \bibcite{w3cNavigationTiming}{5}
-\bibcite{siegeHomepage}{6}
-\bibcite{siegeManual}{7}
-\@writefile{toc}{\contentsline {chapter}{\relax \fontsize  {10.95}{13.6}\selectfont  \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \MakeTextUppercase  {References}}{83}}
+\bibcite{SiegeHomepage}{6}
+\bibcite{SiegeManual}{7}
+\@writefile{toc}{\contentsline {chapter}{\relax \fontsize  {10.95}{13.6}\selectfont  \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \MakeTextUppercase  {References}}{85}}
 \bibcite{phpWiki}{8}
 \bibcite{webserverSurvey}{9}
 \bibcite{highPerformanceWebsites}{10}

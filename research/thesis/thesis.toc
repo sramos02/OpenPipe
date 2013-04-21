@@ -13,50 +13,50 @@
 \contentsline {section}{\numberline {2.2}Static Sample App}{12}
 \contentsline {section}{\numberline {2.3}Basic Pipeline}{14}
 \contentsline {section}{\numberline {2.4}MVC Pipeline (PVC)}{15}
-\contentsline {section}{\numberline {2.5}Server components}{16}
-\contentsline {section}{\numberline {2.6}Client components}{18}
+\contentsline {section}{\numberline {2.5}Server Components}{16}
+\contentsline {section}{\numberline {2.6}Client Components}{18}
 \contentsline {section}{\numberline {2.7}Pipelets}{19}
 \contentsline {section}{\numberline {2.8}The Root Pipelet}{20}
-\contentsline {section}{\numberline {2.9}Nested Pipelets}{22}
-\contentsline {section}{\numberline {2.10}Pipelet Priority}{23}
-\contentsline {section}{\numberline {2.11}Output}{24}
-\contentsline {section}{\numberline {2.12}Framework Adapter}{27}
-\contentsline {section}{\numberline {2.13}Design Patterns}{28}
-\contentsline {section}{\numberline {2.14}Strategy Pattern}{28}
-\contentsline {section}{\numberline {2.15}Factory Pattern}{29}
-\contentsline {section}{\numberline {2.16}Server Request Cycle}{30}
-\contentsline {section}{\numberline {2.17}Client Data Processing Cycle}{32}
-\contentsline {section}{\numberline {2.18}Transmitted Data}{35}
-\contentsline {section}{\numberline {2.19}PHP Output Buffering}{36}
-\contentsline {section}{\numberline {2.20}Dynamic JavaScript DOM Insertion}{38}
-\contentsline {chapter}{\numberline {3}DATA COLLECTION AND ANALYSIS}{39}
-\contentsline {section}{\numberline {3.1}Data Collection}{39}
-\contentsline {section}{\numberline {3.2}Simulating Load}{42}
-\contentsline {section}{\numberline {3.3}Performance Data}{42}
-\contentsline {section}{\numberline {3.4}Plain HTML Performance}{45}
-\contentsline {section}{\numberline {3.5}Local Database Performance}{46}
-\contentsline {section}{\numberline {3.6}Exteral Web Service Performance}{48}
-\contentsline {section}{\numberline {3.7}Conclusions}{49}
-\contentsline {chapter}{\numberline {4}FUTURE WORK}{50}
-\contentsline {section}{\numberline {4.1}Expanded Output API}{50}
-\contentsline {section}{\numberline {4.2}Minification}{51}
-\contentsline {section}{\numberline {4.3}Addition of framework adapters}{51}
-\contentsline {section}{\numberline {4.4}Language agnostic Apache server extension}{51}
+\contentsline {section}{\numberline {2.9}Nested Pipelets}{23}
+\contentsline {section}{\numberline {2.10}Pipelet Priority}{25}
+\contentsline {section}{\numberline {2.11}Output}{26}
+\contentsline {section}{\numberline {2.12}Framework Adapter}{29}
+\contentsline {section}{\numberline {2.13}Design Patterns}{30}
+\contentsline {subsection}{\numberline {2.13.1}Strategy Pattern}{30}
+\contentsline {subsection}{\numberline {2.13.2}Factory Pattern}{31}
+\contentsline {section}{\numberline {2.14}Server Request Cycle}{32}
+\contentsline {section}{\numberline {2.15}Client Data Processing Cycle}{34}
+\contentsline {section}{\numberline {2.16}Transmitted Data}{37}
+\contentsline {section}{\numberline {2.17}PHP Output Buffering}{38}
+\contentsline {section}{\numberline {2.18}Dynamic JavaScript DOM Insertion}{40}
+\contentsline {chapter}{\numberline {3}DATA COLLECTION AND ANALYSIS}{41}
+\contentsline {section}{\numberline {3.1}Data Collection}{41}
+\contentsline {section}{\numberline {3.2}Simulating Load}{44}
+\contentsline {section}{\numberline {3.3}Performance Data}{44}
+\contentsline {section}{\numberline {3.4}Plain HTML Performance}{47}
+\contentsline {section}{\numberline {3.5}Local Database Performance}{48}
+\contentsline {section}{\numberline {3.6}Exteral Web Service Performance}{50}
+\contentsline {section}{\numberline {3.7}Conclusions}{51}
+\contentsline {chapter}{\numberline {4}FUTURE WORK}{52}
+\contentsline {section}{\numberline {4.1}Expanded Output API}{52}
+\contentsline {section}{\numberline {4.2}Minification}{53}
+\contentsline {section}{\numberline {4.3}Addition of framework adapters}{53}
+\contentsline {section}{\numberline {4.4}Language agnostic Apache server extension}{53}
 \def \cftchappresnum {APPENDIX }
-\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{53}
-\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{53}
-\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{55}
-\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{57}
-\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{59}
-\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{60}
-\contentsline {section}{\numberline {A.6}Output/Interface.php}{61}
-\contentsline {section}{\numberline {A.7}Output/Piped.php}{63}
-\contentsline {section}{\numberline {A.8}Output/Standard.php}{65}
-\contentsline {section}{\numberline {A.9}Output/Util.php}{69}
-\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{72}
-\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{72}
-\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{74}
-\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{76}
-\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{78}
-\contentsline {section}{\numberline {B.1}openpipe.js}{78}
-\contentsline {chapter}{\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \MakeTextUppercase {References}}{83}
+\contentsline {chapter}{\numberline {A}SERVER SOURCE CODE}{55}
+\contentsline {section}{\numberline {A.1}Pipelet/Runner.php}{55}
+\contentsline {section}{\numberline {A.2}Pipelet/Interface.php}{57}
+\contentsline {section}{\numberline {A.3}Pipelet/Abstract.php}{59}
+\contentsline {section}{\numberline {A.4}Pipelet/Base.php}{61}
+\contentsline {section}{\numberline {A.5}Pipelet/Factory.php}{62}
+\contentsline {section}{\numberline {A.6}Output/Interface.php}{63}
+\contentsline {section}{\numberline {A.7}Output/Piped.php}{65}
+\contentsline {section}{\numberline {A.8}Output/Standard.php}{67}
+\contentsline {section}{\numberline {A.9}Output/Util.php}{71}
+\contentsline {section}{\numberline {A.10}Adapter/Interface.php}{74}
+\contentsline {section}{\numberline {A.11}Adapter/Abstract.php}{74}
+\contentsline {section}{\numberline {A.12}Adapter/Basic.php}{76}
+\contentsline {section}{\numberline {A.13}Pvc/CodeIgniter.php}{78}
+\contentsline {chapter}{\numberline {B}CLIENT SOURCE CODE}{80}
+\contentsline {section}{\numberline {B.1}openpipe.js}{80}
+\contentsline {chapter}{\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \MakeTextUppercase {References}}{85}

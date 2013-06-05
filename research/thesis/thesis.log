@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  21 APR 2013 13:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  5 JUN 2013 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,21 +546,21 @@ e
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 147.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 151.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 152.
+(Font)              <12> on input line 156.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 152.
+(Font)              <8> on input line 156.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 152.
+(Font)              <6> on input line 156.
 
-Overfull \hbox (6.89145pt too wide) in paragraph at lines 152--159
+Overfull \hbox (6.89145pt too wide) in paragraph at lines 156--163
 []  
  []
 
 [3]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 170.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 174.
  [4] [5] (./thesis.toc [6] [7])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
@@ -578,7 +578,7 @@ Chapter 1.
 File: figures/images/pipeline_request_cycle_linear.png Graphic file (type png)
 <use figures/images/pipeline_request_cycle_linear.png>
 Package pdftex.def Info: figures/images/pipeline_request_cycle_linear.png used 
-on input line 242.
+on input line 246.
 (pdftex.def)             Requested size: 469.75502pt x 267.0489pt.
  [3]
 <figures/images/HTTP_request_cycles.jpg, id=50, 626.34pt x 493.845pt>
@@ -586,14 +586,14 @@ File: figures/images/HTTP_request_cycles.jpg Graphic file (type jpg)
 
 <use figures/images/HTTP_request_cycles.jpg>
 Package pdftex.def Info: figures/images/HTTP_request_cycles.jpg used on input l
-ine 253.
+ine 257.
 (pdftex.def)             Requested size: 412.56496pt x 325.29819pt.
  [4 <./figures/images/pipeline_request_cycle_linear.png>]
 <figures/images/php_logo.png, id=55, 95.35625pt x 51.19125pt>
 File: figures/images/php_logo.png Graphic file (type png)
 
 <use figures/images/php_logo.png>
-Package pdftex.def Info: figures/images/php_logo.png used on input line 263.
+Package pdftex.def Info: figures/images/php_logo.png used on input line 267.
 (pdftex.def)             Requested size: 85.35826pt x 45.82564pt.
  [5 <./figures/images/HTTP_request_cycles.jpg>] <figures/images/php_documentor_
 logo.png, id=59, 250.9375pt x 150.5625pt>
@@ -601,14 +601,14 @@ File: figures/images/php_documentor_logo.png Graphic file (type png)
 
 <use figures/images/php_documentor_logo.png>
 Package pdftex.def Info: figures/images/php_documentor_logo.png used on input l
-ine 273.
+ine 277.
 (pdftex.def)             Requested size: 85.35826pt x 51.21584pt.
 
 <figures/images/ci_logo.jpg, id=60, 150.5625pt x 164.615pt>
 File: figures/images/ci_logo.jpg Graphic file (type jpg)
 
 <use figures/images/ci_logo.jpg>
-Package pdftex.def Info: figures/images/ci_logo.jpg used on input line 281.
+Package pdftex.def Info: figures/images/ci_logo.jpg used on input line 285.
 (pdftex.def)             Requested size: 85.35826pt x 93.32915pt.
  [6 <./figures/images/php_logo.png> <./figures/images/php_documentor_logo.png>]
 
@@ -616,7 +616,7 @@ Package pdftex.def Info: figures/images/ci_logo.jpg used on input line 281.
 File: figures/images/apache_logo.png Graphic file (type png)
 
 <use figures/images/apache_logo.png>
-Package pdftex.def Info: figures/images/apache_logo.png used on input line 289.
+Package pdftex.def Info: figures/images/apache_logo.png used on input line 293.
 
 (pdftex.def)             Requested size: 85.35826pt x 45.1171pt.
  [7 <./figures/images/ci_logo.jpg> <./figures/images/apache_logo.png (PNG copy)
@@ -625,7 +625,7 @@ Package pdftex.def Info: figures/images/apache_logo.png used on input line 289.
 File: figures/images/firefox_logo.png Graphic file (type png)
 
 <use figures/images/firefox_logo.png>
-Package pdftex.def Info: figures/images/firefox_logo.png used on input line 301
+Package pdftex.def Info: figures/images/firefox_logo.png used on input line 305
 .
 (pdftex.def)             Requested size: 85.35826pt x 85.35973pt.
 
@@ -633,8 +633,8 @@ Package pdftex.def Info: figures/images/firefox_logo.png used on input line 301
 File: figures/images/Selenium_logo.png Graphic file (type png)
 
 <use figures/images/Selenium_logo.png>
-Package pdftex.def Info: figures/images/Selenium_logo.png used on input line 30
-9.
+Package pdftex.def Info: figures/images/Selenium_logo.png used on input line 31
+3.
 (pdftex.def)             Requested size: 85.35826pt x 77.2512pt.
  [8 <./figures/images/firefox_logo.png> <./figures/images/Selenium_logo.png>] [
 9] [10]
@@ -644,7 +644,7 @@ File: figures/images/pipeline_request_cycle.png Graphic file (type png)
 
 <use figures/images/pipeline_request_cycle.png>
 Package pdftex.def Info: figures/images/pipeline_request_cycle.png used on inpu
-t line 355.
+t line 359.
 (pdftex.def)             Requested size: 184.9429pt x 289.08397pt.
  [11
 
@@ -654,7 +654,7 @@ File: figures/images/sample_app_with_overlay.png Graphic file (type png)
 
 <use figures/images/sample_app_with_overlay.png>
 Package pdftex.def Info: figures/images/sample_app_with_overlay.png used on inp
-ut line 393.
+ut line 397.
 (pdftex.def)             Requested size: 469.75502pt x 250.88136pt.
  [13]
 <figures/images/basic_pipeline.jpg, id=95, 1174.3875pt x 624.3325pt>
@@ -662,16 +662,16 @@ File: figures/images/basic_pipeline.jpg Graphic file (type jpg)
 
 <use figures/images/basic_pipeline.jpg>
 Package pdftex.def Info: figures/images/basic_pipeline.jpg used on input line 4
-06.
+10.
 (pdftex.def)             Requested size: 469.75502pt x 249.72858pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 406--407
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 410--411
  [][] 
  []
 
 [14 <./figures/images/sample_app_with_overlay.png (PNG copy)>] [15 <./figures/i
 mages/basic_pipeline.jpg>] [16]
-Overfull \hbox (1.80342pt too wide) in paragraph at lines 457--458
+Overfull \hbox (1.80342pt too wide) in paragraph at lines 461--462
 \OT1/phv/m/n/12 work nor-mally pro-vides core web ap-pli-ca-tion com-po-nents s
 uch as database li-braries,
  []
@@ -681,10 +681,10 @@ File: figures/images/framework_stack.pdf Graphic file (type pdf)
 
 <use figures/images/framework_stack.pdf>
 Package pdftex.def Info: figures/images/framework_stack.pdf used on input line 
-461.
+465.
 (pdftex.def)             Requested size: 469.75502pt x 340.67987pt.
  [17]
-Overfull \hbox (5.91148pt too wide) in paragraph at lines 473--474
+Overfull \hbox (5.91148pt too wide) in paragraph at lines 477--478
 []\OT1/phv/b/n/12 Vendor Li-braries \OT1/phv/m/n/12 - Open-Pipe makes use of tw
 o very pop-u-lar, re-li-able, and lightweight
  []
@@ -694,24 +694,24 @@ o very pop-u-lar, re-li-able, and lightweight
 File: figures/images/client_stack.pdf Graphic file (type pdf)
 
 <use figures/images/client_stack.pdf>
-Package pdftex.def Info: figures/images/client_stack.pdf used on input line 482
+Package pdftex.def Info: figures/images/client_stack.pdf used on input line 486
 .
 (pdftex.def)             Requested size: 469.75502pt x 221.40544pt.
  [19 <./figures/images/client_stack.pdf>]
-LaTeX Font Info:    Try loading font information for OML+phv on input line 510.
+LaTeX Font Info:    Try loading font information for OML+phv on input line 514.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omlphv.fd
 File: omlphv.fd 
 )
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 510.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 514.
  [20]
 <figures/images/root_pipelet.pdf, id=184, 564.1075pt x 725.71124pt>
 File: figures/images/root_pipelet.pdf Graphic file (type pdf)
 
 <use figures/images/root_pipelet.pdf>
-Package pdftex.def Info: figures/images/root_pipelet.pdf used on input line 545
+Package pdftex.def Info: figures/images/root_pipelet.pdf used on input line 549
 .
 (pdftex.def)             Requested size: 469.75502pt x 604.3334pt.
  [21]
@@ -724,7 +724,7 @@ File: figures/images/nested_pipelets.pdf Graphic file (type pdf)
 
 <use figures/images/nested_pipelets.pdf>
 Package pdftex.def Info: figures/images/nested_pipelets.pdf used on input line 
-595.
+599.
 (pdftex.def)             Requested size: 469.75502pt x 481.51909pt.
  [24] [25 <./figures/images/nested_pipelets.pdf>]
 <figures/images/generalization_output.pdf, id=240, 491.8375pt x 353.32pt>
@@ -732,7 +732,7 @@ File: figures/images/generalization_output.pdf Graphic file (type pdf)
 
 <use figures/images/generalization_output.pdf>
 Package pdftex.def Info: figures/images/generalization_output.pdf used on input
- line 638.
+ line 642.
 (pdftex.def)             Requested size: 469.75502pt x 337.46893pt.
  [26] [27 <./figures/images/generalization_output.pdf>] [28]
 <figures/images/generalization_adapters.pdf, id=286, 503.8825pt x 444.66125pt>
@@ -740,7 +740,7 @@ File: figures/images/generalization_adapters.pdf Graphic file (type pdf)
 
 <use figures/images/generalization_adapters.pdf>
 Package pdftex.def Info: figures/images/generalization_adapters.pdf used on inp
-ut line 668.
+ut line 672.
 (pdftex.def)             Requested size: 469.75502pt x 414.54843pt.
  [29 <./figures/images/generalization_adapters.pdf>]
 <figures/images/strategy_runner.pdf, id=329, 773.89125pt x 446.66875pt>
@@ -748,10 +748,10 @@ File: figures/images/strategy_runner.pdf Graphic file (type pdf)
 
 <use figures/images/strategy_runner.pdf>
 Package pdftex.def Info: figures/images/strategy_runner.pdf used on input line 
-689.
+693.
 (pdftex.def)             Requested size: 469.75502pt x 271.13167pt.
  [30]
-Overfull \hbox (28.28838pt too wide) in paragraph at lines 708--709
+Overfull \hbox (28.28838pt too wide) in paragraph at lines 712--713
 \OT1/phv/m/n/12 from the HTML and re-turn an ar-ray of Pipelets that con-form t
 o the \OT1/cmtt/m/n/12 OpenPipe[]Pipelet[]Interface 
  []
@@ -762,16 +762,16 @@ File: figures/images/factory_pipelets.pdf Graphic file (type pdf)
 
 <use figures/images/factory_pipelets.pdf>
 Package pdftex.def Info: figures/images/factory_pipelets.pdf used on input line
- 712.
+ 716.
 (pdftex.def)             Requested size: 469.75502pt x 120.85434pt.
 
-Overfull \hbox (21.8035pt too wide) in paragraph at lines 727--728
+Overfull \hbox (21.8035pt too wide) in paragraph at lines 731--732
 \OT1/phv/m/n/12 its passes any ren-der-able con-tent to a class that im-ple-men
 ts the \OT1/cmtt/m/n/12 OpenPipe[]Output interface\OT1/phv/m/n/12 .
  []
 
 [32 <./figures/images/factory_pipelets.pdf>]
-Overfull \hbox (43.49721pt too wide) in paragraph at lines 731--732
+Overfull \hbox (43.49721pt too wide) in paragraph at lines 735--736
 []\OT1/phv/m/n/12 All com-po-nents of this pro-cess are plug-gable and de-ter-m
 ined at run-time. The \OT1/cmtt/m/n/12 OpenPipe[]Runner
  []
@@ -781,7 +781,7 @@ File: figures/images/openpipe_runner.png Graphic file (type png)
 
 <use figures/images/openpipe_runner.png>
 Package pdftex.def Info: figures/images/openpipe_runner.png used on input line 
-737.
+741.
 (pdftex.def)             Requested size: 469.75502pt x 456.56961pt.
  [33] [34 <./figures/images/openpipe_runner.png>]
 <figures/images/openpipe_clientoutput.png, id=427, 324.21124pt x 584.1825pt>
@@ -789,7 +789,7 @@ File: figures/images/openpipe_clientoutput.png Graphic file (type png)
 
 <use figures/images/openpipe_clientoutput.png>
 Package pdftex.def Info: figures/images/openpipe_clientoutput.png used on input
- line 759.
+ line 763.
 (pdftex.def)             Requested size: 227.62204pt x 410.14615pt.
  [35] [36 <./figures/images/openpipe_clientoutput.png>] [37]
 <figures/images/client_segment_data_object.pdf, id=437, 436.63126pt x 194.7275p
@@ -797,39 +797,34 @@ t>
 File: figures/images/client_segment_data_object.pdf Graphic file (type pdf)
  <use figures/images/client_segment_data_object.pdf>
 Package pdftex.def Info: figures/images/client_segment_data_object.pdf used on 
-input line 811.
+input line 815.
 (pdftex.def)             Requested size: 469.75502pt x 209.50029pt.
  [38 <./figures/images/client_segment_data_object.pdf>] [39] [40]
 Chapter 3.
 [41
 
 ]
-Overfull \vbox (75.13992pt too high) has occurred while \output is active []
-
-
-[42]
-Overfull \hbox (80.4732pt too wide) in paragraph at lines 932--933
+Overfull \hbox (80.4732pt too wide) in paragraph at lines 927--928
 \OT1/phv/m/n/12 for-mance tim-ing in-for-ma-tion can be found in the DOM JavaSc
 ript el-e-ment, '\OT1/cmtt/m/n/12 window.performance.timing\OT1/phv/m/n/12 '.
  []
 
-<figures/images/timing_overview.png, id=481, 709.6914pt x 423.5022pt>
+[42] <figures/images/timing_overview.png, id=481, 709.6914pt x 423.5022pt>
 File: figures/images/timing_overview.png Graphic file (type png)
 
 <use figures/images/timing_overview.png>
 Package pdftex.def Info: figures/images/timing_overview.png used on input line 
-968.
+963.
 (pdftex.def)             Requested size: 426.79134pt x 254.67839pt.
  [43] [44 <./figures/images/timing_overview.png>] [45]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 996.
+(Font)              <10.95> on input line 991.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 997.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 992.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 1000.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 995.
 
-
-Overfull \hbox (7.55952pt too wide) in paragraph at lines 996--1020
+Overfull \hbox (7.55952pt too wide) in paragraph at lines 991--1015
 [][] 
  []
 
@@ -838,7 +833,7 @@ File: figures/images/analysis_chart_plain.png Graphic file (type png)
 
 <use figures/images/analysis_chart_plain.png>
 Package pdftex.def Info: figures/images/analysis_chart_plain.png used on input 
-line 1029.
+line 1024.
 (pdftex.def)             Requested size: 469.75502pt x 287.15756pt.
  [46] [47 <./figures/images/analysis_chart_plain.png>]
 <figures/images/analysis_chart_database.png, id=502, 842.1864pt x 517.4532pt>
@@ -846,7 +841,7 @@ File: figures/images/analysis_chart_database.png Graphic file (type png)
 
 <use figures/images/analysis_chart_database.png>
 Package pdftex.def Info: figures/images/analysis_chart_database.png used on inp
-ut line 1046.
+ut line 1041.
 (pdftex.def)             Requested size: 469.75502pt x 288.63483pt.
  [48 <./figures/images/analysis_chart_database.png>]
 <figures/images/analysis_chart_webservice.png, id=507, 860.9766pt x 520.344pt>
@@ -854,7 +849,7 @@ File: figures/images/analysis_chart_webservice.png Graphic file (type png)
 
 <use figures/images/analysis_chart_webservice.png>
 Package pdftex.def Info: figures/images/analysis_chart_webservice.png used on i
-nput line 1065.
+nput line 1060.
 (pdftex.def)             Requested size: 469.75502pt x 283.90341pt.
  [49] [50 <./figures/images/analysis_chart_webservice.png>] [51]
 Chapter 4.
@@ -893,43 +888,43 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (../../client/js/openpipe.js [80
 
 ] [81] [82] [83]) [84]
-Underfull \hbox (badness 1742) in paragraph at lines 1205--1207
+Underfull \hbox (badness 1742) in paragraph at lines 1200--1202
 []\OT1/phv/m/n/12 facebook.com, "Big-Pipe: Pipelin-ing web pages for high per-f
 or-mance", Face-
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 1205--1207
+Underfull \hbox (badness 2744) in paragraph at lines 1200--1202
 \OT1/phv/m/n/12 book, June 2010 [On-line] Avail-able: http://www.facebook.com/n
 otes/facebook-
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 1213--1215
+Underfull \hbox (badness 6542) in paragraph at lines 1208--1210
 []\OT1/phv/m/n/12 Aaron Hop-kins, "Op-ti-miz-ing Page Load Time", die.net [On-l
 ine] Avail-able:
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 1217--1219
+Underfull \hbox (badness 2213) in paragraph at lines 1212--1214
 []\OT1/phv/m/n/12 Darin Fisher, "What is HTTP pipelin-ing", Mozilla, April 2008
  [On-line] Avail-
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 1221--1223
+Underfull \hbox (badness 7925) in paragraph at lines 1216--1218
 []\OT1/phv/m/n/12 Zhiheng Wang, "Nav-i-ga-tion Tim-ing", W3C, July 2012 [On-lin
 e] Avail-able:
  []
 
 
-Underfull \hbox (badness 6110) in paragraph at lines 1225--1227
+Underfull \hbox (badness 6110) in paragraph at lines 1220--1222
 []\OT1/phv/m/n/12 Jeff Ful-mer, "Siege Home", joe-dog.org, Jan-uary 2012 [On-li
 ne] Avail-able:
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 1229--1231
+Underfull \hbox (badness 4378) in paragraph at lines 1224--1226
 []\OT1/phv/m/n/12 Jeff Ful-mer, "Siege Man-ual", joe-dog.org, Jan-uary 2012 [On
 -line] Avail-able:
  []
@@ -937,19 +932,19 @@ Underfull \hbox (badness 4378) in paragraph at lines 1229--1231
 [85
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1233--1235
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1230
 []\OT1/phv/m/n/12 wikipedia.org, "PHP", Wiki-me-dia Foun-da-tion [On-line] Avai
 l-able:
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 1237--1239
+Underfull \hbox (badness 2913) in paragraph at lines 1232--1234
 []\OT1/phv/m/n/12 netcraft.com, "March 2012 Web Server Sur-vey", Netcraft [On-l
 ine] Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1239
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1234
 \OT1/phv/m/n/12 http://news.netcraft.com/archives/2012/03/05/march-2012-web-ser
 ver-survey.html
  []
@@ -973,7 +968,7 @@ pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
 fb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></us
 r/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local
 /texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on thesis.pdf (96 pages, 1650285 bytes).
+Output written on thesis.pdf (96 pages, 1650274 bytes).
 PDF statistics:
  667 PDF objects out of 1000 (max. 8388607)
  419 compressed objects within 5 object streams

@@ -8,7 +8,7 @@ HTTP pipelining is inspired from traditional pipelining technologies utilized by
 
 
 ### Authors and Contributors
-In 2012, Sean Kenny (@polycoder), built the OpenPipe HTTP Pipeline Framework v1.0
+In 2012, Sean Kenny, built the OpenPipe HTTP Pipeline Framework v1.0
 
 ### Support or Contact
 Having trouble with OpenPipe? contact skenny214@gmail.com with questions
